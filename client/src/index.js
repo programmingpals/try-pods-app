@@ -25,27 +25,29 @@ const client = new ApolloClient({
 client
   .query({
     query: gql`
-      {
-        getPodcastEpisode(
-          name: "The Only Single Girl at Disney with Blythe Roberson"
-        ) {
+    {
+      getPodcastSeries(name:"Pod Save America"){
+        uuid
+        name
+        itunesId
+        description
+        imageUrl
+        itunesInfo{
           uuid
-          guid
-          name
-          podcastSeries {
-            uuid
-            name
-          }
-          duration
-          datePublished
-          description
-          websiteUrl
-          imageUrl
+          baseArtworkUrlOf(size:640)
         }
+            totalEpisodesCount
+            genres
+            episodes {
+                uuid
+                name
+            }
       }
+    }  
     `,
   })
-  .then((result) => console.log(result));
+  .then((result) => console.log(result))
+  .catch((err) => console.log(err))
 
 ReactDOM.render(<App />, document.getElementById("root"));
 

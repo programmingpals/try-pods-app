@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  list_id: one
+  title: MyString
+  description: MyText
+  release_date: 1
+  link: MyText
+  notes: MyText
+  pod_uuid: MyString
+  itunes_id: 1
+  image: MyText
+
+two:
+  list_id: two
+  title: MyString
+  description: MyText
+  release_date: 1
+  link: MyText
+  notes: MyText
+  pod_uuid: MyString
+  itunes_id: 1
+  image: MyText
