@@ -1,10 +1,53 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import * as serviceWorker from "./serviceWorker";
+import {
+  ApolloClient,
+  InMemoryCache,
+  ApolloProvider,
+  gql,
+} from "@apollo/client";
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const client = new ApolloClient({
+  uri: "https://api.taddy.org",
+  cache: new InMemoryCache(),
+  headers: {
+    "Content-Type": "application/JSON",
+    "X-API-KEY": process.env.TADDY_API_KEY,
+    "X-USER-ID": process.env.TADDY_USER_ID,
+  },
+});
+
+// const client = ...
+
+client
+  .query({
+    query: gql`
+      {
+        getPodcastEpisode(
+          name: "The Only Single Girl at Disney with Blythe Roberson"
+        ) {
+          uuid
+          guid
+          name
+          podcastSeries {
+            uuid
+            name
+          }
+          duration
+          datePublished
+          description
+          websiteUrl
+          imageUrl
+        }
+      }
+    `,
+  })
+  .then((result) => console.log(result));
+
+ReactDOM.render(<App />, document.getElementById("root"));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
