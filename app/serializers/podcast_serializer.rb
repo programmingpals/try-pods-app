@@ -1,5 +1,5 @@
 class PodcastSerializer
   include JSONAPI::Serializer
-  attributes :name, :description
-  belongs_to: list
+  attributes :title, :description
+
 end

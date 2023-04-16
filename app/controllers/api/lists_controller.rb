@@ -5,12 +5,12 @@ class Api::ListsController < ApplicationController
     # json_string = ListSerializer.new(lists).serializable_hash.to_json
     # render json: json_string
     lists = List.all
-    render json: lists
+    render json: serializer(lists)
   end
 
   def show
     list = List.includes(:podcasts).find(params[:id])
-    render json: list
+    render json: serializer(list)
   end
   
   def create
@@ -35,7 +35,13 @@ class Api::ListsController < ApplicationController
   end
 
   def options
-    @options ||= { include: %i[podcasts] }
+    @options ||= { include: %i[podcasts, title, description] }
   end
+
+  def serializer(records, options = {})
+  ListSerializer.new(records, options).
+  serializable_hash
+  end
+
 
 end
