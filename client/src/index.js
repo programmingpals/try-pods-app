@@ -22,32 +22,32 @@ const client = new ApolloClient({
 
 // const client = ...
 
-client
-  .query({
-    query: gql`
-    {
-      getPodcastSeries(name:"Pod Save America"){
-        uuid
-        name
-        itunesId
-        description
-        imageUrl
-        itunesInfo{
-          uuid
-          baseArtworkUrlOf(size:640)
-        }
-            totalEpisodesCount
-            genres
-            episodes {
-                uuid
-                name
-            }
-      }
-    }  
-    `,
-  })
-  .then((result) => console.log(result))
-  .catch((err) => console.log(err))
+// client
+//   .query({
+//     query: gql`
+//     {
+//       getPodcastSeries(name:"Pod Save America"){
+//         uuid
+//         name
+//         itunesId
+//         description
+//         imageUrl
+//         itunesInfo{
+//           uuid
+//           baseArtworkUrlOf(size:640)
+//         }
+//             totalEpisodesCount
+//             genres
+//             episodes {
+//                 uuid
+//                 name
+//             }
+//       }
+//     }
+//     `,
+//   })
+//   .then((result) => console.log(result))
+//   .catch((err) => console.log(err))
 
 ReactDOM.render(<App />, document.getElementById("root"));
 
