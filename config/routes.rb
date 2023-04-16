@@ -9,6 +9,14 @@ Rails.application.routes.draw do
 
   end
 
+  namespace :api do # /api/data
+
+    get '/lists', to: 'lists#index'
+    
+    resources :dogs
+
+  end
+
   get '*path', to: "static_pages#fallback_index_html", constraints: ->(request) do
     !request.xhr? && request.format.html?
   end
