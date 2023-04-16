@@ -1,6 +1,9 @@
 class Api::ListsController < ApplicationController
 
   def index
+    # lists = List.all
+    # json_string = ListSerializer.new(lists).serializable_hash.to_json
+    # render json: json_string
     lists = List.all
     render json: lists
   end
@@ -30,4 +33,9 @@ class Api::ListsController < ApplicationController
   def list_params
     params.require(:list).permit(:user_id, :name)
   end
+
+  def options
+    @options ||= { include: %i[podcasts] }
+  end
+
 end
