@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
   # get '/lists', to: 'lists#index'
   namespace :api do
-    resources :lists
+    resources :lists, :podcasts
   end
 
   get '*path', to: "static_pages#fallback_index_html", constraints: ->(request) do
