@@ -1,6 +1,7 @@
 import React, { Component, useState, useEffect } from "react";
 import List from "./List";
 import axios from "axios";
+import AddListForm from "./AddListForm";
 
 
 export default function ListGrid(props) {
@@ -29,6 +30,7 @@ console.log("props.attributes", props.attributes)
   return (
   <div><h1>Hello from ListGrid!!!!!</h1>
   {lists}
+  <AddListForm />
   </div>
   )
 }

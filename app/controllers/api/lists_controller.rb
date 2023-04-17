@@ -31,7 +31,7 @@ class Api::ListsController < ApplicationController
 
   private
   def list_params
-    params.require(:list).permit(:user_id, :name)
+    params.require(:list).permit(:user_id, :name, :description)
   end
 
   def options
