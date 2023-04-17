@@ -1,6 +1,7 @@
 import React, { Component, useState, useEffect } from "react";
 import axios from "axios";
 import "./App.css";
+import Profile from "./components/profile/Profile";
 import {
   ApolloClient,
   InMemoryCache,
@@ -17,11 +18,15 @@ export default function App(props) {
 
   useEffect(() => {
     axios.get("/api/lists").then((response) => {
-      console.log("REPSONSE", response.data.data);
+      console.log("RESPONSE", response.data.data);
       const lists = response.data.data;
       setState((prev) => ({ ...prev, lists }));
     });
   }, []);
 
-  return <div className="App"></div>;
+  return (
+  <div className="App"><Profile attributes={state.lists}/>
+  </div>
+  );
 }
+
