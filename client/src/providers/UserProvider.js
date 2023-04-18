@@ -16,9 +16,35 @@ export default function UserProvider(props) {
   const deleteList = (id) => {
     axios.delete(`/api/lists/${id}`).then((response) => {
       console.log(response.data);
-      alert("wow it's gone");
+      // alert("wow it's gone");
+      const updatedLists = response.data
+      setUser(
+        user.filter((u) => {
+        return u.id !== id
+      })
+      )
     })
     .catch((err) => console.log(err));
+  };
+
+  const addList = (name, description) => {
+    axios
+      .post("/api/lists", { user_id: 1, name: name, description: description })
+      .then((response) => {
+        console.log("POST API", response.data);
+        const newList = {
+          id: response.data.id,
+          type: 'list',
+          attributes: {
+            description: response.data.description,
+            name: response.data.name
+          }
+        }
+        const tempUser = [ ...user]
+        tempUser.push(newList)
+        console.log("tempUser:", tempUser)
+        setUser(tempUser);
+      });
   };
 
 
@@ -36,10 +62,10 @@ export default function UserProvider(props) {
   }, []);
 
 console.log("user:", user)
-  const value = {deleteList}
+  const value = {user, deleteList, addList}
   return (
     <userContext.Provider
-      value={{user, deleteList}}
+      value={value}
     >
       {props.children}
     </userContext.Provider>

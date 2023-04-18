@@ -7,36 +7,24 @@ import AddListForm from "./AddListForm";
 
 export default function ListGrid(props) {
 
-  const {user, deleteList} = useContext(userContext);
+  const {user, deleteList, addList} = useContext(userContext);
   console.log("user", user)
 
-const lists = user.map((u) => u.id)
-
-  // const deleteList = (id) => {
-  //   axios.delete(`/api/lists/${id}`).then((response) => {
-  //     console.log(response.data);
-  //     alert("wow it's gone");
-  //   })
-  //   .catch((err) => console.log(err));
-  // };
-
-  // const lists = user.map((list) => {
-  //   console.log("list:", list)
-  //   // return (
-  //   //   // <List
-  //   //   // key={list.id}
-  //   //   // id={list.id}
-  //   //   // name={list.attributes.name}
-  //   //   // description={list.attributes.description}
-  //   //   // // delete={deleteList}
-  //   //   // />
-  //   //  )
-  // })
+  const lists = user.map((list) => {
+    return (
+      <List
+      key={list.id}
+      id={list.id}
+      name={list.attributes.name}
+      description={list.attributes.description}
+      />
+     )
+  })
 
   return (
   <div><h1>Hello from ListGrid!!!!!</h1>
   {lists}
-  <AddListForm />
+  <AddListForm addList={addList} />
   </div>
   )
 }
