@@ -1,27 +1,20 @@
-import React, { Component, useState, useEffect } from "react";
+import React, { Component, useState, useEffect, useContext } from "react";
+import { userContext } from "../../providers/UserProvider";
 import axios from "axios";
 import ListGrid from "./ListGrid";
+
 
 export default function AddListForm(props) {
   const [listName, setListName] = useState("");
   const [listDescription, setListDescription] = useState("");
+
+  // const {user, addList} = useContext(userContext);
 
   const handleSubmit = (event) => {
     event.preventDefault();
 
     setListName("");
     setListDescription("");
-  };
-
-  const addList = (name, description) => {
-    axios
-      .post("/api/lists", { user_id: 1, name: name, description: description })
-      .then((response) => {
-        console.log("POST API", response.data);
-        // const newList = response.data;
-        // const lists = [...state.lists, newList];
-        // setState((prev) => ({ ...prev, lists }));
-      });
   };
 
   return (
@@ -46,7 +39,7 @@ export default function AddListForm(props) {
       onChange={(event) => {setListDescription(event.target.value)}} 
       />
     
-    <button onClick={() => {addList(listName, listDescription)}}>Save</button>
+    <button onClick={() => {props.addList(listName, listDescription)}}>Save</button>
   </form>
   );
 }
