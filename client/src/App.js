@@ -19,9 +19,9 @@ export default function App(props) {
   return (
     <div className="App">
     <UserProvider>
+    <Search />
       <BrowserRouter>
     <Routes>
-      <Search />
       <Route path="/" element={<Home />} />
       <Route path="/profilepage" element={<Profile />} />
       <Route path="/podcastlist" element={<PodList />} />
