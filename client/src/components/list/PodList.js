@@ -1,16 +1,20 @@
 import React, { Component, useState, useEffect, useContext } from "react";
-import { userContext, UserProvider } from "../../providers/UserProvider";
 import PodListGrid from "./PodListGrid";
+import axios from "axios";
 
 export default function PodList(props) {
-  const { user, listDetails } = useContext(userContext);
+  const [listDetails, setListDetails] = useState([]);
 
-  console.log(listDetails.name);
-  // const list = { ...user.user[0] };
-  // console.log("list:", list.attributes);
-  // // const listAttributes = list.attributes;
-  // const listAttributes = { ...list.attributes };
-  // console.log("listAttributes", listAttributes);
+  useEffect(() => {
+    const getListData = function (id) {
+      axios.get(`/api/lists/${id}`).then((response) => {
+        console.log("list/id", response.data.data.attributes.podcasts);
+        setListDetails(response.data.data.attributes);
+      });
+    };
+
+    getListData(1);
+  }, []);
 
   return (
     <div>

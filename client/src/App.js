@@ -12,19 +12,6 @@ import {
 } from "@apollo/client";
 
 export default function App(props) {
-  // const [state, setState] = useState({
-  //   lists: [],
-  //   list: [],
-  //   podcast: [],
-  // });
-
-  // useEffect(() => {
-  //   axios.get("/api/lists").then((response) => {
-  //     console.log("RESPONSE", response.data.data);
-  //     const lists = response.data.data;
-  //     setState((prev) => ({ ...prev, lists }));
-  //   });
-  // }, []);
   const showProfile = false;
 
   return (
