@@ -4,27 +4,27 @@ import axios from "axios";
 export const userContext = createContext();
 
 export default function UserProvider(props) {
-
   // const [state, setState] = useState({
-  //   lists: [],
+  //   user: [],
   //   list: [],
-  //   podcast: [],
   // });
 
-  const [user, setUser] = useState([])
+  const [user, setUser] = useState([]);
 
   const deleteList = (id) => {
-    axios.delete(`/api/lists/${id}`).then((response) => {
-      console.log(response.data);
-      // alert("wow it's gone");
-      const updatedLists = response.data
-      setUser(
-        user.filter((u) => {
-        return u.id !== id
+    axios
+      .delete(`/api/lists/${id}`)
+      .then((response) => {
+        console.log(response.data);
+        // alert("wow it's gone");
+        const updatedLists = response.data;
+        setUser(
+          user.filter((u) => {
+            return u.id !== id;
+          })
+        );
       })
-      )
-    })
-    .catch((err) => console.log(err));
+      .catch((err) => console.log(err));
   };
 
   const addList = (name, description) => {
@@ -34,40 +34,34 @@ export default function UserProvider(props) {
         console.log("POST API", response.data);
         const newList = {
           id: response.data.id,
-          type: 'list',
+          type: "list",
           attributes: {
             description: response.data.description,
-            name: response.data.name
-          }
-        }
-        const tempUser = [ ...user]
-        tempUser.push(newList)
-        console.log("tempUser:", tempUser)
+            name: response.data.name,
+          },
+        };
+        const tempUser = [...user];
+        tempUser.push(newList);
+        console.log("tempUser:", tempUser);
         setUser(tempUser);
       });
   };
 
-
-  
   useEffect(() => {
-    const getUserData = function() {
-    axios.get("/api/lists").then((response) => {
-      console.log("RESPONSE", response.data.data);
-      const lists = response.data.data;
-      // setState((prev) => ({ ...prev, lists }));
-      setUser(response.data.data)
-    });
-  }
-  getUserData();
+    const getUserData = function () {
+      axios.get("/api/lists").then((response) => {
+        console.log("RESPONSE", response.data.data);
+        const lists = response.data.data;
+        // setState((prev) => ({ ...prev, lists }));
+        setUser(response.data.data);
+      });
+    };
+    getUserData();
   }, []);
 
-console.log("user:", user)
-  const value = {user, deleteList, addList}
+  console.log("user:", user);
+  const value = { user, deleteList, addList };
   return (
-    <userContext.Provider
-      value={value}
-    >
-      {props.children}
-    </userContext.Provider>
-  )
+    <userContext.Provider value={value}>{props.children}</userContext.Provider>
+  );
 }

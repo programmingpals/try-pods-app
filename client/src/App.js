@@ -2,6 +2,7 @@ import React, { Component, useState, useEffect, useContext } from "react";
 import axios from "axios";
 import "./App.css";
 import Profile from "./components/profile/Profile";
+import PodList from "./components/list/PodList";
 import UserProvider from "./providers/UserProvider";
 import {
   ApolloClient,
@@ -24,13 +25,14 @@ export default function App(props) {
   //     setState((prev) => ({ ...prev, lists }));
   //   });
   // }, []);
+  const showProfile = false;
 
   return (
-  <div className="App">
-    <UserProvider>
-      <Profile />
-    </UserProvider>
-  </div>
+    <div className="App">
+      <UserProvider>
+        {showProfile && <Profile />}
+        {!showProfile && <PodList />}
+      </UserProvider>
+    </div>
   );
 }
-
