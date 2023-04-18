@@ -3,17 +3,20 @@ import { userContext, UserProvider } from "../../providers/UserProvider";
 import PodListGrid from "./PodListGrid";
 
 export default function PodList(props) {
-  const user = useContext(userContext);
+  const { user, listDetails } = useContext(userContext);
 
-  const list = { ...user.user[0] };
-  console.log("list:", list.attributes);
-  // const listAttributes = list.attributes;
+  console.log(listDetails.name);
+  // const list = { ...user.user[0] };
+  // console.log("list:", list.attributes);
+  // // const listAttributes = list.attributes;
+  // const listAttributes = { ...list.attributes };
+  // console.log("listAttributes", listAttributes);
 
   return (
     <div>
       <h1>Helllooooo from the PodList component</h1>
-      <h2>{list.name}</h2>
-      <h3>{list.description}</h3>
+      <h2>List Name: {listDetails.name}</h2>
+      <h3>List Description: {listDetails.description}</h3>
       <PodListGrid />
     </div>
   );
