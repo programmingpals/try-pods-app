@@ -4,6 +4,8 @@ import "./App.css";
 import Profile from "./components/profile/Profile";
 import PodList from "./components/list/PodList";
 import UserProvider from "./providers/UserProvider";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./components/pages/Home"
 import {
   ApolloClient,
   InMemoryCache,
@@ -11,15 +13,33 @@ import {
   gql,
 } from "@apollo/client";
 
-export default function App(props) {
-  const showProfile = false;
+function App() {
+  // const showProfile = false;
 
-  return (
-    <div className="App">
-      <UserProvider>
-        {showProfile && <Profile />}
-        {!showProfile && <PodList />}
-      </UserProvider>
-    </div>
-  );
+  // return (
+  //   <div className="App">
+  //     <UserProvider>
+  //       {showProfile && <Profile />}
+  //       {!showProfile && <PodList />}
+  //     </UserProvider>
+  //   </div>
+  // );
+return (
+  
+  <UserProvider>
+    <BrowserRouter>
+  <Routes>
+    <Route path="/" element={<Home />} />
+    <Route path="/profilepage" element={<Profile />} />
+    <Route path="/podcastlist" element={<PodList />} />
+
+  </Routes>
+  </BrowserRouter>
+  </UserProvider>
+
+)
+
+
 }
+
+export default App
