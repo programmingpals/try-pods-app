@@ -5,6 +5,8 @@ import Profile from "./components/profile/Profile";
 import Search from "./components/search/Search";
 import PodList from "./components/list/PodList";
 import UserProvider from "./providers/UserProvider";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./components/pages/Home"
 import {
   ApolloClient,
   InMemoryCache,
@@ -13,15 +15,19 @@ import {
 } from "@apollo/client";
 
 export default function App(props) {
-  const showProfile = "Search";
 
   return (
     <div className="App">
-      <UserProvider>
-        {showProfile === "Search" && <Search />}
-        {showProfile && <Profile />}
-        {!showProfile && <PodList />}
-      </UserProvider>
+    <UserProvider>
+      <BrowserRouter>
+    <Routes>
+      <Search />
+      <Route path="/" element={<Home />} />
+      <Route path="/profilepage" element={<Profile />} />
+      <Route path="/podcastlist" element={<PodList />} />
+    </Routes>
+    </BrowserRouter>
+    </UserProvider>
     </div>
-  );
+  )
 }
