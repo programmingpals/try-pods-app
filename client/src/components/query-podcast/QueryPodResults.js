@@ -2,11 +2,12 @@ import React, { useContext } from "react";
 import { podcastQueryContext } from "../../providers/PodcastQueryProvider";
 import EpListGrid from "./EpListGrid";
 import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function QueryPodResults(props) {
   const { queryPod } = useContext(podcastQueryContext);
 
-  const params = useParams()
+  const params = useParams();
 
   return (
     <div className="QueryPodResults">
@@ -20,6 +21,9 @@ export default function QueryPodResults(props) {
       <p>{queryPod.isCompleted}</p>
       <p>{queryPod.totalEpisodesCount}</p>
       <img src={queryPod.imageUrl} style={{ width: "125px" }} />
+      <Link to="/addpodcast" state={{ attributes: queryPod }}>
+        <p>Add to list</p>
+      </Link>
 
       <EpListGrid />
     </div>
