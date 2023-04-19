@@ -1,4 +1,4 @@
-import { gql, ApolloClient, InMemoryCache } from '@apollo/client';
+import { gql, ApolloClient, InMemoryCache } from "@apollo/client";
 
 const client = new ApolloClient({
   uri: "https://api.taddy.org",
@@ -12,4 +12,4 @@ const client = new ApolloClient({
   },
 });
 
-export { client }
+export { client };

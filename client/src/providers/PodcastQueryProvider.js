@@ -7,9 +7,8 @@ export const podcastQueryContext = createContext([]);
 
 export default function PodcastQueryProvider(props) {
   const [queryPod, setQueryPod] = useState([]);
-  const [episodeList, setEpisodeList] = useState([]);
 
-  const params = useParams()
+  const params = useParams();
 
   useEffect(() => {
     const getPodcastData = function (uuid) {
@@ -50,7 +49,6 @@ export default function PodcastQueryProvider(props) {
         .then((result) => {
           const podcast = result.data.getPodcastSeries;
           setQueryPod(podcast);
-          setEpisodeList(podcast.episodes);
         })
         .catch((err) => console.log(err));
     };
@@ -60,9 +58,9 @@ export default function PodcastQueryProvider(props) {
 
   const value = {
     queryPod,
-    episodeList,
+    episodeList: (queryPod && queryPod.episodes) || [],
   };
- 
+
   return (
     <podcastQueryContext.Provider value={value}>
       {props.children}
