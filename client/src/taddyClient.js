@@ -5,7 +5,7 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
   headers: {
     "Content-Type": "application/JSON",
-    "X-API-KEY": process.env.TADDY_API_KEY,
+    "X-API-KEY":process.env.TADDY_API_KEY,
     "X-USER-ID": process.env.TADDY_USER_ID
   },
 });

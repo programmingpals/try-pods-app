@@ -53,6 +53,7 @@ export default function Search() {
       name={p.name}
       description={p.description}
       image={p.imageUrl}
+      setPodcast={setPodcast}
     />
     )
   })
