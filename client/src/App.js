@@ -16,18 +16,21 @@ export default function App(props) {
     <div className="App">
       <UserProvider>
         <BrowserRouter>
-        <Search />
+          <Search />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/profilepage" element={<Profile />} />
             <Route path="/podcastlist" element={<PodList />} />
             <Route path="/addpodcast" element={<AddPodcast />} />
             <Route path="/podcastlist/:id" element={<PodList />} />
-            <Route path="/querypodcast/:podId" element={ 
-              <PodcastQueryProvider>
-                <QueryPodResults />
-              </PodcastQueryProvider>} 
-              />
+            <Route
+              path="/querypodcast/:podId"
+              element={
+                <PodcastQueryProvider>
+                  <QueryPodResults />
+                </PodcastQueryProvider>
+              }
+            />
           </Routes>
         </BrowserRouter>
       </UserProvider>

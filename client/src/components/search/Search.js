@@ -1,17 +1,15 @@
-import React, { useState } from 'react';
-import { gql, ApolloClient, InMemoryCache } from '@apollo/client';
-import PodResultItem from './PodResultItem';
-import { client } from '../../taddyClient';
+import React, { useState } from "react";
+import { gql, ApolloClient, InMemoryCache } from "@apollo/client";
+import PodResultItem from "./PodResultItem";
+import { client } from "../../taddyClient";
 
 export default function Search() {
-
-  const [searchQuery, setsearchQuery] = useState('');
+  const [searchQuery, setsearchQuery] = useState("");
   const [podcast, setPodcast] = useState([]);
 
   function handleQueryChange(event) {
     setsearchQuery(event.target.value);
   }
-
 
   function taddyCall() {
     client
@@ -46,22 +44,37 @@ export default function Search() {
 
   const podcastResults = podcast.map((p) => {
     return (
-     <PodResultItem
-      key={p.uuid}
-      attributes={p}
-      uuid={p.uuid}
-      name={p.name}
-      description={p.description}
-      image={p.imageUrl}
-      setPodcast={setPodcast}
-    />
-    )
-  })
+      <PodResultItem
+        key={p.uuid}
+        attributes={p}
+        uuid={p.uuid}
+        name={p.name}
+        description={p.description}
+        image={p.imageUrl}
+        setPodcast={setPodcast}
+      />
+    );
+  });
 
   return (
     <div>
-      <input type="text" value={searchQuery} onChange={handleQueryChange} />
-      <button onClick={() => {taddyCall()}}>Search</button>
+      <input
+        type="text"
+        value={searchQuery}
+        onChange={handleQueryChange}
+        onKeyDown={(event) => {
+          if (event.key === "Enter") {
+            taddyCall();
+          }
+        }}
+      />
+      <button
+        onClick={() => {
+          taddyCall();
+        }}
+      >
+        Search
+      </button>
       {podcastResults}
     </div>
   );
