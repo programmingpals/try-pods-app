@@ -1,8 +1,7 @@
-import React, { Component, useState, useEffect, useContext } from "react";
-import { Link, Routes, Route } from "react-router-dom";
+import React, { useContext } from "react";
+import { Link } from "react-router-dom";
 import { userContext } from "../../providers/UserProvider";
-import PodList from "../list/PodList";
-import axios from "axios";
+
 
 export default function List(props) {
 
@@ -10,7 +9,7 @@ export default function List(props) {
 
   return (
   <div>
-    <h4>Hello from List component!!!</h4>
+    <h4>List Component</h4>
     <Link to={`/podcastlist/${props.id}`}><p>{props.name}</p></Link>
     <p>{props.description}</p>
     <button onClick={() => deleteList(props.id)}>Delete list</button>

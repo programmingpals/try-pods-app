@@ -1,8 +1,6 @@
-import React, { Component, useState, useEffect, useContext } from "react";
-import { userContext } from "../../providers/UserProvider";
-import axios from "axios";
-import ListGrid from "./ListGrid";
+import React, { useState, useContext } from "react";
 
+// Reassess use of userContext with form, if not needed, remove it
 
 export default function AddListForm(props) {
   const [listName, setListName] = useState("");
@@ -19,7 +17,7 @@ export default function AddListForm(props) {
 
   return (
     <form autoComplete="off" onSubmit={handleSubmit}>
-      <h1>Form!</h1>
+      <h1>Add a List Form</h1>
    
       Name:
       <input

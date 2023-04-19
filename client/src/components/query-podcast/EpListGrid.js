@@ -1,5 +1,4 @@
-import React, { Component, useState, useEffect, useContext } from "react";
-import axios from "axios";
+import React, { useContext } from "react";
 import EpListItem from "./EpListItem";
 import { podcastQueryContext } from "../../providers/PodcastQueryProvider";
 
@@ -21,7 +20,7 @@ export default function EpListGrid(props) {
   });
   return (
     <div>
-      <h3>I'm from the EpListGrid!</h3>
+      <h3>EpListGrid</h3>
       {episodes}
     </div>
   );

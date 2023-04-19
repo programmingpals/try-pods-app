@@ -11,7 +11,6 @@ export default function PodList(props) {
   useEffect(() => {
     const getListData = function (id) {
       axios.get(`/api/lists/${id}`).then((response) => {
-        console.log("list/id", response.data.data.attributes.podcasts);
         setListDetails(response.data.data.attributes);
       });
     };
@@ -21,7 +20,7 @@ export default function PodList(props) {
 
   return (
     <div>
-      <h1>Helllooooo from the PodList component</h1>
+      <h4>PodList component</h4>
       <h2>List Name: {listDetails.name}</h2>
       <h3>List Description: {listDetails.description}</h3>
       <PodListGrid id={params.id}/>

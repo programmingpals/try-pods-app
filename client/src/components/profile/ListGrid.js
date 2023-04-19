@@ -1,14 +1,12 @@
-import React, { Component, useState, useEffect , useContext} from "react";
+import React, { useContext} from "react";
 import { userContext } from "../../providers/UserProvider";
 import List from "./List";
-import axios from "axios";
 import AddListForm from "./AddListForm";
 
 
 export default function ListGrid(props) {
 
-  const {user, deleteList, addList} = useContext(userContext);
-  console.log("user", user)
+  const {user, addList} = useContext(userContext);
 
   const lists = user.map((list) => {
     return (
@@ -22,9 +20,10 @@ export default function ListGrid(props) {
   })
 
   return (
-  <div><h1>Hello from ListGrid!!!!!</h1>
-  {lists}
-  <AddListForm addList={addList} />
+  <div>
+    <h1>ListGrid Component</h1>
+    {lists}
+    <AddListForm addList={addList} />
   </div>
   )
 }

@@ -11,7 +11,6 @@ export default function PodListGrid(props) {
   useEffect((props) => {
     const getListData = function (id) {
       axios.get(`/api/lists/${id}`).then((response) => {
-        console.log("list/id", response.data.data.attributes.podcasts);
         setList(response.data.data.attributes.podcasts);
       });
     };
@@ -33,7 +32,6 @@ export default function PodListGrid(props) {
   };
 
   const podcasts = list.map((podcast) => {
-    console.log("FROM PODLISTGRID", podcast.pod_uuid);
     return (
       <PodListItem
         key={podcast.id}
@@ -48,7 +46,7 @@ export default function PodListGrid(props) {
 
   return (
     <div>
-      <h1>Hello from PodListGrid!!!!!</h1>
+      <h1>PodListGrid Component</h1>
       {podcasts}
       {/* <AddListForm addList={addList} /> */}
     </div>

@@ -8,7 +8,6 @@ export default function PodResultItem(props) {
     <div>
       <p>Hello from PodResultItem</p>
        <Link to={`/querypodcast/${props.uuid}`}><p>{props.name}</p></Link>
-      {/* <p>{props.name}</p> */}
       <p><img src={props.image} style={{width: "125px"}}/></p>
       <p>{props.description}</p>
       <button>Add to list</button>

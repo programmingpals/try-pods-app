@@ -1,12 +1,7 @@
 import React, { createContext, useState, useEffect } from "react";
-import axios from "axios";
-import {
-  ApolloClient,
-  InMemoryCache,
-  ApolloProvider,
-  gql,
-} from "@apollo/client";
+import { gql } from "@apollo/client";
 import { useParams } from "react-router-dom";
+import { client } from "../taddyClient";
 
 export const podcastQueryContext = createContext([]);
 
@@ -14,20 +9,7 @@ export default function PodcastQueryProvider(props) {
   const [queryPod, setQueryPod] = useState([]);
   const [episodeList, setEpisodeList] = useState([]);
 
-
   const params = useParams()
-  console.log("params from the podcast provider", params)
-
-  const client = new ApolloClient({
-    uri: "https://api.taddy.org",
-    cache: new InMemoryCache(),
-    headers: {
-      "Content-Type": "application/JSON",
-      "X-API-KEY":
-        "899e058f600526f593e417216f5f5a0c56e992807f36b2187bfb57edac4e01a95c42dac8c884ff2113ddb63d7c522a4004",
-      "X-USER-ID": "345",
-    },
-  });
 
   useEffect(() => {
     const getPodcastData = function (uuid) {
@@ -80,7 +62,7 @@ export default function PodcastQueryProvider(props) {
     queryPod,
     episodeList,
   };
-  console.log("value:", value)
+ 
   return (
     <podcastQueryContext.Provider value={value}>
       {props.children}

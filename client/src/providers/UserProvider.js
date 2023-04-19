@@ -23,7 +23,6 @@ export default function UserProvider(props) {
     axios
       .post("/api/lists", { user_id: 1, name: name, description: description })
       .then((response) => {
-        console.log("POST API", response.data);
         const newList = {
           id: response.data.id,
           type: "list",
@@ -41,14 +40,12 @@ export default function UserProvider(props) {
   useEffect(() => {
     const getUserData = function () {
       axios.get("/api/lists").then((response) => {
-        console.log("RESPONSE", response.data.data);
         setUser(response.data.data);
       });
     };
     getUserData();
   }, []);
 
-  console.log("user:", user);
   const value = {
     user,
     deleteList,

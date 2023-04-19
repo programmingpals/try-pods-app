@@ -1,5 +1,4 @@
-import React, { Component, useState, useEffect, useContext } from "react";
-import axios from "axios";
+import React from "react";
 
 export default function EpListItem(props) {
   return (
