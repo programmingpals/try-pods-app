@@ -2,9 +2,17 @@ import React, { Component, useState, useEffect, useContext } from "react";
 import { podcastQueryContext } from "../../providers/PodcastQueryProvider";
 import axios from "axios";
 import EpListGrid from "./EpListGrid";
+import { useParams } from "react-router-dom";
 
 export default function QueryPodResults(props) {
   const { queryPod } = useContext(podcastQueryContext);
+
+  const params = useParams()
+  console.log("params from the querypodresults", params)
+
+  // if (!queryPod) {
+  //   return null
+  // }
 
   return (
     <div className="QueryPodResults">

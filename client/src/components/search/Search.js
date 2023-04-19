@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { gql, ApolloClient, InMemoryCache } from '@apollo/client';
 import PodResultItem from './PodResultItem';
+import { Link } from 'react-router-dom';
 
 
 function Search() {
@@ -23,7 +24,7 @@ function Search() {
   });
 
   function taddyCall() {
-    console.log(searchQuery)
+    console.log("searchQuery:", searchQuery)
     client
       .query({
         query: gql`
@@ -60,13 +61,18 @@ function Search() {
     console.log("p results:", p)
     return (
      <PodResultItem
+      key={p.uuid}
       attributes={p}
+      uuid={p.uuid}
       name={p.name}
       description={p.description}
       image={p.imageUrl}
     />
     )
   })
+
+
+  console.log("podcastResults:", podcastResults)
 
   return (
     <div>

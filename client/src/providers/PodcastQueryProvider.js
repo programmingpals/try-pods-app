@@ -6,12 +6,17 @@ import {
   ApolloProvider,
   gql,
 } from "@apollo/client";
+import { useParams } from "react-router-dom";
 
-export const podcastQueryContext = createContext();
+export const podcastQueryContext = createContext([]);
 
 export default function PodcastQueryProvider(props) {
   const [queryPod, setQueryPod] = useState([]);
   const [episodeList, setEpisodeList] = useState([]);
+
+
+  const params = useParams()
+  console.log("params from the podcast provider", params)
 
   const client = new ApolloClient({
     uri: "https://api.taddy.org",
@@ -68,13 +73,14 @@ export default function PodcastQueryProvider(props) {
         .catch((err) => console.log(err));
     };
 
-    getPodcastData("2cf30b44-6965-4485-bded-77173f835077");
+    getPodcastData(`${params.podId}`);
   }, []);
 
   const value = {
     queryPod,
     episodeList,
   };
+  console.log("value:", value)
   return (
     <podcastQueryContext.Provider value={value}>
       {props.children}

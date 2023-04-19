@@ -1,11 +1,14 @@
 import React, { Component, useState, useEffect, useContext } from "react";
 import PodListItem from "./PodListItem";
 import axios from "axios";
+import { useParams } from "react-router-dom";
 
 export default function PodListGrid(props) {
   const [list, setList] = useState([]);
 
-  useEffect(() => {
+  const params = useParams()
+
+  useEffect((props) => {
     const getListData = function (id) {
       axios.get(`/api/lists/${id}`).then((response) => {
         console.log("list/id", response.data.data.attributes.podcasts);
@@ -13,7 +16,7 @@ export default function PodListGrid(props) {
       });
     };
 
-    getListData(1);
+    getListData(params.id);
   }, []);
 
   const deleteFromList = function (id) {
@@ -30,11 +33,12 @@ export default function PodListGrid(props) {
   };
 
   const podcasts = list.map((podcast) => {
-    console.log(podcast);
+    console.log("FROM PODLISTGRID", podcast.pod_uuid);
     return (
       <PodListItem
         key={podcast.id}
         id={podcast.id}
+        uuid={podcast.pod_uuid}
         title={podcast.title}
         description={podcast.description}
         delete={deleteFromList}
