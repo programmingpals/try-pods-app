@@ -8,6 +8,7 @@ export default function Search() {
   const [podcast, setPodcast] = useState([]);
 
   function handleQueryChange(event) {
+    event.preventDefault()
     setsearchQuery(event.target.value);
   }
 
@@ -38,6 +39,7 @@ export default function Search() {
       .then((result) => {
         const podcast = result.data.searchForTerm.podcastSeries;
         setPodcast(podcast);
+        setsearchQuery('')
       })
       .catch((err) => console.log(err));
   }

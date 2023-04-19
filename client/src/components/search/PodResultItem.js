@@ -10,7 +10,6 @@ export default function PodResultItem(props) {
 
   return (
     <div>
-      <p>Hello from PodResultItem</p>
       {/* reloadDocument added to force reload and get updated query results- readdress as time permits */}
       <Link
         onClick={() => clearResults()}
@@ -18,11 +17,10 @@ export default function PodResultItem(props) {
         reloadDocument
       >
         <p>{props.name}</p>
-      </Link>
       <p>
         <img src={props.image} style={{ width: "125px" }} />
       </p>
-      <p>{props.description}</p>
+      </Link>
       <Link
         onClick={() => clearResults()}
         to="/addpodcast"
