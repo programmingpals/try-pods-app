@@ -19,7 +19,7 @@ export default function QueryPodResults(props) {
       <p>{queryPod.authorName}</p>
       <p>{queryPod.isCompleted}</p>
       <p>{queryPod.totalEpisodesCount}</p>
-      <img src={`${queryPod.imageUrl}`} style={{ width: "125px" }} />
+      <img src={queryPod.imageUrl} style={{ width: "125px" }} />
 
       <EpListGrid />
     </div>
