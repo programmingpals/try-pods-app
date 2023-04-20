@@ -51,10 +51,8 @@ export default function PodListGrid(props) {
   });
 
   return (
-    <div>
-      <h1>PodListGrid Component</h1>
+    <div class= "podlist-grid">
       {podcasts}
-      {/* <AddListForm addList={addList} /> */}
     </div>
   );
 }

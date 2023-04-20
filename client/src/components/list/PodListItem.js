@@ -9,21 +9,36 @@ export default function PodListItem(props) {
   const release = releaseFullDate.toDateString();
 
   return (
-    <div>
-      <h4>PodListItem Component</h4>
-      <Link to={`/querypodcast/${props.uuid}`}>
-        <p>{props.title}</p>
-      </Link>
-      <p>
+    <div class="podlist-item">
+      <div class="podlist-item-image">
         <img src={props.image} style={{ width: "125px" }} />
-      </p>
-      <p>{props.description}</p>
-      <p>Episode Count: {props.totalEpisodeCount}</p>
-      <p>Released: {`${release}`}</p>
-      <p>Publisher: {props.authorName}</p>
-      {props.ownerId === user && (
-        <button onClick={() => props.delete(props.id)}>Delete Podcast</button>
-      )}
+      </div>
+      <div class="podlist-item-details">
+        <div class="details-first-row">
+          <div class="details-row-left">
+            <Link to={`/querypodcast/${props.uuid}`}>
+              <h3>{props.title}</h3>
+            </Link>
+            <p>Episode Count: {props.totalEpisodeCount}</p>
+          </div>
+          <div class="details-row-right">
+            <div class="podlist-item-actions">
+              {props.ownerId !== user && (
+                <button onClick={() => props.delete(props.id)}>
+                  Delete Podcast
+                </button>
+              )}
+            </div>
+          </div>
+        </div>
+        <div class="details-row-left">
+          <p>genres details go here</p>
+          <p>serial/episodic details go here</p>
+        </div>
+        <div class="pod-list-item-description">
+          <p>{props.description}</p>
+        </div>
+      </div>
     </div>
   );
 }

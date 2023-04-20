@@ -33,6 +33,7 @@
 }
 
 .main {
+display: flex;
 max-width: 900px;
 margin: auto
 }
@@ -51,4 +52,59 @@ margin: auto
   margin: 20px;
   padding: 20px;
   border: 2px solid grey;
+}
+
+//user podlist page
+
+.podlist {
+  display: flex;
+  flex-direction: column;
+}
+
+.podlist-details {
+  display: flex;
+  justify-content: space-between;
+  background-color: lightgray;
+  padding: 20px;
+  margin: 20px;
+}
+
+.podlist-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.podlist-item {
+  display: flex;
+  margin: 20px;
+}
+
+.podlist-item-details {
+  text-align: left;
+  margin: 0px 20px 20px 20px;
+}
+
+.details-first-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between
+
+}
+
+.details-row-left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.details-row-left p, .details-row-left h3 {
+  margin-top: 0px;
+  padding-right: 20px;
+}
+
+.details-row-right {
+  display: flex;
+  justify-content: flex-end;
 }
