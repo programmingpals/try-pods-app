@@ -34,8 +34,7 @@
 
 .main {
 display: flex;
-max-width: 900px;
-margin: auto
+justify-content: center;
 }
 
 //profile page lists components
@@ -59,26 +58,75 @@ margin: auto
 .podlist {
   display: flex;
   flex-direction: column;
+  max-width: 65%;
+}
+
+.page-header {
+  display: flex;
+  flex-direction: row;
+  background-color: lightgray;
+  align-items: center;
+  margin:auto;
+  margin-top: 20px;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.page-image {
+  margin: 20px;
 }
 
 .podlist-details {
   display: flex;
   justify-content: space-between;
-  background-color: lightgray;
-  padding: 20px;
+  padding: 20px 20px 20px 0px;
   margin: 20px;
+  flex-direction: column;
+  width: 100%;
+}
+
+.podlist-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.podlist-row-left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.podlist-row-right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.podlist-row-mix {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .podlist-grid {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: start;
 }
 
 .podlist-item {
   display: flex;
   margin: 20px;
+}
+
+.podlist-description {
+  margin: 20px;
+  max-width: 80%;
+  margin: auto;
 }
 
 .podlist-item-details {
@@ -108,3 +156,5 @@ margin: auto
   display: flex;
   justify-content: flex-end;
 }
+
+
