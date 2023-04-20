@@ -1,29 +1,29 @@
-import React, { useContext} from "react";
-import { userContext } from "../../providers/UserProvider";
+import React, { useContext } from "react";
+import { userListsContext } from "../../providers/UserProvider";
 import List from "./List";
 import AddListForm from "./AddListForm";
 
-
 export default function ListGrid(props) {
-
-  const {user, addList} = useContext(userContext);
-
-  const lists = user.map((list) => {
+  let userId = null;
+  const lists = props.userLists.map((list) => {
+    userId = list.attributes.user_id;
     return (
       <List
-      key={list.id}
-      id={list.id}
-      name={list.attributes.name}
-      description={list.attributes.description}
+        key={list.id}
+        id={list.id}
+        name={list.attributes.name}
+        description={list.attributes.description}
+        ownerId={userId}
+        setUserLists={props.setUserLists}
       />
-     )
-  })
+    );
+  });
 
   return (
-  <div>
-    <h1>ListGrid Component</h1>
-    {lists}
-    <AddListForm addList={addList} />
-  </div>
-  )
+    <div>
+      <h1>ListGrid Component</h1>
+      {lists}
+      <AddListForm setUserLists={props.setUserLists} ownerId={userId} />
+    </div>
+  );
 }

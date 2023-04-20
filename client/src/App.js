@@ -1,12 +1,11 @@
-import React, { Component, useState, useEffect, useContext } from "react";
-import axios from "axios";
+import React from "react";
 import "./App.css";
 import Profile from "./components/profile/Profile";
 import Search from "./components/search/Search";
 import PodList from "./components/list/PodList";
 import QueryPodResults from "./components/query-podcast/QueryPodResults";
 import UserProvider from "./providers/UserProvider";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, useParams } from "react-router-dom";
 import Home from "./components/pages/Home";
 import PodcastQueryProvider from "./providers/PodcastQueryProvider";
 import AddPodcast from "./components/add-podcast/AddPodcast";
@@ -21,7 +20,7 @@ export default function App(props) {
           <Search />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/profilepage" element={<Profile />} />
+            <Route path="/profilepage/:userId" element={<Profile />} />
             <Route path="/podcastlist" element={<PodList />} />
             <Route path="/addpodcast" element={<AddPodcast />} />
             <Route path="/podcastlist/:id" element={<PodList />} />
