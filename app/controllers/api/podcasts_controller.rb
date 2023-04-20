@@ -12,6 +12,6 @@ class Api::PodcastsController < ApplicationController
   private
 
   def podcast_params
-    params.require(:podcast).permit(:list_id, :title)
+    params.require(:podcast).permit(:list_id, :title, :pod_uuid, :itunes_id, :description, :authorName, :isCompleted, :totalEpisodeCount, :rssUrl, :image, :release_date)
   end
 end
