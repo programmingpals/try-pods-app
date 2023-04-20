@@ -21,9 +21,17 @@ export default function PodList(props) {
 
   return (
     <div class="podlist">
-      <div class="podlist-details">
-        <h2>{listDetails.name}</h2>
-        <button>Add more to list</button>
+      <div class="page-header">
+        <div class="podlist-details">
+          <div class="podlist-row">
+            <div class="podlist-row-left">
+              <h2>{listDetails.name}</h2>
+            </div>
+            <div class="podlist-row-right">
+              <button>Add more to list</button>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="podlist-description">
         <h4>Description: {listDetails.description}</h4>
