@@ -31,15 +31,12 @@ export default function ListChoice(props) {
   };
 
   return (
-    <div>
-      <ul>
+    <div class="listitem">
         <Link to={`/podcastlist/${props.id}`}>
-          <button onClick={() => addToList(props.podcast)}>
+        <a href="#" onClick={() => addToList(props.podcast)}>
             <h4>{props.name}</h4>
-            <p>Add to this list</p>
-          </button>
+            </a>
         </Link>
-      </ul>
     </div>
   );
 }

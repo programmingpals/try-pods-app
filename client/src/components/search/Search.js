@@ -8,7 +8,7 @@ export default function Search() {
   const [podcast, setPodcast] = useState([]);
 
   function handleQueryChange(event) {
-    event.preventDefault()
+    event.preventDefault();
     setsearchQuery(event.target.value);
   }
 
@@ -40,7 +40,7 @@ export default function Search() {
       .then((result) => {
         const podcast = result.data.searchForTerm.podcastSeries;
         setPodcast(podcast);
-        setsearchQuery('')
+        setsearchQuery("");
       })
       .catch((err) => console.log(err));
   }
@@ -60,25 +60,27 @@ export default function Search() {
   });
 
   return (
-    <div>
-      <input
-        type="text"
-        value={searchQuery}
-        onChange={handleQueryChange}
-        onKeyDown={(event) => {
-          if (event.key === "Enter") {
+    <div class="search">
+      <div class="search-form">
+        <input
+          type="text"
+          value={searchQuery}
+          onChange={handleQueryChange}
+          onKeyDown={(event) => {
+            if (event.key === "Enter") {
+              taddyCall();
+            }
+          }}
+        />
+        <button
+          onClick={() => {
             taddyCall();
-          }
-        }}
-      />
-      <button
-        onClick={() => {
-          taddyCall();
-        }}
-      >
-        Search
-      </button>
-      {podcastResults}
+          }}
+        >
+          Search
+        </button>
+      </div>
+      <div class="search-results-container">{podcastResults}</div>
     </div>
   );
 }

@@ -9,25 +9,31 @@ export default function PodResultItem(props) {
   }
 
   return (
-    <div>
+    <div class="search-results-item">
       {/* reloadDocument added to force reload and get updated query results- readdress as time permits */}
-      <Link
-        onClick={() => clearResults()}
-        to={`/querypodcast/${props.uuid}`}
-        reloadDocument
-      >
-        <p>{props.name}</p>
-      <p>
-        <img src={props.image} style={{ width: "125px" }} />
-      </p>
-      </Link>
-      <Link
-        onClick={() => clearResults()}
-        to="/addpodcast"
-        state={{ attributes: props.attributes }}
-      >
-        <p>Add to list</p>
-      </Link>
+      <div>
+        <img src={props.image} />
+      </div>
+      <div class="item-details">
+        <div>
+          <Link
+            onClick={() => clearResults()}
+            to={`/querypodcast/${props.uuid}`}
+            reloadDocument
+          >
+            <p>{props.name}</p>
+          </Link>
+        </div>
+        <div>
+          <Link
+            onClick={() => clearResults()}
+            to="/addpodcast"
+            state={{ attributes: props.attributes }}
+          >
+            <p>Add to list</p>
+          </Link>
+        </div>
+      </div>
     </div>
   );
 }
