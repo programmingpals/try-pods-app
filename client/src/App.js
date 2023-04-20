@@ -10,12 +10,14 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./components/pages/Home";
 import PodcastQueryProvider from "./providers/PodcastQueryProvider";
 import AddPodcast from "./components/AddPodcast";
+import Nav from "./components/Nav";
 
 export default function App(props) {
   return (
     <div className="App">
       <UserProvider>
         <BrowserRouter>
+          <Nav />
           <Search />
           <Routes>
             <Route path="/" element={<Home />} />
