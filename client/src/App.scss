@@ -31,3 +31,24 @@
     transform: rotate(360deg);
   }
 }
+
+.main {
+max-width: 900px;
+margin: auto
+}
+
+//profile page lists components
+
+.listgrid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.listitem {
+  width: 25%;
+  margin: 20px;
+  padding: 20px;
+  border: 2px solid grey;
+}

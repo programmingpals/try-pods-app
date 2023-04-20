@@ -18,7 +18,7 @@ export default function Profile(props) {
   }, []);
 
   return (
-    <div>
+    <div class="profile">
       <h1>Profile component</h1>
       <ListGrid userLists={userLists} setUserLists={setUserLists} />
     </div>

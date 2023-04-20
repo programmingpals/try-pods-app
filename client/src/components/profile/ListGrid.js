@@ -21,8 +21,9 @@ export default function ListGrid(props) {
 
   return (
     <div>
-      <h1>ListGrid Component</h1>
-      {lists}
+      <div class="listgrid">
+        {lists}
+      </div>
       <AddListForm setUserLists={props.setUserLists} ownerId={userId} />
     </div>
   );
