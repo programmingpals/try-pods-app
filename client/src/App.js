@@ -8,13 +8,15 @@ import UserProvider from "./providers/UserProvider";
 import { BrowserRouter, Route, Routes, useParams } from "react-router-dom";
 import Home from "./components/pages/Home";
 import PodcastQueryProvider from "./providers/PodcastQueryProvider";
-import AddPodcast from "./components/AddPodcast";
+import AddPodcast from "./components/add-podcast/AddPodcast";
+import Nav from "./components/Nav";
 
 export default function App(props) {
   return (
     <div className="App">
-      <BrowserRouter>
-        <UserProvider>
+      <UserProvider>
+        <BrowserRouter>
+          <Nav />
           <Search />
           <Routes>
             <Route path="/" element={<Home />} />
@@ -31,8 +33,8 @@ export default function App(props) {
               }
             />
           </Routes>
-        </UserProvider>
-      </BrowserRouter>
+        </BrowserRouter>
+      </UserProvider>
     </div>
   );
 }

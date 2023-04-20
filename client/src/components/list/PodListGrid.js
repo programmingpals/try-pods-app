@@ -34,12 +34,17 @@ export default function PodListGrid(props) {
   const podcasts = list.map((podcast) => {
     return (
       <PodListItem
+        ownerId={props.ownerId}
         key={podcast.id}
         id={podcast.id}
         uuid={podcast.pod_uuid}
         title={podcast.title}
         description={podcast.description}
-        ownerId={props.ownerId}
+        image={podcast.image}
+        link={podcast.link}
+        totalEpisodeCount={podcast.totalEpisodeCount}
+        release_date={podcast.release_date}
+        authorName={podcast.authorName}
         delete={deleteFromList}
       />
     );
