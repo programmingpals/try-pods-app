@@ -38,7 +38,9 @@ export default function AddPodcast(props) {
       <p>{podcast.name}</p>
       <img src={podcast.imageUrl} style={{ width: "125px" }} />
       <p>What list would like to add it to?</p>
-      {lists}
+      <div class="listgrid">
+        {lists}
+      </div>
     </div>
   );
 }
