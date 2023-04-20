@@ -20,11 +20,17 @@ export default function PodList(props) {
   }, []);
 
   return (
-    <div>
-      <h4>PodList component</h4>
-      <h2>List Name: {listDetails.name}</h2>
-      <h3>List Description: {listDetails.description}</h3>
-      <PodListGrid id={params.id} ownerId={userId} />
+    <div class="podlist">
+      <div class="podlist-details">
+        <h2>{listDetails.name}</h2>
+        <button>Add more to list</button>
+      </div>
+      <div class="podlist-description">
+        <h4>Description: {listDetails.description}</h4>
+      </div>
+      <div class= "podlist-grid-container">
+        <PodListGrid id={params.id} ownerId={userId} />
+      </div>
     </div>
   );
 }

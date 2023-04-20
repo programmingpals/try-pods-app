@@ -1,5 +1,5 @@
 import React from "react";
-import "./App.css";
+import "./App.scss";
 import Profile from "./components/profile/Profile";
 import Search from "./components/search/Search";
 import PodList from "./components/list/PodList";
@@ -18,6 +18,7 @@ export default function App(props) {
         <BrowserRouter>
           <Nav />
           <Search />
+          <div class="main">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/profilepage/:userId" element={<Profile />} />
@@ -33,6 +34,7 @@ export default function App(props) {
               }
             />
           </Routes>
+          </div>
         </BrowserRouter>
       </UserProvider>
     </div>
