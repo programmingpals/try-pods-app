@@ -31,6 +31,7 @@ export default function Search() {
                     totalEpisodesCount
                     rssUrl
                     imageUrl
+                    datePublished
                 }
             }
         }
