@@ -1,56 +1,14 @@
-import React, { createContext, useState, useEffect } from "react";
-import axios from "axios";
+import React, { createContext, useState, useEffect, useContext } from "react";
 
 export const userContext = createContext();
 
 export default function UserProvider(props) {
-  const [user, setUser] = useState([]);
-
-  const deleteList = (id) => {
-    axios
-      .delete(`/api/lists/${id}`)
-      .then((response) => {
-        setUser(
-          user.filter((u) => {
-            return u.id !== id;
-          })
-        );
-      })
-      .catch((err) => console.log(err));
-  };
-
-  const addList = (name, description) => {
-    axios
-      .post("/api/lists", { user_id: 1, name: name, description: description })
-      .then((response) => {
-        const newList = {
-          id: response.data.id,
-          type: "list",
-          attributes: {
-            description: response.data.description,
-            name: response.data.name,
-          },
-        };
-        const tempUser = [...user];
-        tempUser.push(newList);
-        setUser(tempUser);
-      });
-  };
-
-  useEffect(() => {
-    const getUserData = function () {
-      axios.get("/api/lists").then((response) => {
-        setUser(response.data.data);
-      });
-    };
-    getUserData();
-  }, []);
+  const user = 1;
 
   const value = {
     user,
-    deleteList,
-    addList,
   };
+
   return (
     <userContext.Provider value={value}>{props.children}</userContext.Provider>
   );

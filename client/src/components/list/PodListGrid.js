@@ -6,7 +6,7 @@ import { useParams } from "react-router-dom";
 export default function PodListGrid(props) {
   const [list, setList] = useState([]);
 
-  const params = useParams()
+  const params = useParams();
 
   useEffect((props) => {
     const getListData = function (id) {
@@ -34,6 +34,7 @@ export default function PodListGrid(props) {
   const podcasts = list.map((podcast) => {
     return (
       <PodListItem
+        ownerId={props.ownerId}
         key={podcast.id}
         id={podcast.id}
         uuid={podcast.pod_uuid}
