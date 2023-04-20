@@ -1,12 +1,12 @@
 import React, { useState, useContext } from "react";
-
-// Reassess use of userContext with form, if not needed, remove it
+import axios from "axios";
+import { userContext } from "../../providers/UserProvider";
 
 export default function AddListForm(props) {
   const [listName, setListName] = useState("");
   const [listDescription, setListDescription] = useState("");
 
-  // const {user, addList} = useContext(userContext);
+  const { user } = useContext(userContext);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -15,29 +15,60 @@ export default function AddListForm(props) {
     setListDescription("");
   };
 
+  const addList = (userId, name, description) => {
+    axios
+      .post(`/api/lists/`, {
+        user_id: userId,
+        name: name,
+        description: description,
+      })
+      .then((response) => {
+        const newList = {
+          id: response.data.id,
+          type: "list",
+          attributes: {
+            description: response.data.description,
+            name: response.data.name,
+          },
+        };
+        props.setUserLists((prev) => [...prev, newList]);
+      });
+  };
+
   return (
-    <form autoComplete="off" onSubmit={handleSubmit}>
-      <h1>Add a List Form</h1>
-   
-      Name:
-      <input
-       type="text" 
-       name="name"
-       placeholder="Add your list name"
-       value={listName}
-       onChange={(event) => {setListName(event.target.value)}} 
-       />
-   
-      Description:
-      <input
-      type="text" 
-      name="description"
-      placeholder="Add a description"
-      value={listDescription}
-      onChange={(event) => {setListDescription(event.target.value)}} 
-      />
-    
-    <button onClick={() => {props.addList(listName, listDescription)}}>Save</button>
-  </form>
+    <div>
+      {props.ownerId === user && (
+        <form autoComplete="off" onSubmit={handleSubmit}>
+          <h1>Add a List Form</h1>
+          Name:
+          <input
+            type="text"
+            name="name"
+            placeholder="Add your list name"
+            value={listName}
+            onChange={(event) => {
+              setListName(event.target.value);
+            }}
+          />
+          Description:
+          <input
+            type="text"
+            name="description"
+            placeholder="Add a description"
+            value={listDescription}
+            onChange={(event) => {
+              setListDescription(event.target.value);
+            }}
+          />
+          <button
+            onClick={() => {
+              addList(1, listName, listDescription);
+            }}
+          >
+            Save
+          </button>
+        </form>
+      )}
+    </div>
   );
 }

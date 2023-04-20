@@ -1,14 +1,13 @@
 class Api::ListsController < ApplicationController
 
   def index
-    # lists = List.all
-    # json_string = ListSerializer.new(lists).serializable_hash.to_json
-    # render json: json_string
-    lists = List.all
+    user = User.find(params[:user_id])
+    lists = List.where(user_id: user)
     render json: serializer(lists)
   end
 
   def show
+
     list = List.includes(:podcasts).find(params[:id])
     render json: serializer(list)
   end
