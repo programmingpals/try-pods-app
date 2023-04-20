@@ -39,6 +39,11 @@ export default function PodListGrid(props) {
         uuid={podcast.pod_uuid}
         title={podcast.title}
         description={podcast.description}
+        image={podcast.image}
+        link={podcast.link}
+        totalEpisodeCount={podcast.totalEpisodeCount}
+        release_date={podcast.release_date}
+        authorName={podcast.authorName}
         delete={deleteFromList}
       />
     );
