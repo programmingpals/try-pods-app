@@ -40,7 +40,7 @@ export default function QueryPodResults(props) {
               } else {
                 setPlayerSelected(false)
               }
-            }}>Open Player</button>
+            }}>{playerSelected? "Close Player" : "Open Player"}</button>
             <p>
               <a href={`${queryPod.websiteUrl}`}>Website</a>
             </p>
