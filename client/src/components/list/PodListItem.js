@@ -1,9 +1,12 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { userContext } from "../../providers/UserProvider";
+import AnimateHeight from "react-animate-height";
 
 export default function PodListItem(props) {
   const { user } = useContext(userContext);
+
+  const [height, setHeight] = useState(0);
 
   const releaseFullDate = new Date(props.release_date * 1000);
   const release = releaseFullDate.toDateString();
@@ -35,8 +38,24 @@ export default function PodListItem(props) {
           <p>genres details go here</p>
           <p>serial/episodic details go here</p>
         </div>
-        <div class="pod-list-item-description">
-          <p>{props.description}</p>
+        <div class="drop-down-test">
+          <a
+            href="#"
+            aria-expanded={height !== 0}
+            aria-controls="example-panel"
+            onClick={() => setHeight(height === 0 ? "auto" : 0)}
+          >
+            {height === 0 ? "Open" : "Close"}
+          </a>
+          <AnimateHeight
+            id="example-panel"
+            duration={500}
+            height={height} // see props documentation below
+          >
+            <div class="pod-list-item-description">
+              <p>{props.description}</p>
+            </div>
+          </AnimateHeight>
         </div>
       </div>
     </div>

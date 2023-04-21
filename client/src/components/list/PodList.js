@@ -2,9 +2,13 @@ import React, { Component, useState, useEffect, useContext } from "react";
 import PodListGrid from "./PodListGrid";
 import axios from "axios";
 import { useParams } from "react-router-dom";
+import SearchToggleProvider from "../../providers/SearchToggleProvider";
+import { searchContext } from "../../providers/SearchToggleProvider";
 
 export default function PodList(props) {
   const [listDetails, setListDetails] = useState([]);
+  const { height, setHeight } = useContext(searchContext);
+  console.log(height);
 
   const params = useParams();
 
@@ -28,7 +32,15 @@ export default function PodList(props) {
               <h2>{listDetails.name}</h2>
             </div>
             <div class="podlist-row-right">
-              <button>Add more to list</button>
+              <a
+                href="#"
+                aria-expanded={height !== 0}
+                aria-controls="example-panel"
+                onClick={() => setHeight(height === 0 ? "auto" : 0)}
+              >
+                {height === 0 ? "Add Podcasts" : "Close Search"}
+              </a>
+              {/* <button>Add more to list</button> */}
             </div>
           </div>
         </div>
@@ -36,7 +48,7 @@ export default function PodList(props) {
       <div class="podlist-description">
         <h4>Description: {listDetails.description}</h4>
       </div>
-      <div class= "podlist-grid-container">
+      <div class="podlist-grid-container">
         <PodListGrid id={params.id} ownerId={userId} />
       </div>
     </div>
