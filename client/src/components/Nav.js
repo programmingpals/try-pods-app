@@ -11,7 +11,9 @@ export default function Nav() {
     <div>
       <div class="nav">
         <div class="nav-left">
-          <h4>Try-Pods</h4>
+          <Link to={"/"}>
+            <h4>Try-Pods</h4>
+          </Link>
         </div>
         <div class="nav-right">
           <a
