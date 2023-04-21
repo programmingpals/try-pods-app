@@ -18,9 +18,5 @@ export default function EpListGrid(props) {
       />
     );
   });
-  return (
-    <div class= "podlist-grid">
-      {episodes}
-    </div>
-  );
+  return <div class="podlist-grid">{episodes}</div>;
 }
