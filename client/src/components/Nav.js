@@ -5,7 +5,9 @@ export default function Nav() {
   return (
     <div class="nav">
       <div class="nav-left">
-        <h4>Try-Pods</h4>
+        <Link to={"/"}>
+          <h4>Try-Pods</h4>
+        </Link> 
       </div>
       <div class="nav-right">
         <p>Search</p>
