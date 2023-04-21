@@ -1,10 +1,14 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { podcastQueryContext } from "../../providers/PodcastQueryProvider";
 import EpListGrid from "./EpListGrid";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
+import PodPlayer from "./PodPlayer";
 
 export default function QueryPodResults(props) {
+
+  const [playerSelected, setPlayerSelected] = useState(false)
+
   const { queryPod } = useContext(podcastQueryContext);
 
   const params = useParams();
@@ -30,6 +34,13 @@ export default function QueryPodResults(props) {
             <p>Series type: {queryPod.seriesType}</p>
             <p>Is Completed? {queryPod.isCompleted}</p>
             <p>Total episodes: {queryPod.totalEpisodesCount}</p>
+            <button onClick={() => {
+              if (!playerSelected) {
+              setPlayerSelected(true)
+              } else {
+                setPlayerSelected(false)
+              }
+            }}>Open Player</button>
             <p>
               <a href={`${queryPod.websiteUrl}`}>Website</a>
             </p>
@@ -39,6 +50,11 @@ export default function QueryPodResults(props) {
       <div className="podlist-description">
         <h4>Description: {queryPod.description}</h4>
       </div>
+      {playerSelected && 
+            <PodPlayer 
+            itunesId={queryPod.itunesId}
+            />
+            }
       <div class="podlist-grid-container">
         <EpListGrid podImage={queryPod.imageUrl} />
       </div>
