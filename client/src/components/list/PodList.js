@@ -23,14 +23,14 @@ export default function PodList(props) {
   }, []);
 
   return (
-    <div class="podlist">
-      <div class="page-header">
-        <div class="podlist-details">
-          <div class="podlist-row">
-            <div class="podlist-row-left">
+    <div className="podlist">
+      <div className="page-header">
+        <div className="podlist-details">
+          <div className="podlist-row">
+            <div className="podlist-row-left">
               <h2>{listDetails.name}</h2>
             </div>
-            <div class="podlist-row-right">
+            <div className="podlist-row-right">
               <a
                 href="#"
                 aria-expanded={height !== 0}
@@ -43,10 +43,10 @@ export default function PodList(props) {
           </div>
         </div>
       </div>
-      <div class="podlist-description">
+      <div className="podlist-description">
         <h4>Description: {listDetails.description}</h4>
       </div>
-      <div class="podlist-grid-container">
+      <div className="podlist-grid-container">
         <PodListGrid id={params.id} ownerId={userId} />
       </div>
     </div>

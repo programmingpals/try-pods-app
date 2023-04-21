@@ -14,12 +14,12 @@ import AddListForm from "./components/profile/AddListForm";
 
 export default function App(props) {
   return (
-    <div class="App">
+    <div className="App">
       <UserProvider>
         <SearchToggleProvider>
           <BrowserRouter>
             <Nav />
-            <div class="main">
+            <div className="main">
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/profilepage/:userId" element={<Profile />} />

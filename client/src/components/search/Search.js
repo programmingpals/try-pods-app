@@ -79,8 +79,8 @@ export default function Search() {
   });
 
   return (
-    <div class="search">
-      <div class="search-form" ref={componentRef}>
+    <div className="search">
+      <div className="search-form" ref={componentRef}>
         <input
           type="text"
           value={searchQuery}
@@ -105,7 +105,7 @@ export default function Search() {
         </button>
       </div>
       {show && (
-        <div class="search-results-container" ref={componentRef}>
+        <div className="search-results-container" ref={componentRef}>
           {podcastResults}
         </div>
       )}

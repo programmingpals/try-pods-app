@@ -22,7 +22,7 @@ export default function List(props) {
   };
 
   return (
-    <div class="listitem">
+    <div className="listitem">
       <Link to={`/podcastlist/${props.id}`}>
         <p>{props.name}</p>
       </Link>

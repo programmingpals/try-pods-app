@@ -10,23 +10,23 @@ export default function QueryPodResults(props) {
   const params = useParams();
 
   return (
-    <div class="podlist">
-      <div class="page-header">
-        <div class="page-image">
+    <div className="podlist">
+      <div className="page-header">
+        <div className="page-image">
           <img src={queryPod.imageUrl} style={{ width: "125px" }} />
         </div>
-        <div class="podlist-details">
-          <div class="podlist-row">
-            <div class="podlist-row-left">
+        <div className="podlist-details">
+          <div className="podlist-row">
+            <div className="podlist-row-left">
               <h2>{queryPod.name}</h2>
             </div>
-            <div class="podlist-row-right">
+            <div className="podlist-row-right">
               <Link to="/addpodcast" state={{ attributes: queryPod }}>
                 <p>Add to list</p>
               </Link>
             </div>
           </div>
-          <div class="podlist-row-mix">
+          <div className="podlist-row-mix">
             <p>Series type: {queryPod.seriesType}</p>
             <p>Is Completed? {queryPod.isCompleted}</p>
             <p>Total episodes: {queryPod.totalEpisodesCount}</p>
@@ -36,10 +36,10 @@ export default function QueryPodResults(props) {
           </div>
         </div>
       </div>
-      <div class="podlist-description">
+      <div className="podlist-description">
         <h4>Description: {queryPod.description}</h4>
       </div>
-      <div class="podlist-grid-container">
+      <div className="podlist-grid-container">
         <EpListGrid />
       </div>
     </div>

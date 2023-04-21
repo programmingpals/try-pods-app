@@ -25,7 +25,7 @@ export default function ListGrid(props) {
 
   return (
     <div>
-      <div class="listgrid">
+      <div className="listgrid">
         {lists}
         {userId === user && <AddListBlock setUserLists={props.setUserLists} />}
       </div>

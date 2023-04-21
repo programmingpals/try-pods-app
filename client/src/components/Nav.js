@@ -9,13 +9,13 @@ export default function Nav() {
 
   return (
     <div>
-      <div class="nav">
-        <div class="nav-left">
+      <div className="nav">
+        <div className="nav-left">
           <Link to={"/"}>
             <h4>Try-Pods</h4>
           </Link>
         </div>
-        <div class="nav-right">
+        <div className="nav-right">
           <a
             href="#"
             aria-expanded={height !== 0}
@@ -30,7 +30,7 @@ export default function Nav() {
           <p>Rowan</p>
         </div>
       </div>
-      <div class="toggle-search">
+      <div className="toggle-search">
         <AnimateHeight id="example-panel" duration={500} height={height}>
           <Search />
         </AnimateHeight>

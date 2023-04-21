@@ -9,12 +9,12 @@ export default function PodResultItem(props) {
   }
 
   return (
-    <div class="search-results-item">
+    <div className="search-results-item">
       {/* reloadDocument added to force reload and get updated query results- readdress as time permits */}
       <div>
         <img src={props.image} />
       </div>
-      <div class="item-details">
+      <div className="item-details">
         <div>
           <Link
             onClick={() => clearResults()}

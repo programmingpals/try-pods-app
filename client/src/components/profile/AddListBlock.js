@@ -7,7 +7,7 @@ export default function AddListBlock(props) {
   const setUserLists = props.setUserLists;
 
   return (
-    <div class="listitem">
+    <div className="listitem">
       <Link to={"/addlist"} state={{ state: setUserLists }}>
         <p>Add New List</p>
       </Link>
