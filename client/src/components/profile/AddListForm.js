@@ -1,12 +1,14 @@
 import React, { useState, useContext } from "react";
 import axios from "axios";
 import { userContext } from "../../providers/UserProvider";
+import { useNavigate } from "react-router-dom";
 
 export default function AddListForm(props) {
   const [listName, setListName] = useState("");
   const [listDescription, setListDescription] = useState("");
 
   const { user } = useContext(userContext);
+  const navigate = useNavigate();
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -23,52 +25,43 @@ export default function AddListForm(props) {
         description: description,
       })
       .then((response) => {
-        const newList = {
-          id: response.data.id,
-          type: "list",
-          attributes: {
-            description: response.data.description,
-            name: response.data.name,
-          },
-        };
-        props.setUserLists((prev) => [...prev, newList]);
+        const id = response.data.id;
+        navigate(`/podcastlist/${id}`);
       });
   };
 
   return (
     <div>
-      {props.ownerId === user && (
-        <form autoComplete="off" onSubmit={handleSubmit}>
-          <h1>Add a List Form</h1>
-          Name:
-          <input
-            type="text"
-            name="name"
-            placeholder="Add your list name"
-            value={listName}
-            onChange={(event) => {
-              setListName(event.target.value);
-            }}
-          />
-          Description:
-          <input
-            type="text"
-            name="description"
-            placeholder="Add a description"
-            value={listDescription}
-            onChange={(event) => {
-              setListDescription(event.target.value);
-            }}
-          />
-          <button
-            onClick={() => {
-              addList(1, listName, listDescription);
-            }}
-          >
-            Save
-          </button>
-        </form>
-      )}
+      <form autoComplete="off" onSubmit={handleSubmit}>
+        <h1>Add a List Form</h1>
+        Name:
+        <input
+          type="text"
+          name="name"
+          placeholder="Add your list name"
+          value={listName}
+          onChange={(event) => {
+            setListName(event.target.value);
+          }}
+        />
+        Description:
+        <input
+          type="text"
+          name="description"
+          placeholder="Add a description"
+          value={listDescription}
+          onChange={(event) => {
+            setListDescription(event.target.value);
+          }}
+        />
+        <button
+          onClick={() => {
+            addList(user, listName, listDescription);
+          }}
+        >
+          Save
+        </button>
+      </form>
     </div>
   );
 }

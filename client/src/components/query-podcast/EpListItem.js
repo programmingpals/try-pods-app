@@ -2,37 +2,27 @@ import React from "react";
 
 export default function EpListItem(props) {
   return (
-      <div class="podlist-item">
-        <div class="podlist-item-image">
+    <div className="podlist-item">
+      <div className="podlist-item-image">
         <img src={`${props.imageUrl}`} style={{ width: "125px" }} />
+      </div>
+      <div className="podlist-item-details">
+        <div className="details-first-row">
+          <div className="details-row-left">
+            <h3>{props.name}</h3>
+          </div>
+          <div className="details-row-right">
+            <div className="podlist-item-actions">{props.seasonNumber}</div>
+          </div>
         </div>
-        <div class="podlist-item-details">
-          <div class="details-first-row">
-            <div class="details-row-left">
-                <h3>{props.name}</h3>
-            </div>
-            <div class="details-row-right">
-              <div class="podlist-item-actions">
-              {props.seasonNumber}
-              </div>
-            </div>
-          </div>
-          <div class="details-row-left">
-            <p>{props.duration}</p>
-            <p>{props.datePublished}</p>
-          </div>
-          <div class="pod-list-item-description">
-            <p>{props.description}</p>
-          </div>
+        <div className="details-row-left">
+          <p>{props.duration}</p>
+          <p>{props.datePublished}</p>
+        </div>
+        <div className="pod-list-item-description">
+          <p>{props.description}</p>
         </div>
       </div>
+    </div>
   );
 }
-
-{/* <h3>I'm from the EpListItem!</h3>
-      <p>{props.name}</p>
-      <p>{props.duration}</p>
-      <p>{props.datePublished}</p>
-      <p>{props.seasonNumber}</p>
-      <p>{props.description}</p>
-      <img src={`${props.imageUrl}`} style={{ width: "125px" }} /> */}

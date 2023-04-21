@@ -31,7 +31,7 @@ export default function PodList(props) {
               <h1>{listDetails.name}</h1>
               <h4>{listDetails.description}</h4>
             </div>
-            <div class="podlist-row-right">
+            <div className="podlist-row-right">
               <a
                 href="#"
                 aria-expanded={height !== 0}
@@ -44,10 +44,7 @@ export default function PodList(props) {
           </div>
         </div>
       </div>
-      <div class="podlist-description">
-        
-      </div>
-      <div class="podlist-grid-container">
+      <div className="podlist-grid-container">
         <PodListGrid id={params.id} ownerId={userId} />
       </div>
     </div>

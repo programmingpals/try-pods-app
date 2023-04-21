@@ -12,20 +12,20 @@ export default function PodListItem(props) {
   const release = releaseFullDate.toDateString();
 
   return (
-    <div class="podlist-item">
-      <div class="podlist-item-image">
+    <div className="podlist-item">
+      <div className="podlist-item-image">
         <img src={props.image} style={{ width: "125px" }} />
       </div>
-      <div class="podlist-item-details">
-        <div class="details-first-row">
-          <div class="details-row-left">
+      <div className="podlist-item-details">
+        <div className="details-first-row">
+          <div className="details-row-left">
             <Link to={`/querypodcast/${props.uuid}`}>
               <h3>{props.title}</h3>
             </Link>
             <p>Episode Count: {props.totalEpisodeCount}</p>
           </div>
-          <div class="details-row-right">
-            <div class="podlist-item-actions">
+          <div className="details-row-right">
+            <div className="podlist-item-actions">
               {props.ownerId !== user && (
                 <button onClick={() => props.delete(props.id)}>
                   Delete Podcast
@@ -34,11 +34,11 @@ export default function PodListItem(props) {
             </div>
           </div>
         </div>
-        <div class="details-row-left">
+        <div className="details-row-left">
           <p>genres details go here</p>
           <p>serial/episodic details go here</p>
         </div>
-        <div class="drop-down-test">
+        <div className="drop-down-test">
           <a
             href="#"
             aria-expanded={height !== 0}
@@ -52,7 +52,7 @@ export default function PodListItem(props) {
             duration={500}
             height={height} // see props documentation below
           >
-            <div class="pod-list-item-description">
+            <div className="pod-list-item-description">
               <p>{props.description}</p>
             </div>
           </AnimateHeight>

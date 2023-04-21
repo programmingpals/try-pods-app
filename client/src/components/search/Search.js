@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect} from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { gql, ApolloClient, InMemoryCache } from "@apollo/client";
 import PodResultItem from "./PodResultItem";
 import { client } from "../../taddyClient";
@@ -16,9 +16,13 @@ export default function Search() {
   };
 
   useEffect(() => {
-    document.addEventListener("mousedown", handleOutsideClick, { capture: true });
+    document.addEventListener("mousedown", handleOutsideClick, {
+      capture: true,
+    });
     return () => {
-      document.removeEventListener("mousedown", handleOutsideClick, { capture: true });
+      document.removeEventListener("mousedown", handleOutsideClick, {
+        capture: true,
+      });
     };
   }, []);
 
@@ -75,35 +79,36 @@ export default function Search() {
   });
 
   return (
-    <div class="search">
-      <div class="search-form" ref={componentRef}>
+    <div className="search">
+      <div className="search-form" ref={componentRef}>
         <input
           type="text"
           value={searchQuery}
           onChange={handleQueryChange}
           onKeyDown={(event) => {
-            if ( event.key === "Enter" && searchQuery.length > 0) {
-              setShow(true)
+            if (event.key === "Enter" && searchQuery.length > 0) {
+              setShow(true);
               taddyCall();
             }
           }}
         />
 
-        
         <button
           onClick={() => {
             if (searchQuery.length > 0) {
-            setShow(true)
-            taddyCall();
+              setShow(true);
+              taddyCall();
             }
           }}
         >
           Search
         </button>
       </div>
-      { show && 
-       <div class="search-results-container" ref={componentRef}>{podcastResults}</div>
-      }
+      {show && (
+        <div className="search-results-container" ref={componentRef}>
+          {podcastResults}
+        </div>
+      )}
     </div>
   );
 }

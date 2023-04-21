@@ -2,9 +2,13 @@ import React, { useContext } from "react";
 import { userListsContext } from "../../providers/UserProvider";
 import List from "./List";
 import AddListForm from "./AddListForm";
+import AddListBlock from "./AddListBlock";
+import { userContext } from "../../providers/UserProvider";
 
 export default function ListGrid(props) {
+  const { user } = useContext(userContext);
   let userId = null;
+
   const lists = props.userLists.map((list) => {
     userId = list.attributes.user_id;
     return (
@@ -21,10 +25,10 @@ export default function ListGrid(props) {
 
   return (
     <div>
-      <div class="listgrid">
+      <div className="listgrid">
         {lists}
+        {userId === user && <AddListBlock setUserLists={props.setUserLists} />}
       </div>
-      <AddListForm setUserLists={props.setUserLists} ownerId={userId} />
     </div>
   );
 }

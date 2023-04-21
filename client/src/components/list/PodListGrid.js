@@ -50,9 +50,5 @@ export default function PodListGrid(props) {
     );
   });
 
-  return (
-    <div class= "podlist-grid">
-      {podcasts}
-    </div>
-  );
+  return <div className="podlist-grid">{podcasts}</div>;
 }

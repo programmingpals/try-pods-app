@@ -16,7 +16,8 @@ export default function Nav() {
           </Link>
         </div>
         <div class="nav-right">
-          <a class="nav-link"
+          <a
+            class="nav-link"
             href="#"
             aria-expanded={height !== 0}
             aria-controls="example-panel"
@@ -25,12 +26,14 @@ export default function Nav() {
             {height === 0 ? "Search" : "Close Search"}
           </a>
           <p>
-            <Link to={"profilepage/1"} class="nav-link">My Profile</Link>
+            <Link to={"profilepage/1"} class="nav-link">
+              My Profile
+            </Link>
           </p>
           <p>Rowan</p>
         </div>
       </div>
-      <div class="toggle-search">
+      <div className="toggle-search">
         <AnimateHeight id="example-panel" duration={500} height={height}>
           <Search />
         </AnimateHeight>
