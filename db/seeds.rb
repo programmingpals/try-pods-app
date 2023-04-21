@@ -10,11 +10,11 @@ List.destroy_all
 Podcast.destroy_all
 Friendship.destroy_all
 
-user1 = User.create(first_name: "Rowan", last_name: "Mackenzie", email: "row.row@gmail.com", password: "123123", avatar: "bingbong")
+user1 = User.create(first_name: "Rowan", last_name: "Mackenzie", email: "row.row@gmail.com", password: "123123", avatar: "https://raw.githubusercontent.com/bootonk/try-pods-app/master/client/src/assets/1Rowan.png")
 
-user2 = User.create(first_name: "Liz", last_name: "Fosdick", email: "lf@gmail.com", password: "123123", avatar: "bingbong")
+user2 = User.create(first_name: "Liz", last_name: "Fosdick", email: "lf@gmail.com", password: "123123", avatar: "https://raw.githubusercontent.com/bootonk/try-pods-app/master/client/src/assets/2Liz.png")
 
-user3 = User.create(first_name: "Kate", last_name: "Booton", email: "kb@gmail.com", password: "123123", avatar: "bingbong")
+user3 = User.create(first_name: "Kate", last_name: "Booton", email: "kb@gmail.com", password: "123123", avatar: "https://raw.githubusercontent.com/bootonk/try-pods-app/master/client/src/assets/3Kate.png")
 
 katelist1 = List.create(user_id: 3, name: "A Few extras", description: "Some miscellaneous podcasts!", series: true)
 
