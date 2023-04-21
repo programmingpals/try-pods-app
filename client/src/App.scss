@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@200;400&family=Chivo+Mono:wght@200;700&display=swap');
+
+
 .App {
   text-align: center;
 }
@@ -37,6 +40,44 @@ display: flex;
 justify-content: center;
 }
 
+body {
+  font-family: 'Barlow';
+}
+
+h1 {
+  font-family: 'Chivo Mono';
+  font-size: 36px;
+  color: #1B3312;
+}
+
+h2 {
+  font-family: 'Chivo Mono';
+  font-size: 26px;
+  color: #1B3312;
+}
+
+h3 {
+  font-family: 'Chivo Mono';
+  font-weight: 200;
+  font-size: 20px;
+  color: #1B3312;
+}
+
+h4 {
+  font-family: 'Barlow';
+  font-size: 20px;
+  font-weight: 200;
+  color: #1B3312;
+}
+
+h5 {
+  font-family: 'Barlow';
+  font-size: 26px;
+  font-weight: 200;
+  color: #1B3312;
+}
+
+
 //profile page lists components
 
 .listgrid {
@@ -50,7 +91,7 @@ justify-content: center;
   width: 25%;
   margin: 20px;
   padding: 20px;
-  border: 2px solid grey;
+  border: 2px solid #3AF0D7;
 }
 
 //user podlist page
@@ -64,7 +105,9 @@ justify-content: center;
 .page-header {
   display: flex;
   flex-direction: row;
-  background-color: lightgray;
+  border-style: solid;
+  border-width: 5px;
+  border-color: #D2E93C;
   align-items: center;
   margin:auto;
   margin-top: 20px;
@@ -94,8 +137,8 @@ justify-content: center;
 
 .podlist-row-left {
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .podlist-row-right {
@@ -161,13 +204,20 @@ justify-content: center;
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-  background-color: lightblue;
+  background-color: #370545;
   padding-left: 20px;
   padding-right: 20px;
+  color: #ffffff;
+  font-size: 18px;
+}
+
+.nav-link {
+  color: #ffffff;
+  font-size: 18px;
 }
 
 .nav-left {
-
+  
 }
 
 .nav-right {
@@ -175,7 +225,6 @@ justify-content: center;
   justify-content: space-between;
   flex-direction: row;
   align-items: center;
-
 }
 
 .nav-right p {
@@ -224,4 +273,15 @@ justify-content: center;
   flex-direction: row;
   justify-content: space-between;
   width: 100%
+}
+
+a {
+  color: #370545
+}
+
+button {
+  border-style: solid;
+  background-color: #ffffff;
+  border-color: #D2E93C;
+  font-family: 'Chivo Mono';
 }

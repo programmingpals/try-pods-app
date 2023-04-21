@@ -39,8 +39,8 @@ export default function QueryPodResults(props) {
       <div className="podlist-description">
         <h4>Description: {queryPod.description}</h4>
       </div>
-      <div className="podlist-grid-container">
-        <EpListGrid />
+      <div class="podlist-grid-container">
+        <EpListGrid podImage={queryPod.imageUrl} />
       </div>
     </div>
   );
