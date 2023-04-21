@@ -8,7 +8,6 @@ import { searchContext } from "../../providers/SearchToggleProvider";
 export default function PodList(props) {
   const [listDetails, setListDetails] = useState([]);
   const { height, setHeight } = useContext(searchContext);
-  console.log(height);
 
   const params = useParams();
 
@@ -40,7 +39,6 @@ export default function PodList(props) {
               >
                 {height === 0 ? "Add Podcasts" : "Close Search"}
               </a>
-              {/* <button>Add more to list</button> */}
             </div>
           </div>
         </div>

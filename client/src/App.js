@@ -19,7 +19,6 @@ export default function App(props) {
         <SearchToggleProvider>
           <BrowserRouter>
             <Nav />
-            {/* <Search /> */}
             <div class="main">
               <Routes>
                 <Route path="/" element={<Home />} />

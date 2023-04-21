@@ -29,17 +29,10 @@ export default function Nav() {
         </div>
       </div>
       <div class="toggle-search">
-        <AnimateHeight
-          id="example-panel"
-          duration={500}
-          height={height} // see props documentation below
-        >
+        <AnimateHeight id="example-panel" duration={500} height={height}>
           <Search />
         </AnimateHeight>
       </div>
     </div>
   );
 }
-
-// <Link to={"podcastresult"}>Click to view a query result page</Link>
-// <Link to={"podcastlist/1"}>Click to view a podcast list page</Link>
