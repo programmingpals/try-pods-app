@@ -11,6 +11,13 @@ export default function PodListItem(props) {
   const releaseFullDate = new Date(props.release_date * 1000);
   const release = releaseFullDate.toDateString();
 
+  const [showConfirmation, setShowConfirmation] = useState(false);
+
+  const handleDelete = () => {
+    props.delete(props.id);
+    setShowConfirmation(false);
+  };
+
   return (
     <div className="podlist-item">
       <div className="podlist-item-image">
@@ -26,11 +33,22 @@ export default function PodListItem(props) {
           </div>
           <div className="details-row-right">
             <div className="podlist-item-actions">
-              {props.ownerId !== user && (
-                <button onClick={() => props.delete(props.id)}>
+              {(props.ownerId !== user && !showConfirmation) && (
+                <button onClick={() => setShowConfirmation(true)}>
                   Delete Podcast
                 </button>
               )}
+              <div>
+                {showConfirmation && (
+                  <div className="deletion-confirmation">
+                    <p>Are you sure you want to delete this podcast?</p>
+                    <button onClick={handleDelete}>Confirm Deletion</button>
+                    <button onClick={() => setShowConfirmation(false)}>
+                      Cancel
+                    </button>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         </div>
