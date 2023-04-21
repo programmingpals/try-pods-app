@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@200;400&family=Chivo+Mono:wght@200;700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@200;400&family=Chivo+Mono:wght@200;700&display=swap");
 
 .App {
   text-align: center;
@@ -36,62 +35,79 @@
 }
 
 .main {
-display: flex;
-justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 body {
-  font-family: 'Barlow';
+  font-family: "Barlow";
 }
 
 h1 {
-  font-family: 'Chivo Mono';
+  font-family: "Chivo Mono";
   font-size: 36px;
-  color: #1B3312;
+  color: #1b3312;
 }
 
 h2 {
-  font-family: 'Chivo Mono';
+  font-family: "Chivo Mono";
   font-size: 26px;
-  color: #1B3312;
+  color: #1b3312;
 }
 
 h3 {
-  font-family: 'Chivo Mono';
+  font-family: "Chivo Mono";
   font-weight: 200;
   font-size: 20px;
-  color: #1B3312;
+  color: #1b3312;
 }
 
 h4 {
-  font-family: 'Barlow';
+  font-family: "Barlow";
   font-size: 20px;
   font-weight: 200;
-  color: #1B3312;
+  color: #1b3312;
 }
 
 h5 {
-  font-family: 'Barlow';
+  font-family: "Barlow";
   font-size: 26px;
   font-weight: 200;
-  color: #1B3312;
+  color: #1b3312;
 }
-
 
 //profile page lists components
 
 .listgrid {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-evenly;
+}
+
+.listgrid-addpodcast {
+  display: flex;
+  flex-direction: row;
+}
+
+.list-section {
+  display: flex;
+  flex-direction: column;
+}
+.section-title {
+  text-align: left;
+}
+
+.lists {
+  display: flex;
+  flex-direction: row;
 }
 
 .listitem {
   width: 25%;
   margin: 20px;
   padding: 20px;
-  border: 2px solid #3AF0D7;
+  border: 2px solid #3af0d7;
 }
 
 //user podlist page
@@ -107,9 +123,9 @@ h5 {
   flex-direction: row;
   border-style: solid;
   border-width: 5px;
-  border-color: #D2E93C;
+  border-color: #d2e93c;
   align-items: center;
-  margin:auto;
+  margin: auto;
   margin-top: 20px;
   justify-content: flex-start;
   width: 100%;
@@ -180,8 +196,7 @@ h5 {
 .details-first-row {
   display: flex;
   flex-direction: row;
-  justify-content: space-between
-
+  justify-content: space-between;
 }
 
 .details-row-left {
@@ -190,7 +205,8 @@ h5 {
   align-items: center;
 }
 
-.details-row-left p, .details-row-left h3 {
+.details-row-left p,
+.details-row-left h3 {
   margin-top: 0px;
   padding-right: 20px;
 }
@@ -217,7 +233,6 @@ h5 {
 }
 
 .nav-left {
-  
 }
 
 .nav-right {
@@ -272,16 +287,16 @@ h5 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 100%
+  width: 100%;
 }
 
 a {
-  color: #370545
+  color: #370545;
 }
 
 button {
   border-style: solid;
   background-color: #ffffff;
-  border-color: #D2E93C;
-  font-family: 'Chivo Mono';
+  border-color: #d2e93c;
+  font-family: "Chivo Mono";
 }

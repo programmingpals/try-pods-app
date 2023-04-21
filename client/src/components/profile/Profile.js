@@ -35,6 +35,7 @@ export default function Profile(props) {
           const userDetails = results[1];
           setUserLists(userLists);
           setUserDetails(userDetails);
+          console.log("userDetails", userDetails);
 
           let listOrg = {
             top8: {},
@@ -43,9 +44,9 @@ export default function Profile(props) {
           };
 
           userLists.map((list) => {
-            if (list.attributes.name === "All Time Faves") {
+            if (list.attributes.name === "Top 8") {
               listOrg.top8 = list;
-            } else if (list.attributes.name === "Entertainment") {
+            } else if (list.attributes.name === "Up Next") {
               listOrg.upNext = list;
             } else {
               listOrg.customLists.push(list);
@@ -75,7 +76,15 @@ export default function Profile(props) {
       </div>
       <div className="profile-friends"></div>
       <div>
-        <ListGrid userLists={userLists} setUserLists={setUserLists} />
+        {!isLoading && (
+          <ListGrid
+            userLists={userLists}
+            setUserLists={setUserLists}
+            customLists={listOrg.customLists}
+            top8={listOrg.top8}
+            upNext={listOrg.upNext}
+          />
+        )}
       </div>
     </div>
   );
