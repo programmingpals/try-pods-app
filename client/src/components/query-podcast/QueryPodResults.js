@@ -40,14 +40,7 @@ export default function QueryPodResults(props) {
               } else {
                 setPlayerSelected(false)
               }
-            }}>Player</button>
-            {playerSelected && 
-            <PodPlayer 
-            name={queryPod.name}
-            imageUrl={queryPod.imageUrl}
-            feedUrl={queryPod.rssUrl}
-            />
-            }
+            }}>Open Player</button>
             <p>
               <a href={`${queryPod.websiteUrl}`}>Website</a>
             </p>
@@ -57,6 +50,11 @@ export default function QueryPodResults(props) {
       <div className="podlist-description">
         <h4>Description: {queryPod.description}</h4>
       </div>
+      {playerSelected && 
+            <PodPlayer 
+            itunesId={queryPod.itunesId}
+            />
+            }
       <div class="podlist-grid-container">
         <EpListGrid podImage={queryPod.imageUrl} />
       </div>
