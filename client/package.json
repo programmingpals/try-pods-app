@@ -7,6 +7,7 @@
     "axios": "^0.18.0",
     "graphql": "^16.6.0",
     "react": "^18.2.0",
+    "react-animate-height": "^3.1.1",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.10.0",
     "react-scripts": "^3.0.0"

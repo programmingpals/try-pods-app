@@ -30,7 +30,9 @@ export default function QueryPodResults(props) {
             <p>Series type: {queryPod.seriesType}</p>
             <p>Is Completed? {queryPod.isCompleted}</p>
             <p>Total episodes: {queryPod.totalEpisodesCount}</p>
-            <p><a href={`${queryPod.websiteUrl}`}>Website</a></p>
+            <p>
+              <a href={`${queryPod.websiteUrl}`}>Website</a>
+            </p>
           </div>
         </div>
       </div>
@@ -38,26 +40,8 @@ export default function QueryPodResults(props) {
         <h4>Description: {queryPod.description}</h4>
       </div>
       <div class="podlist-grid-container">
-      <EpListGrid />
+        <EpListGrid />
       </div>
     </div>
-
-    // <div className="QueryPodResults">
-    //   <h3>QueryPodResults</h3>
-    //   <p>{queryPod.name}</p>
-    //   <p>{queryPod.description}</p>
-    //   <p>{queryPod.seriesType}</p>
-    //   <p>{queryPod.websiteUrl}</p>
-    //   <p>{queryPod.language}</p>
-    //   <p>{queryPod.authorName}</p>
-    //   <p>{queryPod.isCompleted}</p>
-    //   <p>{queryPod.totalEpisodesCount}</p>
-    //   <img src={queryPod.imageUrl} style={{ width: "125px" }} />
-    //   <Link to="/addpodcast" state={{ attributes: queryPod }}>
-    //     <p>Add to list</p>
-    //   </Link>
-
-    //   <EpListGrid />
-    // </div>
   );
 }
