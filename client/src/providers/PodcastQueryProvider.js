@@ -29,6 +29,7 @@ export default function PodcastQueryProvider(props) {
               totalEpisodesCount
               imageUrl
               childrenHash
+              rssUrl
               episodes{
                 uuid
                 name

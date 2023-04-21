@@ -1,10 +1,14 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { podcastQueryContext } from "../../providers/PodcastQueryProvider";
 import EpListGrid from "./EpListGrid";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
+import PodPlayer from "./PodPlayer";
 
 export default function QueryPodResults(props) {
+
+  const [playerSelected, setPlayerSelected] = useState(false)
+
   const { queryPod } = useContext(podcastQueryContext);
 
   const params = useParams();
@@ -30,6 +34,20 @@ export default function QueryPodResults(props) {
             <p>Series type: {queryPod.seriesType}</p>
             <p>Is Completed? {queryPod.isCompleted}</p>
             <p>Total episodes: {queryPod.totalEpisodesCount}</p>
+            <button onClick={() => {
+              if (!playerSelected) {
+              setPlayerSelected(true)
+              } else {
+                setPlayerSelected(false)
+              }
+            }}>Player</button>
+            {playerSelected && 
+            <PodPlayer 
+            name={queryPod.name}
+            imageUrl={queryPod.imageUrl}
+            feedUrl={queryPod.rssUrl}
+            />
+            }
             <p>
               <a href={`${queryPod.websiteUrl}`}>Website</a>
             </p>
