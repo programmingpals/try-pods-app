@@ -6,6 +6,9 @@ export default function EpListGrid(props) {
   const { episodeList } = useContext(podcastQueryContext);
 
   const episodes = episodeList.map((episode) => {
+
+    const epImage = episode.imageUrl? episode.imageUrl : props.podImage
+
     return (
       <EpListItem
         key={episode.uuid}
@@ -14,7 +17,7 @@ export default function EpListGrid(props) {
         datePublished={episode.datePublished}
         seasonNumber={episode.seasonNumber}
         description={episode.description}
-        imageUrl={episode.imageUrl}
+        imageUrl={epImage}
       />
     );
   });
