@@ -7,6 +7,8 @@ import { searchContext } from "../../providers/SearchToggleProvider";
 
 export default function PodList(props) {
   const [listDetails, setListDetails] = useState([]);
+  const [isLoading, setIsLoading] = useState(true)
+
   const { height, setHeight } = useContext(searchContext);
 
   const params = useParams();
@@ -16,11 +18,17 @@ export default function PodList(props) {
     const getListData = function (id) {
       axios.get(`/api/lists/${id}`).then((response) => {
         setListDetails(response.data.data.attributes);
+        setIsLoading(false);
         userId = response.data.data.attributes.user_id;
       });
     };
     getListData(`${params.id}`);
   }, []);
+
+  if(isLoading) {
+    return <p>...Loading</p>
+  }
+
 
   return (
     <div class="podlist">
@@ -44,9 +52,11 @@ export default function PodList(props) {
           </div>
         </div>
       </div>
+      
       <div className="podlist-grid-container">
-        <PodListGrid id={params.id} ownerId={userId} />
-      </div>
+      {!isLoading &&
+        <PodListGrid id={params.id} ownerId={userId} /> }
+      </div> 
     </div>
   );
 }
