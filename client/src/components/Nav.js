@@ -11,12 +11,12 @@ export default function Nav() {
     <div>
       <div class="nav">
         <div class="nav-left">
-          <Link to={"/"}>
+          <Link to={"/"} class="nav-link">
             <h4>Try-Pods</h4>
           </Link>
         </div>
         <div class="nav-right">
-          <a
+          <a class="nav-link"
             href="#"
             aria-expanded={height !== 0}
             aria-controls="example-panel"
@@ -25,7 +25,7 @@ export default function Nav() {
             {height === 0 ? "Search" : "Close Search"}
           </a>
           <p>
-            <Link to={"profilepage/1"}>My Profile</Link>
+            <Link to={"profilepage/1"} class="nav-link">My Profile</Link>
           </p>
           <p>Rowan</p>
         </div>

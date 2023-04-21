@@ -24,7 +24,7 @@ export default function List(props) {
   return (
     <div class="listitem">
       <Link to={`/podcastlist/${props.id}`}>
-        <p>{props.name}</p>
+        <h5>{props.name}</h5>
       </Link>
       <p>{props.description}</p>
 
