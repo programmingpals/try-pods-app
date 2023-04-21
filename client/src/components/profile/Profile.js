@@ -35,7 +35,6 @@ export default function Profile(props) {
           const userDetails = results[1];
           setUserLists(userLists);
           setUserDetails(userDetails);
-          console.log("userDetails", userDetails);
 
           let listOrg = {
             top8: {},
@@ -55,7 +54,6 @@ export default function Profile(props) {
 
           setListOrg(listOrg);
           setIsLoading(false);
-          console.log("ListOrg in promise.then", listOrg.top8);
         }
       );
     };
@@ -67,7 +65,7 @@ export default function Profile(props) {
     <div className="profile">
       <div className="profile-header">
         <div className="profile-details">
-          <p>{userDetails.avatar}</p>
+          <img src={userDetails.avatar} style={{ width: "125px" }} />
           <h2>{userDetails.first_name}</h2>
         </div>
         <div className="profile-top8">

@@ -9,9 +9,6 @@ export default function ListGrid(props) {
   const { user } = useContext(userContext);
   let userId = null;
 
-  console.log("custom lists", props.customLists);
-  console.log("upNext", props.upNext.id);
-
   const lists = props.customLists.map((list) => {
     userId = list.attributes.user_id;
     return (

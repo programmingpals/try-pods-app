@@ -232,9 +232,6 @@ h5 {
   font-size: 18px;
 }
 
-.nav-left {
-}
-
 .nav-right {
   display: flex;
   justify-content: space-between;
@@ -299,4 +296,24 @@ button {
   background-color: #ffffff;
   border-color: #d2e93c;
   font-family: "Chivo Mono";
+}
+
+.profile-header {
+  margin: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.profile-details {
+  width: 30%;
+}
+
+.profile-top8 {
+  max-width: 30%;
+}
+
+.top8-grid {
+  display: flex;
+  flex: row;
 }
