@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { userContext } from "../../providers/UserProvider";
 import AnimateHeight from "react-animate-height";
+import deleteIcon from "../../assets/icons/deleteIcon.png"
 
 export default function PodListItem(props) {
   const { user } = useContext(userContext);
@@ -35,7 +36,7 @@ export default function PodListItem(props) {
             <div className="podlist-item-actions">
               {(props.ownerId !== user && !showConfirmation) && (
                 <button onClick={() => setShowConfirmation(true)}>
-                  Delete Podcast
+                  <img src={deleteIcon} alt="Delete" style={{width: '20px', border: "none", color: "green"}}/>
                 </button>
               )}
               <div>
