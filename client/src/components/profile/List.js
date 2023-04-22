@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { userContext } from "../../providers/UserProvider";
@@ -6,9 +6,9 @@ import { userContext } from "../../providers/UserProvider";
 export default function List(props) {
   const { user } = useContext(userContext);
 
-  const deleteList = (id) => {
+  const deleteList = (userId, id) => {
     axios
-      .delete(`/api/lists/${id}`)
+      .delete(`/api/users/${userId}/lists/${id}`)
       .then((response) => {
         props.setUserLists((prev) => removeList(prev, id));
       })
@@ -29,7 +29,7 @@ export default function List(props) {
       <p>{props.description}</p>
 
       {props.ownerId === user && (
-        <button onClick={() => deleteList(props.id)}>Delete list</button>
+        <button onClick={() => deleteList(user, props.id)}>Delete list</button>
       )}
     </div>
   );
