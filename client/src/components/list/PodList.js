@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 
 export default function PodList(props) {
   const [listDetails, setListDetails] = useState([]);
-  const [isLoading, setIsLoading] = useState(true)
+  const [isLoading, setIsLoading] = useState(true);
   const [showConfirmation, setShowConfirmation] = useState(false);
 
   const { user } = useContext(userContext);
@@ -38,10 +38,9 @@ export default function PodList(props) {
     getListData(`${params.id}`);
   }, []);
 
-  if(isLoading) {
-    return <p>...Loading</p>
+  if (isLoading) {
+    return <p>...Loading</p>;
   }
-
 
   return (
     <div class="podlist">
@@ -55,12 +54,16 @@ export default function PodList(props) {
                 <button onClick={() => setShowConfirmation(true)}>
                   Delete List
                 </button>
-                )}
+              )}
               <div>
                 {showConfirmation && (
                   <div className="deletion-confirmation">
                     <p>Are you sure you want to delete this list?</p>
-                    <Link to={`/profilepage/${user}`}><button onClick={() => deleteList(user, params.id)}>Confirm Deletion</button></Link>
+                    <Link to={`/profilepage/${user}`} reloadDocument>
+                      <button onClick={() => deleteList(user, params.id)}>
+                        Confirm Deletion
+                      </button>
+                    </Link>
                     <button onClick={() => setShowConfirmation(false)}>
                       Cancel
                     </button>
@@ -81,11 +84,10 @@ export default function PodList(props) {
           </div>
         </div>
       </div>
-      
+
       <div className="podlist-grid-container">
-      {!isLoading &&
-        <PodListGrid id={params.id} ownerId={userId} /> }
-      </div> 
+        {!isLoading && <PodListGrid id={params.id} ownerId={userId} />}
+      </div>
     </div>
   );
 }
