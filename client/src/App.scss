@@ -42,7 +42,7 @@
 }
 
 hr {
-  margin: 0px -500px 40px -500px;
+  margin: 0px -500px 30px -500px;
   border: 0;
   border-top: 3px solid #c9c7c7;
   z-index: -1;
@@ -380,4 +380,18 @@ button :hover {
 
 .top8-item img {
   width: 75px;
+}
+
+.recommend-item,
+.friend-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0px 10px 0px 10px;
+}
+
+.recommend-item img,
+.friend-item img {
+  width: 40px;
+  margin-right: 10px;
 }
