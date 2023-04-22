@@ -7,7 +7,7 @@ export default function PodPlayer(props) {
     <iframe
       title="My Podcast Episode"
       width="100%"
-      height="500"
+      height="400"
       frameBorder="0"
       allowtransparency="true"
       src={itunesId}>

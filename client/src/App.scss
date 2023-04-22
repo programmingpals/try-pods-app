@@ -390,3 +390,16 @@ button :hover {
 .top8-item img {
   width: 75px;
 }
+
+
+.add-form {
+display: flex;
+flex-direction: row;
+justify-content: start;
+}
+
+.add-form input {
+  padding: 10px;
+  border-style: solid;
+  border-color: #d2e93c;
+}
