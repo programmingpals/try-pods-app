@@ -8,6 +8,7 @@ export default function PodResultItem(props) {
     props.setPodcast([]);
   }
 
+  console.log("props.attributes", props.attributes);
   return (
     <div className="search-results-item">
       {/* reloadDocument added to force reload and get updated query results- readdress as time permits */}

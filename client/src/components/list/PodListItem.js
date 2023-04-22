@@ -8,15 +8,29 @@ export default function PodListItem(props) {
   const { user } = useContext(userContext);
 
   const [height, setHeight] = useState(0);
+  const [showConfirmation, setShowConfirmation] = useState(false);
 
   const releaseFullDate = new Date(props.release_date * 1000);
   const release = releaseFullDate.toDateString();
 
-  const [showConfirmation, setShowConfirmation] = useState(false);
-
   const handleDelete = () => {
     props.delete(props.id);
     setShowConfirmation(false);
+  };
+
+  const podcast = {
+    authorName: props.attributes.authorName,
+    datePublished: props.attributes.release_date,
+    description: props.attributes.description,
+    imageUrl: props.attributes.image,
+    isCompleted: props.attributes.isCompleted,
+    itunesId: props.attributes.itunes_id,
+    language: props.attributes.language,
+    name: props.attributes.title,
+    rssUrl: props.attributes.rssUrl,
+    totalEpisodesCount: props.attributes.totalEpisodeCount,
+    uuid: props.attributes.pod_uuid,
+    websiteUrl: props.attributes.link,
   };
 
   return (
@@ -34,10 +48,15 @@ export default function PodListItem(props) {
           </div>
           <div className="details-row-right">
             <div className="podlist-item-actions">
-              {(props.ownerId !== user && !showConfirmation) && (
+              {props.ownerId === user && !showConfirmation && (
                 <button onClick={() => setShowConfirmation(true)}>
                   <img src={deleteIcon} alt="Delete" style={{width: '20px', border: "none", color: "green"}}/>
                 </button>
+              )}
+              {props.ownerId !== user && (
+                <Link to="/addpodcast" state={{ attributes: podcast }}>
+                  <button>My List +</button>
+                </Link>
               )}
               <div>
                 {showConfirmation && (
