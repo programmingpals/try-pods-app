@@ -43,9 +43,6 @@ export default function PodList(props) {
     return <p>...Loading</p>;
   }
 
-  console.log("user", user, "owner", owner);
-  console.log("listdetails", listDetails.name);
-
   return (
     <div class="podlist">
       <div class="page-header">
@@ -79,14 +76,16 @@ export default function PodList(props) {
               </div>
             </div>
             <div className="podlist-row-right">
-              <a
-                href="#"
-                aria-expanded={height !== 0}
-                aria-controls="example-panel"
-                onClick={() => setHeight(height === 0 ? "auto" : 0)}
-              >
-                {height === 0 ? "Add Podcasts" : "Close Search"}
-              </a>
+              {user === owner && (
+                <a
+                  href="#"
+                  aria-expanded={height !== 0}
+                  aria-controls="example-panel"
+                  onClick={() => setHeight(height === 0 ? "auto" : 0)}
+                >
+                  {height === 0 ? "Add Podcasts" : "Close Search"}
+                </a>
+              )}
             </div>
           </div>
         </div>

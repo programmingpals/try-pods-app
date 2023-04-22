@@ -17,6 +17,21 @@ export default function PodListItem(props) {
     setShowConfirmation(false);
   };
 
+  const podcast = {
+    authorName: props.attributes.authorName,
+    datePublished: props.attributes.release_date,
+    description: props.attributes.description,
+    imageUrl: props.attributes.image,
+    isCompleted: props.attributes.isCompleted,
+    itunesId: props.attributes.itunes_id,
+    language: props.attributes.language,
+    name: props.attributes.title,
+    rssUrl: props.attributes.rssUrl,
+    totalEpisodesCount: props.attributes.totalEpisodeCount,
+    uuid: props.attributes.pod_uuid,
+    websiteUrl: props.attributes.link,
+  };
+
   return (
     <div className="podlist-item">
       <div className="podlist-item-image">
@@ -36,6 +51,11 @@ export default function PodListItem(props) {
                 <button onClick={() => setShowConfirmation(true)}>
                   Delete Podcast
                 </button>
+              )}
+              {props.ownerId !== user && (
+                <Link to="/addpodcast" state={{ attributes: podcast }}>
+                  <button>My List +</button>
+                </Link>
               )}
               <div>
                 {showConfirmation && (

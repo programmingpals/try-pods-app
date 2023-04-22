@@ -35,6 +35,7 @@ export default function PodListGrid(props) {
     return (
       <PodListItem
         ownerId={props.ownerId}
+        attributes={podcast}
         key={podcast.id}
         id={podcast.id}
         uuid={podcast.pod_uuid}
