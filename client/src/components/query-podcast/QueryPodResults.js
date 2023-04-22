@@ -13,6 +13,12 @@ export default function QueryPodResults(props) {
 
   const params = useParams();
 
+
+  const seriesType = `${queryPod.seriesType}`
+  const seriesTypeLowerCase = seriesType.toLowerCase();
+  const seriesTypeTitleCase = seriesTypeLowerCase.charAt(0).toUpperCase() + seriesTypeLowerCase.slice(1);
+
+
   return (
     <div className="podlist">
       <div className="page-header">
@@ -25,30 +31,29 @@ export default function QueryPodResults(props) {
               <h2>{queryPod.name}</h2>
             </div>
             <div className="podlist-row-right">
-              <Link to="/addpodcast" state={{ attributes: queryPod }}>
-                <p>Add to list</p>
+              <Link to="/addpodcast" className="button-add" state={{ attributes: queryPod }}>
+                <p>Add to list +</p>
               </Link>
             </div>
           </div>
           <div className="podlist-row-mix">
-            <p>Series type: {queryPod.seriesType}</p>
-            <p>Is Completed? {queryPod.isCompleted}</p>
-            <p>Total episodes: {queryPod.totalEpisodesCount}</p>
-            <button onClick={() => {
+            <button className="button-blue">Series type: {seriesTypeTitleCase}</button>
+            <button className="button-blue">Total episodes: {queryPod.totalEpisodesCount}</button>
+            <button className="button-blue" onClick={() => {
               if (!playerSelected) {
               setPlayerSelected(true)
               } else {
                 setPlayerSelected(false)
               }
             }}>{playerSelected? "Close Player" : "Open Player"}</button>
-            <p>
+            <button>
               <a href={`${queryPod.websiteUrl}`}>Website</a>
-            </p>
+            </button>
           </div>
         </div>
       </div>
       <div className="podlist-description">
-        <h4>Description: {queryPod.description}</h4>
+        <h4>{queryPod.description}</h4>
       </div>
       {playerSelected && 
             <PodPlayer 

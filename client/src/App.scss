@@ -321,6 +321,24 @@ button :hover {
   box-shadow: 0 0 5px rgb(117, 125, 116);
 }
 
+.button-blue {
+  border-style: solid;
+  background-color: #ffffff;
+  border-color: #3af0d7;
+  font-family: "Chivo Mono";
+}
+
+.button-add {
+  border-style: solid;
+  background-color: #ffffff;
+  border-color: #3af0d7;
+  font-family: "Chivo Mono";
+  font-size: 16px;
+  padding-right: 5px;
+  padding-left: 5px;
+  margin-bottom: 20px;
+}
+
 .profile-header {
   margin: 80px 0px 0px 0px;
   display: flex;
