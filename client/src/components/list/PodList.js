@@ -5,11 +5,21 @@ import { useParams } from "react-router-dom";
 import { searchContext } from "../../providers/SearchToggleProvider";
 import { userContext } from "../../providers/UserProvider";
 import { Link } from "react-router-dom";
+import {
+  FacebookShareButton,
+  TwitterShareButton,
+  FacebookIcon,
+  TwitterIcon,
+  EmailShareButton,
+  EmailIcon
+} from "react-share";
+import mailIcon from  "../../assets/icons/mailIcon.png"
 
 export default function PodList(props) {
   const [listDetails, setListDetails] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [showConfirmation, setShowConfirmation] = useState(false);
+  const [owner, setOwner] = useState(0);
 
   const { user } = useContext(userContext);
 
@@ -26,13 +36,13 @@ export default function PodList(props) {
 
   const params = useParams();
 
-  let userId = 0;
   useEffect(() => {
     const getListData = function (id) {
       axios.get(`/api/lists/${id}`).then((response) => {
         setListDetails(response.data.data.attributes);
         setIsLoading(false);
-        userId = response.data.data.attributes.user_id;
+        const userId = response.data.data.attributes.user_id;
+        setOwner(userId);
       });
     };
     getListData(`${params.id}`);
@@ -50,11 +60,14 @@ export default function PodList(props) {
             <div class="podlist-row-left">
               <h1>{listDetails.name}</h1>
               <h4>{listDetails.description}</h4>
-              {!showConfirmation && (
-                <button onClick={() => setShowConfirmation(true)}>
-                  Delete List
-                </button>
-              )}
+              {!showConfirmation &&
+                user === owner &&
+                listDetails.name !== "Up Next" &&
+                listDetails.name !== "Top 8" && (
+                  <button onClick={() => setShowConfirmation(true)}>
+                    Delete List
+                  </button>
+                )}
               <div>
                 {showConfirmation && (
                   <div className="deletion-confirmation">
@@ -72,21 +85,40 @@ export default function PodList(props) {
               </div>
             </div>
             <div className="podlist-row-right">
-              <a
-                href="#"
-                aria-expanded={height !== 0}
-                aria-controls="example-panel"
-                onClick={() => setHeight(height === 0 ? "auto" : 0)}
-              >
-                {height === 0 ? "Add Podcasts" : "Close Search"}
-              </a>
+              {user === owner && (
+                <a
+                  href="#"
+                  aria-expanded={height !== 0}
+                  aria-controls="example-panel"
+                  onClick={() => setHeight(height === 0 ? "auto" : 0)}
+                >
+                  {height === 0 ? "Add Podcasts" : "Close Search"}
+                </a>
+              )}
+              <div className="share">
+                <EmailShareButton
+                subject="My Podcast List"
+                body={`http://localhost:3000/podcastlist/${params.id}`}
+                ><img src={mailIcon} style={{ width: "24px" }} />
+                </EmailShareButton>
+                <TwitterShareButton
+                  url={`http://localhost:3000/podcastlist/${params.id}`}
+                >
+                  <TwitterIcon size={24} round />
+                </TwitterShareButton>
+                <FacebookShareButton
+                  url={`http://localhost:3000/podcastlist/${params.id}`}
+                >
+                  <FacebookIcon size={24} round />
+                </FacebookShareButton>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
       <div className="podlist-grid-container">
-        {!isLoading && <PodListGrid id={params.id} ownerId={userId} />}
+        {!isLoading && <PodListGrid id={params.id} ownerId={owner} />}
       </div>
     </div>
   );

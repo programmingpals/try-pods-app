@@ -177,8 +177,17 @@ h5 {
 
 .podlist-row-right {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
+  justify-content: flex-end;
+  padding: 20px;
+}
+
+.podlist-row-right .share {
+  display: flex;
+  flex-direction: row;
+  padding-top: 10px;
+  justify-content: flex-end;
 }
 
 .podlist-row-mix {
@@ -381,6 +390,19 @@ button :hover {
 
 .top8-item img {
   width: 75px;
+}
+
+
+.add-form {
+display: flex;
+flex-direction: row;
+justify-content: start;
+}
+
+.add-form input {
+  padding: 10px;
+  border-style: solid;
+  border-color: #d2e93c;
 }
 
 // Homepage css
