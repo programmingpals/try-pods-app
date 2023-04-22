@@ -314,6 +314,11 @@ button {
   background-color: #ffffff;
   border-color: #d2e93c;
   font-family: "Chivo Mono";
+  transition: box-shadow 1s ease-in-out;
+}
+
+button :hover {
+  box-shadow: 0 0 5px rgb(117, 125, 116);
 }
 
 .profile-header {
