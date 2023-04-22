@@ -5,6 +5,12 @@ import { useParams } from "react-router-dom";
 import { searchContext } from "../../providers/SearchToggleProvider";
 import { userContext } from "../../providers/UserProvider";
 import { Link } from "react-router-dom";
+import {
+  FacebookShareButton,
+  TwitterShareButton,
+  FacebookIcon,
+  TwitterIcon,
+} from "react-share";
 
 export default function PodList(props) {
   const [listDetails, setListDetails] = useState([]);
@@ -86,6 +92,19 @@ export default function PodList(props) {
                   {height === 0 ? "Add Podcasts" : "Close Search"}
                 </a>
               )}
+              <div className="share">
+                <p>share</p>
+                <TwitterShareButton
+                  url={`http://localhost:3000/podcastlist/${params.id}`}
+                >
+                  <TwitterIcon size={24} round />
+                </TwitterShareButton>
+                <FacebookShareButton
+                  url={`http://localhost:3000/podcastlist/${params.id}`}
+                >
+                  <FacebookIcon size={24} round />
+                </FacebookShareButton>
+              </div>
             </div>
           </div>
         </div>

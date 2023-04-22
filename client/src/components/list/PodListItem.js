@@ -50,7 +50,7 @@ export default function PodListItem(props) {
             <div className="podlist-item-actions">
               {props.ownerId === user && !showConfirmation && (
                 <button onClick={() => setShowConfirmation(true)}>
-                  <img src={deleteIcon} alt="Delete" style={{width: '20px', border: "none", color: "green"}}/>
+                  <img src={deleteIcon} alt="Delete" style={{width: '18px', border: "none", color: "green"}}/>
                 </button>
               )}
               {props.ownerId !== user && (
