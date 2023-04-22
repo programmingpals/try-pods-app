@@ -116,7 +116,10 @@ export default function PodListItem(props) {
           </div>
         </div>
       </div>
-      {playerSelected && <PodPlayer itunesId={props.attributes.itunes_id} />}
+      {playerSelected && <PodPlayer 
+      itunesId={props.attributes.itunes_id} 
+      height={"450"}
+      />}
     </div>
   );
 }

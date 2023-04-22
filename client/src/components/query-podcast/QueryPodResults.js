@@ -58,6 +58,7 @@ export default function QueryPodResults(props) {
       {playerSelected && 
             <PodPlayer 
             itunesId={queryPod.itunesId}
+            height={"500"}
             />
             }
       <div class="podlist-grid-container">
