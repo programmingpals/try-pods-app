@@ -1,13 +1,26 @@
-import React, { Component, useState, useEffect, useContext } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import PodListGrid from "./PodListGrid";
 import axios from "axios";
 import { useParams } from "react-router-dom";
-import SearchToggleProvider from "../../providers/SearchToggleProvider";
 import { searchContext } from "../../providers/SearchToggleProvider";
+import { userContext } from "../../providers/UserProvider";
+import { Link } from "react-router-dom";
 
 export default function PodList(props) {
   const [listDetails, setListDetails] = useState([]);
   const [isLoading, setIsLoading] = useState(true)
+  const [showConfirmation, setShowConfirmation] = useState(false);
+
+  const { user } = useContext(userContext);
+
+  const deleteList = (userId, id) => {
+    axios
+      .delete(`/api/users/${userId}/lists/${id}`)
+      .then((response) => {
+        setShowConfirmation(false);
+      })
+      .catch((err) => console.log(err));
+  };
 
   const { height, setHeight } = useContext(searchContext);
 
@@ -38,6 +51,22 @@ export default function PodList(props) {
             <div class="podlist-row-left">
               <h1>{listDetails.name}</h1>
               <h4>{listDetails.description}</h4>
+              {!showConfirmation && (
+                <button onClick={() => setShowConfirmation(true)}>
+                  Delete List
+                </button>
+                )}
+              <div>
+                {showConfirmation && (
+                  <div className="deletion-confirmation">
+                    <p>Are you sure you want to delete this list?</p>
+                    <Link to={`/profilepage/${user}`}><button onClick={() => deleteList(user, params.id)}>Confirm Deletion</button></Link>
+                    <button onClick={() => setShowConfirmation(false)}>
+                      Cancel
+                    </button>
+                  </div>
+                )}
+              </div>
             </div>
             <div className="podlist-row-right">
               <a
