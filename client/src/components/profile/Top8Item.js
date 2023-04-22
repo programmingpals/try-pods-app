@@ -5,7 +5,7 @@ export default function Top8Item(props) {
   return (
     <div className="top8-item">
       <Link to={`/querypodcast/${props.uuid}`}>
-        <img src={`${props.image}`} style={{ width: "60px" }} />
+        <img src={`${props.image}`} />
       </Link>
     </div>
   );
