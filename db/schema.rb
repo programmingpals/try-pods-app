@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_04_19_193707) do
+ActiveRecord::Schema.define(version: 2023_04_22_025531) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -51,6 +51,7 @@ ActiveRecord::Schema.define(version: 2023_04_19_193707) do
     t.boolean "isCompleted"
     t.integer "totalEpisodeCount"
     t.string "rssUrl"
+    t.string "seriesType"
     t.index ["list_id"], name: "index_podcasts_on_list_id"
   end
 

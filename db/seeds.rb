@@ -58,7 +58,8 @@ isCompleted: false,
 totalEpisodeCount: 681,
 rssUrl: "https://feeds.simplecast.com/dxZsm5kX",
 image: "https://image.simplecastcdn.com/images/9aa1e238-cbed-4305-9808-c9228fc6dd4f/eb7dddd4-ecb0-444c-b379-f75d7dc6c22b/3000x3000/uploads-2f1595947484360-nc4atf9w7ur-dbbaa7ee07a1ee325ec48d2e666ac261-2fpodsave100daysfinal1800.jpg?aid=rss_feed",
-release_date: 1483719600
+release_date: 1483719600,
+seriesType: "EPISODIC"
 )
 
 podcast2 = Podcast.create(list_id: 4,
@@ -73,7 +74,8 @@ isCompleted: false,
 totalEpisodeCount: 1810,
 rssUrl: "https://feeds.simplecast.com/54nAGcIl",
 image: "https://image.simplecastcdn.com/images/03d8b493-87fc-4bd1-931f-8a8e9b945d8a/2cce5659-f647-4366-b318-46e4b67afcfa/3000x3000/c81936f538106550b804e7e4fe2c236319bab7fba37941a6e8f7e5c3d3048b88fc5b2182fb790f7d446bdc820406456c94287f245db89d8656c105d5511ec3de.jpeg?aid=rss_feed",
-release_date: 1484687987
+release_date: 1484687987,
+seriesType: "EPISODIC"
 )
 
 podcast3 = Podcast.create(list_id: 1,
@@ -88,7 +90,8 @@ isCompleted: false,
 totalEpisodeCount: 10,
 rssUrl: "https://www.thisamericanlife.org/podcast/rss.xml",
 image: "https://files.thisamericanlife.org/sites/all/themes/thislife/img/tal-name-1400x1400.png",
-release_date: 1630879200
+release_date: 1630879200,
+seriesType: "EPISODIC"
 )
 
 podcast4 = Podcast.create(list_id: 8,
@@ -103,7 +106,8 @@ podcast4 = Podcast.create(list_id: 8,
 "totalEpisodeCount": 184,
 "rssUrl": "https://www.google.com/sorry/index?continue=https://feeds.feedburner.com/TEDTalks_audio&q=EgQi2Uj1GJ-KjJ8GIjBy1q7u3XbFFwRKfNhtpuTXKhcBSekrRex1KI_rUo-y7qxPUvd4guqtTTwfvoOOYXUyAmNy",
 "image": "https://pl.tedcdn.com/rss_feed_images/ted_talks_main_podcast/audio.png",
-"release_date": 1616413891
+"release_date": 1616413891,
+"seriesType": "EPISODIC",
 )
 
 podcast5 = Podcast.create(list_id: 7,
@@ -118,7 +122,8 @@ podcast5 = Podcast.create(list_id: 7,
 "totalEpisodeCount": 76,
 "rssUrl": "https://feeds.simplecast.com/xl36XBC2",
 "image": "https://image.simplecastcdn.com/images/420025f0-46ea-493d-bf27-5999548228e9/a4c10b58-706f-4037-bc5b-4ec0f60d759b/3000x3000/nyt-serialprod-album-1400.jpg?aid=rss_feed",
-"release_date": 1412343900
+"release_date": 1412343900,
+"seriesType": "SERIAL"
 )
 
 podcast6 = Podcast.create(list_id: 5,
@@ -133,7 +138,8 @@ podcast6 = Podcast.create(list_id: 5,
 "totalEpisodeCount": 76,
 "rssUrl": "https://feeds.simplecast.com/xl36XBC2",
 "image": "https://image.simplecastcdn.com/images/420025f0-46ea-493d-bf27-5999548228e9/a4c10b58-706f-4037-bc5b-4ec0f60d759b/3000x3000/nyt-serialprod-album-1400.jpg?aid=rss_feed",
-"release_date": 1412343900
+"release_date": 1412343900,
+"seriesType": "SERIAL"
 )
 
 podcast7 = Podcast.create(list_id: 5,
@@ -148,7 +154,8 @@ podcast7 = Podcast.create(list_id: 5,
 "totalEpisodeCount": 20,
 "rssUrl": "https://feeds.simplecast.com/RGpV1rjX",
 "image": "https://image.simplecastcdn.com/images/b2f51d28-b3c7-4fd9-9447-abfd02b11418/edaa29d5-078d-414c-abdc-7f37ca397197/3000x3000/bb2-logofinal.jpg?aid=rss_feed",
-"release_date": 1533675120
+"release_date": 1533675120,
+"seriesType": "SERIAL"
 )
 
 podcast8 = Podcast.create(list_id: 5,
@@ -163,7 +170,8 @@ podcast8 = Podcast.create(list_id: 5,
 "totalEpisodeCount": 733,
 "rssUrl": "https://rss.art19.com/erm-mfm",
 "image": "https://content.production.cdn.art19.com/images/a0/41/3a/14/a0413a14-d1e5-4504-bc80-536db1f74ad9/f89549f7a47bd7b39fda30cfc5636b72dd3103592fe5bc3e19d3b50845720c3215dc336b34fe868a3e04a979835b526a17f57847ac83c77252861d6ea581e531.jpeg",
-"release_date": 1452731900
+"release_date": 1452731900,
+"seriesType": "EPISODIC"
 )
 
 podcast9 = Podcast.create(list_id: 5,
@@ -178,7 +186,8 @@ podcast9 = Podcast.create(list_id: 5,
 "totalEpisodeCount": 314,
 "rssUrl": "https://feeds.simplecast.com/qm_9xx0g",
 "image": "https://image.simplecastcdn.com/images/7d68c467-d3d7-41c3-b7c0-92218b530432/2751cf9a-6c0b-442d-be20-579194bd385b/3000x3000/crime-junkie-show-art.jpg?aid=rss_feed",
-"release_date": 1513555260
+"release_date": 1513555260,
+"seriesType": "EPISODIC"
 )
 
 podcast10 = Podcast.create(list_id: 3,
@@ -193,7 +202,9 @@ podcast10 = Podcast.create(list_id: 3,
 "totalEpisodeCount": 362,
 "rssUrl": "https://feeds.simplecast.com/dHoohVNH",
 "image": "https://image.simplecastcdn.com/images/d139afc2-e8b0-4ec2-bc74-fdc3c88f649a/6223229f-44ee-42fe-af91-83a4bdd87f00/3000x3000/screen-shot-2023-04-03-at-9-34-20-am.jpg?aid=rss_feed",
-"release_date": 1538607600)
+"release_date": 1538607600,
+"seriesType": "EPISODIC"
+)
 
 podcast11 = Podcast.create(list_id: 5,
 "pod_uuid": "de7ecc53-b64e-49ed-ab7b-ff8887a9cc59",
@@ -207,7 +218,8 @@ podcast11 = Podcast.create(list_id: 5,
 "totalEpisodeCount": 13,
 "rssUrl": "https://rss.art19.com/dr-death",
 "image": "https://content.production.cdn.art19.com/images/d4/06/1f/5b/d4061f5b-c6d1-4304-b9d7-5e793455243a/70623915db6adec4a72cdaa15bbab7d79575e4eaaf31e3daabc2d6ea87a45d53f726ae8a94d6027f5d5a5413df5431bd21a46dc575968c0bc42e7e8acbbc4b89.jpeg",
-"release_date": 1534921500
+"release_date": 1534921500,
+"seriesType": "SERIAL"
 )
 
 podcast12 = Podcast.create(list_id: 8,
@@ -222,7 +234,8 @@ podcast12 = Podcast.create(list_id: 8,
 "totalEpisodeCount": 9,
 "rssUrl": "https://feeds.simplecast.com/B9KgArY4",
 "image": "https://image.simplecastcdn.com/images/4105a47a-42e5-4ccc-887a-832af7989986/994e07c0-bda9-48e1-bc7f-729c161e685b/3000x3000/nyt-s-thorse-albumartwork-3000.jpg?aid=rss_feed",
-"release_date": 1643281200
+"release_date": 1643281200,
+"seriesType": "SERIAL"
 )
 
 podcast13 = Podcast.create(list_id: 2,
@@ -237,7 +250,8 @@ podcast13 = Podcast.create(list_id: 2,
 "totalEpisodeCount": 274,
 "rssUrl": "https://feed.songexploder.net/SongExploder",
 "image": "https://f.prxu.org/song-exploder/images/be38e299-c8df-4c7c-ac77-ea4b8723e23d/Song_Exploder.png",
-"release_date": 1388565000
+"release_date": 1388565000,
+"seriesType": "EPISODIC"
 )
 
 
@@ -253,7 +267,8 @@ podcast14 = Podcast.create(list_id: 2,
 "totalEpisodeCount": 60,
 "rssUrl": "https://feeds.simplecast.com/Ao0C24M8",
 "image": "https://image.simplecastcdn.com/images/a35fca4e-944a-4ccb-bc7b-d678b2c11e9d/9a9cbdd6-22c3-4a6f-be04-49316ffeeaa7/3000x3000/ear-cover-hdtgm-3000x3000-r2017-final.jpg?aid=rss_feed",
-"release_date": 1291190400
+"release_date": 1291190400,
+"seriesType": "EPISODIC"
 )
 
 podcast15 = Podcast.create(list_id: 7,
@@ -268,7 +283,8 @@ podcast15 = Podcast.create(list_id: 7,
 "totalEpisodeCount": 189,
 "rssUrl": "https://feeds.buzzsprout.com/1112270.rss",
 "image": "https://storage.buzzsprout.com/variants/2d605m8uneahqo4polewo18qw4f4/5cfec01b44f3e29fae1fb88ade93fc4aecd05b192fbfbc2c2f1daa412b7c1921.jpg",
-"release_date": 1525291200
+"release_date": 1525291200,
+"seriesType": "EPISODIC"
 )
 
 podcast16 = Podcast.create(list_id: 7,
@@ -283,7 +299,8 @@ podcast16 = Podcast.create(list_id: 7,
 "totalEpisodeCount": 32,
 "rssUrl": "https://publicfeeds.net/f/3492/feed-rss.xml",
 "image": "https://f.prxu.org/3492/images/01e4145d-1e06-4521-8548-d6c9072e53c3/Show_Cover_Normal_Gossip_red_v5.jpg",
-"release_date": 1637188021
+"release_date": 1637188021,
+"seriesType": "EPISODIC"
 )
 
 podcast17 = Podcast.create(list_id: 2,
@@ -298,7 +315,8 @@ podcast17 = Podcast.create(list_id: 2,
 "totalEpisodeCount": 276,
 "rssUrl": "https://feeds.simplecast.com/CbCOMZ03",
 "image": "https://image.simplecastcdn.com/images/ff5c9684-fb4e-4966-a33d-7941e89e2281/1063f746-604d-4707-bd43-a1520175a218/3000x3000/keepit-ig-1080x1080.jpg?aid=rss_feed",
-"release_date": 1513091797
+"release_date": 1513091797,
+"seriesType": "EPISODIC"
 )
 
 podcast18 = Podcast.create(list_id: 2,
@@ -313,7 +331,8 @@ podcast18 = Podcast.create(list_id: 2,
 "totalEpisodeCount": 215,
 "rssUrl": "https://feeds.megaphone.fm/YMRT7068253588",
 "image": "https://megaphone.imgix.net/podcasts/9da5743e-d296-11ea-b5e1-0f0c0fb63e47/image/image.jpg?ixlib=rails-4.3.1&max-w=3000&max-h=3000&fit=crop&auto=format,compress",
-"release_date": 1397683140
+"release_date": 1397683140,
+"seriesType": "EPISODIC"
 )
 
 podcast19 = Podcast.create(list_id: 2,
@@ -328,7 +347,8 @@ podcast19 = Podcast.create(list_id: 2,
 "totalEpisodeCount": 184,
 "rssUrl": "https://feeds.simplecast.com/PxEW_ipK",
 "image": "https://image.simplecastcdn.com/images/d139afc2-e8b0-4ec2-bc74-fdc3c88f649a/2531b112-7436-47dc-8ed6-fb6b68296e3c/3000x3000/stitcher-cover-officeladies-3000x3000-final-1.jpg?aid=rss_feed",
-"release_date": 1569409200
+"release_date": 1569409200,
+"seriesType": "EPISODIC"
 )
 
 podcast20 = Podcast.create(list_id: 2,
@@ -343,7 +363,8 @@ podcast20 = Podcast.create(list_id: 2,
 "totalEpisodeCount": 300,
 "rssUrl": "https://feeds.npr.org/510282/podcast.xml",
 "image": "https://media.npr.org/assets/img/2022/09/23/popculture-happyhour_tile_npr-network-01_sq-a6085eb399896271a87a1983ae3c6c702f69dcd9.jpg?s=1400&c=66&f=jpg",
-"release_date": 1598540525
+"release_date": 1598540525,
+"seriesType": "EPISODIC"
 )
 
 podcast21 = Podcast.create(list_id: 3,
@@ -358,7 +379,8 @@ podcast21 = Podcast.create(list_id: 3,
 "totalEpisodeCount": 960,
 "rssUrl": "https://access.acast.com/rss/62a222737c02140013aa4c03/",
 "image": "https://assets.pippa.io/shows/62a222737c02140013aa4c03/1656679440477-8e0e5db81e3f07c927b0032af2591499.jpeg",
-"release_date": 1401296880
+"release_date": 1401296880,
+"seriesType": "EPISODIC"
 )
 
 podcast22 = Podcast.create(list_id: 3,
@@ -373,7 +395,8 @@ podcast22 = Podcast.create(list_id: 3,
 "totalEpisodeCount": 111,
 "rssUrl": "https://feeds.simplecast.com/byb4nhvN",
 "image": "https://image.simplecastcdn.com/images/a35fca4e-944a-4ccb-bc7b-d678b2c11e9d/ff9cb7ab-74e1-4a8a-98c5-48613e5d500b/3000x3000/ear-cover-comedybangbang-2018refresh-3000x3000-final-1.jpg?aid=rss_feed",
-"release_date": 1241136000
+"release_date": 1241136000,
+"seriesType": "EPISODIC"
 )
 
 podcast23 = Podcast.create(list_id: 3,
@@ -388,7 +411,8 @@ podcast23 = Podcast.create(list_id: 3,
 "totalEpisodeCount": 300,
 "rssUrl": "https://feeds.npr.org/344098539/podcast.xml",
 "image": "https://media.npr.org/assets/img/2022/09/23/waitwait-don-t-tell-me_tile_npr-network-01_sq-d51413832c7ccf5301741d7f1ee2e1853fed9597.jpg?s=1400&c=66&f=jpg",
-"release_date": 1537903380
+"release_date": 1537903380,
+"seriesType": "EPISODIC"
 )
 
 podcast24 = Podcast.create(list_id: 4,
@@ -403,7 +427,8 @@ podcast24 = Podcast.create(list_id: 4,
 "totalEpisodeCount": 29,
 "rssUrl": "https://www.cbc.ca/podcasting/includes/atissue.xml",
 "image": "https://www.cbc.ca/radio/podcasts/images/atissue-promo.jpg",
-"release_date": 1622693400
+"release_date": 1622693400,
+"seriesType": "EPISODIC"
 )
 
 podcast25 = Podcast.create(list_id: 4,
@@ -418,7 +443,8 @@ podcast25 = Podcast.create(list_id: 4,
 "totalEpisodeCount": 435,
 "rssUrl": "https://feeds.megaphone.fm/pivot",
 "image": "https://megaphone.imgix.net/podcasts/d6280242-e5c9-11e8-a7e3-d766bb7d2d3e/image/uploads_2F1589209751803-3cf2fk1zbft-d7b74cb4d52d7b18877546f240df7151_2FPivot_TileArt_FINAL.png?ixlib=rails-4.3.1&max-w=3000&max-h=3000&fit=crop&auto=format,compress",
-"release_date": 1537812480
+"release_date": 1537812480,
+"seriesType": "EPISODIC"
 )
 
 podcast26 = Podcast.create(list_id: 4,
@@ -433,7 +459,8 @@ podcast26 = Podcast.create(list_id: 4,
 "totalEpisodeCount": 1300,
 "rssUrl": "https://feeds.megaphone.fm/VMP5705694065",
 "image": "https://megaphone.imgix.net/podcasts/23d52a2a-1c5f-11ea-9a0e-b70170f2a827/image/uploads_2F1588357113366-jjsdfzx6x4m-c0339c10f9b113a5fcc93436e66e5ef4_2FTodayExplained%2BV2_Tile_3000x3000%2B_281_29.png?ixlib=rails-4.3.1&max-w=3000&max-h=3000&fit=crop&auto=format,compress",
-"release_date": 1519073400
+"release_date": 1519073400,
+"seriesType": "EPISODIC"
 )
 
 podcast27 = Podcast.create(list_id: 1,
@@ -448,7 +475,8 @@ podcast27 = Podcast.create(list_id: 1,
 "totalEpisodeCount": 8,
 "rssUrl": "https://feeds.simplecast.com/CpvnpIaj",
 "image": "https://image.simplecastcdn.com/images/198280b3-d57c-4a19-b5cf-5da06323f149/bb86886a-34ff-4f96-a350-c6590ebb2e60/3000x3000/s-town-itunes-artwork.jpg?aid=rss_feed",
-"release_date": 1490689800
+"release_date": 1490689800,
+"seriesType": "SERIAL"
 )
 
 podcast28 = Podcast.create(list_id: 6,
@@ -463,7 +491,8 @@ podcast28 = Podcast.create(list_id: 6,
 "totalEpisodeCount": 286,
 "rssUrl": "https://feeds.simplecast.com/pjFgZKk1",
 "image": "https://image.simplecastcdn.com/images/2253ffaf-48ca-4d43-8cae-d5b0932e6e0a/c6e18a44-14e5-4c7a-bfa6-65a882ed04db/3000x3000/image.jpg?aid=rss_feed",
-"release_date": 1510776524
+"release_date": 1510776524,
+"seriesType": "EPISODIC"
 )
 
 podcast29 = Podcast.create(list_id: 3,
@@ -478,7 +507,8 @@ podcast29 = Podcast.create(list_id: 3,
 "totalEpisodeCount": 669,
 "rssUrl": "https://feeds.simplecast.com/wjQvYtdl",
 "image": "https://image.simplecastcdn.com/images/9ba52d4c-4e8c-4203-a3de-be89969671f2/13b53677-6ef7-4079-a079-80814f584e14/3000x3000/mbmbam-cover-final.jpg?aid=rss_feed",
-"release_date": 1271035560
+"release_date": 1271035560,
+"seriesType": "EPISODIC"
 )
 
 podcast30 = Podcast.create(list_id: 1,
@@ -493,7 +523,8 @@ podcast30 = Podcast.create(list_id: 1,
 "totalEpisodeCount": 148,
 "rssUrl": "https://rss.art19.com/smartless",
 "image": "https://content.production.cdn.art19.com/images/f2/c3/d0/57/f2c3d057-7482-4a12-8275-64ab40fdec57/8219ba09564eb8780565c7a21f79f61ef73fe090e0a060136485a3b7cec6319fed0caa8e26af1dcb4487b1d4bc9254a4b43e2f1d446d939e275d11d7868dbd14.jpeg",
-"release_date": 1594126800
+"release_date": 1594126800,
+"seriesType": "EPISODIC"
 )
 
 podcast31 = Podcast.create(list_id: 6,
@@ -508,7 +539,8 @@ podcast31 = Podcast.create(list_id: 6,
 "totalEpisodeCount": 32,
 "rssUrl": "https://publicfeeds.net/f/3492/feed-rss.xml",
 "image": "https://f.prxu.org/3492/images/01e4145d-1e06-4521-8548-d6c9072e53c3/Show_Cover_Normal_Gossip_red_v5.jpg",
-"release_date": 1637188021
+"release_date": 1637188021,
+"seriesType": "EPISODIC"
 )
 
 podcast32 = Podcast.create(list_id: 6,
@@ -523,7 +555,8 @@ podcast32 = Podcast.create(list_id: 6,
 "totalEpisodeCount": 369,
 "rssUrl": "https://feeds.simplecast.com/9YNI3WaL",
 "image": "https://image.simplecastcdn.com/images/2dcfae8f-b2e0-4826-a483-1306d3b8be06/d8c21569-e9eb-41d5-b1d0-70d9ea0c8ddc/3000x3000/dhj-podcastartwork-2021-v1.jpg?aid=rss_feed",
-"release_date": 1433764800
+"release_date": 1433764800,
+"seriesType": "EPISODIC"
 )
 
 podcast33 = Podcast.create(list_id: 7,
@@ -538,7 +571,8 @@ podcast33 = Podcast.create(list_id: 7,
 "totalEpisodeCount": 318,
 "rssUrl": "https://feeds.simplecast.com/FO6kxYGj",
 "image": "https://image.simplecastcdn.com/images/89060b63-e603-4297-b6e8-5a654e50244e/f9713c33-7eca-4512-8d96-7a668e274cb2/3000x3000/image.jpg?aid=rss_feed",
-"release_date": 1504501979
+"release_date": 1504501979,
+"seriesType": "EPISODIC"
 )
 
 podcast34 = Podcast.create(list_id: 7,
@@ -553,7 +587,8 @@ podcast34 = Podcast.create(list_id: 7,
 "totalEpisodeCount": 216,
 "rssUrl": "https://feeds.acast.com/public/shows/b19ac1f5-6adf-4c8b-aa1a-2af2160f99e4",
 "image": "https://assets.pippa.io/shows/61ba04aa1a8cbee88a3cf0d8/show-cover.jpg",
-"release_date": 1542391959
+"release_date": 1542391959,
+"seriesType": "EPISODIC"
 )
 
 podcast35 = Podcast.create(list_id: 7,
@@ -568,7 +603,8 @@ podcast35 = Podcast.create(list_id: 7,
 "totalEpisodeCount": 278,
 "rssUrl": "https://feeds.simplecast.com/cYQVc__c",
 "image": "https://image.simplecastcdn.com/images/9ba52d4c-4e8c-4203-a3de-be89969671f2/67af38f8-6bc7-4905-b899-1fa5b4f15e74/3000x3000/steeplechase.jpg?aid=rss_feed",
-"release_date": 1417621203
+"release_date": 1417621203,
+"seriesType": "EPISODIC"
 )
 
 podcast36 = Podcast.create(list_id: 7,
@@ -583,7 +619,8 @@ podcast36 = Podcast.create(list_id: 7,
 "totalEpisodeCount": 64,
 "rssUrl": "https://feeds.buzzsprout.com/1411126.rss",
 "image": "https://storage.buzzsprout.com/variants/4k2yt7zufginqdye9p6ws96sx8gj/5cfec01b44f3e29fae1fb88ade93fc4aecd05b192fbfbc2c2f1daa412b7c1921.jpg",
-"release_date": 1602457200
+"release_date": 1602457200,
+"seriesType": "EPISODIC"
 )
 
 podcast37 = Podcast.create(list_id: 6,
@@ -598,7 +635,8 @@ podcast37 = Podcast.create(list_id: 6,
 "totalEpisodeCount": 64,
 "rssUrl": "https://feeds.buzzsprout.com/1411126.rss",
 "image": "https://storage.buzzsprout.com/variants/4k2yt7zufginqdye9p6ws96sx8gj/5cfec01b44f3e29fae1fb88ade93fc4aecd05b192fbfbc2c2f1daa412b7c1921.jpg",
-"release_date": 1602457200
+"release_date": 1602457200,
+"seriesType": "EPISODIC"
 )
 
 podcast38 = Podcast.create(list_id: 6,
@@ -613,7 +651,8 @@ podcast38 = Podcast.create(list_id: 6,
 "totalEpisodeCount": 847,
 "rssUrl": "https://feeds.megaphone.fm/happier",
 "image": "https://megaphone.imgix.net/podcasts/32ecfb42-8289-11e5-b42a-8f36c3d2bc76/image/Happier_with_Gretchen_Rubin_FINAL.png?ixlib=rails-4.3.1&max-w=3000&max-h=3000&fit=crop&auto=format,compress",
-"release_date": 1424829480
+"release_date": 1424829480,
+"seriesType": "EPISODIC"
 )
 
 podcast39 = Podcast.create(list_id: 6,
@@ -628,7 +667,8 @@ isCompleted: false,
 totalEpisodeCount: 681,
 rssUrl: "https://feeds.simplecast.com/dxZsm5kX",
 image: "https://image.simplecastcdn.com/images/9aa1e238-cbed-4305-9808-c9228fc6dd4f/eb7dddd4-ecb0-444c-b379-f75d7dc6c22b/3000x3000/uploads-2f1595947484360-nc4atf9w7ur-dbbaa7ee07a1ee325ec48d2e666ac261-2fpodsave100daysfinal1800.jpg?aid=rss_feed",
-release_date: 1483719600
+release_date: 1483719600,
+"seriesType": "EPISODIC"
 )
 
 podcast40 = Podcast.create(list_id: 10,
@@ -643,7 +683,8 @@ isCompleted: false,
 totalEpisodeCount: 681,
 rssUrl: "https://feeds.simplecast.com/dxZsm5kX",
 image: "https://image.simplecastcdn.com/images/9aa1e238-cbed-4305-9808-c9228fc6dd4f/eb7dddd4-ecb0-444c-b379-f75d7dc6c22b/3000x3000/uploads-2f1595947484360-nc4atf9w7ur-dbbaa7ee07a1ee325ec48d2e666ac261-2fpodsave100daysfinal1800.jpg?aid=rss_feed",
-release_date: 1483719600
+release_date: 1483719600,
+"seriesType": "EPISODIC"
 )
 
 podcast41 = Podcast.create(list_id: 10,
@@ -658,7 +699,8 @@ podcast41 = Podcast.create(list_id: 10,
 "totalEpisodeCount": 286,
 "rssUrl": "https://feeds.simplecast.com/pjFgZKk1",
 "image": "https://image.simplecastcdn.com/images/2253ffaf-48ca-4d43-8cae-d5b0932e6e0a/c6e18a44-14e5-4c7a-bfa6-65a882ed04db/3000x3000/image.jpg?aid=rss_feed",
-"release_date": 1510776524
+"release_date": 1510776524,
+"seriesType": "EPISODIC"
 )
 
 podcast42 = Podcast.create(list_id: 10,
@@ -673,7 +715,8 @@ podcast42 = Podcast.create(list_id: 10,
 "totalEpisodeCount": 847,
 "rssUrl": "https://feeds.megaphone.fm/happier",
 "image": "https://megaphone.imgix.net/podcasts/32ecfb42-8289-11e5-b42a-8f36c3d2bc76/image/Happier_with_Gretchen_Rubin_FINAL.png?ixlib=rails-4.3.1&max-w=3000&max-h=3000&fit=crop&auto=format,compress",
-"release_date": 1424829480
+"release_date": 1424829480,
+"seriesType": "EPISODIC"
 )
 
 podcast43 = Podcast.create(list_id: 10,
@@ -688,7 +731,8 @@ podcast43 = Podcast.create(list_id: 10,
 "totalEpisodeCount": 32,
 "rssUrl": "https://publicfeeds.net/f/3492/feed-rss.xml",
 "image": "https://f.prxu.org/3492/images/01e4145d-1e06-4521-8548-d6c9072e53c3/Show_Cover_Normal_Gossip_red_v5.jpg",
-"release_date": 1637188021
+"release_date": 1637188021,
+"seriesType": "EPISODIC"
 )
 
 podcast44 = Podcast.create(list_id: 10,
@@ -703,7 +747,8 @@ podcast44 = Podcast.create(list_id: 10,
 "totalEpisodeCount": 64,
 "rssUrl": "https://feeds.buzzsprout.com/1411126.rss",
 "image": "https://storage.buzzsprout.com/variants/4k2yt7zufginqdye9p6ws96sx8gj/5cfec01b44f3e29fae1fb88ade93fc4aecd05b192fbfbc2c2f1daa412b7c1921.jpg",
-"release_date": 1602457200
+"release_date": 1602457200,
+"seriesType": "EPISODIC"
 )
 
 podcast45 = Podcast.create(list_id: 10,
@@ -718,7 +763,8 @@ podcast45 = Podcast.create(list_id: 10,
 "totalEpisodeCount": 276,
 "rssUrl": "https://feeds.simplecast.com/CbCOMZ03",
 "image": "https://image.simplecastcdn.com/images/ff5c9684-fb4e-4966-a33d-7941e89e2281/1063f746-604d-4707-bd43-a1520175a218/3000x3000/keepit-ig-1080x1080.jpg?aid=rss_feed",
-"release_date": 1513091797
+"release_date": 1513091797,
+"seriesType": "EPISODIC"
 )
 
 podcast46 = Podcast.create(list_id: 10,
@@ -733,7 +779,8 @@ podcast46 = Podcast.create(list_id: 10,
 "totalEpisodeCount": 301,
 "rssUrl": "https://feeds.simplecast.com/pdSmCK46",
 "image": "https://image.simplecastcdn.com/images/ff5c9684-fb4e-4966-a33d-7941e89e2281/eb29e619-3c03-44a2-a05e-cc7106494617/3000x3000/loli-512x512.jpg?aid=rss_feed",
-"release_date": 1489683618
+"release_date": 1489683618,
+"seriesType": "EPISODIC"
 )
 
 podcast47 = Podcast.create(list_id: 10,
@@ -748,7 +795,8 @@ podcast47 = Podcast.create(list_id: 10,
 "totalEpisodeCount": 369,
 "rssUrl": "https://feeds.simplecast.com/9YNI3WaL",
 "image": "https://image.simplecastcdn.com/images/2dcfae8f-b2e0-4826-a483-1306d3b8be06/d8c21569-e9eb-41d5-b1d0-70d9ea0c8ddc/3000x3000/dhj-podcastartwork-2021-v1.jpg?aid=rss_feed",
-"release_date": 1433764800
+"release_date": 1433764800,
+"seriesType": "EPISODIC"
 )
 
 podcast48 = Podcast.create(list_id: 11,
@@ -763,7 +811,8 @@ podcast48 = Podcast.create(list_id: 11,
 "totalEpisodeCount": 64,
 "rssUrl": "https://feeds.buzzsprout.com/1411126.rss",
 "image": "https://storage.buzzsprout.com/variants/4k2yt7zufginqdye9p6ws96sx8gj/5cfec01b44f3e29fae1fb88ade93fc4aecd05b192fbfbc2c2f1daa412b7c1921.jpg",
-"release_date": 1602457200
+"release_date": 1602457200,
+"seriesType": "EPISODIC"
 )
 
 podcast49 = Podcast.create(list_id: 11,
@@ -778,7 +827,8 @@ podcast49 = Podcast.create(list_id: 11,
 "totalEpisodeCount": 334,
 "rssUrl": "https://hatelovepodcast.com/rss",
 "image": "https://ssl-static.libsyn.com/p/assets/f/e/f/2/fef214c3b89acb0f/IHIBILI_Square_iTunes2018.jpg",
-"release_date": 1487557951
+"release_date": 1487557951,
+"seriesType": "EPISODIC"
 )
 
 podcast50 = Podcast.create(list_id: 11,
@@ -793,7 +843,8 @@ podcast50 = Podcast.create(list_id: 11,
 "totalEpisodeCount": 216,
 "rssUrl": "https://feeds.acast.com/public/shows/b19ac1f5-6adf-4c8b-aa1a-2af2160f99e4",
 "image": "https://assets.pippa.io/shows/61ba04aa1a8cbee88a3cf0d8/show-cover.jpg",
-"release_date": 1542391959
+"release_date": 1542391959,
+"seriesType": "EPISODIC"
 )
 
 podcast51 = Podcast.create(list_id: 11,
@@ -808,7 +859,8 @@ podcast51 = Podcast.create(list_id: 11,
 "totalEpisodeCount": 10,
 "rssUrl": "https://blart.libsyn.com/rss",
 "image": "https://ssl-static.libsyn.com/p/assets/2/1/9/7/2197f92ee38c1b0e/BlartIconResample.jpg",
-"release_date": 1447444955
+"release_date": 1447444955,
+"seriesType": "EPISODIC"
 )
 
 podcast52 = Podcast.create(list_id: 11,
@@ -823,7 +875,8 @@ podcast52 = Podcast.create(list_id: 11,
 "totalEpisodeCount": 32,
 "rssUrl": "https://publicfeeds.net/f/3492/feed-rss.xml",
 "image": "https://f.prxu.org/3492/images/01e4145d-1e06-4521-8548-d6c9072e53c3/Show_Cover_Normal_Gossip_red_v5.jpg",
-"release_date": 1637188021
+"release_date": 1637188021,
+"seriesType": "EPISODIC"
 )
 
 podcast53 = Podcast.create(list_id: 11,
@@ -838,7 +891,8 @@ podcast53 = Podcast.create(list_id: 11,
 "totalEpisodeCount": 23,
 "rssUrl": "https://feed.articlesofinterest.club/",
 "image": "https://f.prxu.org/187/images/4610f1dc-cafa-4b1b-8dd0-52a384c81214/Articles_of_Interest.png",
-"release_date": 1544122140
+"release_date": 1544122140,
+"seriesType": "EPISODIC"
 )
 
 podcast54 = Podcast.create(list_id: 11,
@@ -853,7 +907,8 @@ podcast54 = Podcast.create(list_id: 11,
 "totalEpisodeCount": 189,
 "rssUrl": "https://feeds.buzzsprout.com/1112270.rss",
 "image": "https://storage.buzzsprout.com/variants/2d605m8uneahqo4polewo18qw4f4/5cfec01b44f3e29fae1fb88ade93fc4aecd05b192fbfbc2c2f1daa412b7c1921.jpg",
-"release_date": 1525291200
+"release_date": 1525291200,
+"seriesType": "EPISODIC"
 )
 
 podcast55 = Podcast.create(list_id: 11,
@@ -868,7 +923,8 @@ podcast55 = Podcast.create(list_id: 11,
 "totalEpisodeCount": 100,
 "rssUrl": "https://feed.podbean.com/thefinancialdiet/feed.xml",
 "image": "https://deow9bq0xqvbj.cloudfront.net/image-logo/13701264/TFC_logo_2022_small-03_mvcyi4.png",
-"release_date": 1571068800
+"release_date": 1571068800,
+"seriesType": "EPISODIC"
 )
 
 podcast56 = Podcast.create(list_id: 9,
@@ -883,7 +939,8 @@ podcast56 = Podcast.create(list_id: 9,
 "totalEpisodeCount": 2,
 "rssUrl": "https://feeds.megaphone.fm/heavyweight",
 "image": "https://megaphone.imgix.net/podcasts/37595324-4dcc-11e6-8a94-1f35ab5d7e5c/image/uploads_2F1609675062631-hoodiqukxzm-9c7e11597f818053309e4199d37cd381_2FGimlet_Heavyweight_ShowArt_3000x3000.jpg?ixlib=rails-4.2.0&max-w=3000&max-h=3000&fit=crop&auto=format,compress",
-"release_date": 1472908440
+"release_date": 1472908440,
+"seriesType": "EPISODIC"
 )
 
 podcast57 = Podcast.create(list_id: 9,
@@ -898,7 +955,8 @@ podcast57 = Podcast.create(list_id: 9,
 "totalEpisodeCount": 8,
 "rssUrl": "https://feeds.simplecast.com/CpvnpIaj",
 "image": "https://image.simplecastcdn.com/images/198280b3-d57c-4a19-b5cf-5da06323f149/bb86886a-34ff-4f96-a350-c6590ebb2e60/3000x3000/s-town-itunes-artwork.jpg?aid=rss_feed",
-"release_date": 1490689800
+"release_date": 1490689800,
+"seriesType": "SERIAL"
 )
 
 podcast58 = Podcast.create(list_id: 9,
@@ -913,7 +971,8 @@ podcast58 = Podcast.create(list_id: 9,
 "totalEpisodeCount": 216,
 "rssUrl": "https://feeds.acast.com/public/shows/b19ac1f5-6adf-4c8b-aa1a-2af2160f99e4",
 "image": "https://assets.pippa.io/shows/61ba04aa1a8cbee88a3cf0d8/show-cover.jpg",
-"release_date": 1542391959
+"release_date": 1542391959,
+"seriesType": "EPISODIC"
 )
 
 podcast59 = Podcast.create(list_id: 9,
@@ -928,7 +987,8 @@ podcast59 = Podcast.create(list_id: 9,
 "totalEpisodeCount": 148,
 "rssUrl": "https://rss.art19.com/smartless",
 "image": "https://content.production.cdn.art19.com/images/f2/c3/d0/57/f2c3d057-7482-4a12-8275-64ab40fdec57/8219ba09564eb8780565c7a21f79f61ef73fe090e0a060136485a3b7cec6319fed0caa8e26af1dcb4487b1d4bc9254a4b43e2f1d446d939e275d11d7868dbd14.jpeg",
-"release_date": 1594126800
+"release_date": 1594126800,
+"seriesType": "EPISODIC"
 )
 
 podcast60 = Podcast.create(list_id: 9,
@@ -943,7 +1003,8 @@ isCompleted: false,
 totalEpisodeCount: 10,
 rssUrl: "https://www.thisamericanlife.org/podcast/rss.xml",
 image: "https://files.thisamericanlife.org/sites/all/themes/thislife/img/tal-name-1400x1400.png",
-release_date: 1630879200
+release_date: 1630879200,
+"seriesType": "EPISODIC"
 )
 
 podcast61 = Podcast.create(list_id: 9,
@@ -958,7 +1019,8 @@ podcast61 = Podcast.create(list_id: 9,
 "totalEpisodeCount": 104,
 "rssUrl": "https://www.omnycontent.com/d/playlist/e73c998e-6e60-432f-8610-ae210140c5b1/0e563f45-9d14-4ce8-8ef0-ae32006cd7e7/0d4cc74d-fff7-4b89-8818-ae32006cd7f0/podcast.rss",
 "image": "https://www.omnycontent.com/d/playlist/e73c998e-6e60-432f-8610-ae210140c5b1/0e563f45-9d14-4ce8-8ef0-ae32006cd7e7/0d4cc74d-fff7-4b89-8818-ae32006cd7f0/image.jpg?t=1643956582&size=Large",
-"release_date": 1464956580
+"release_date": 1464956580,
+"seriesType": "EPISODIC"
 )
 
 podcast62 = Podcast.create(list_id: 9,
@@ -973,7 +1035,8 @@ podcast62 = Podcast.create(list_id: 9,
 "totalEpisodeCount": 14,
 "rssUrl": "https://feeds.acast.com/public/shows/620c6279-d89b-4719-947d-a5f4b47b44eb",
 "image": "https://assets.pippa.io/shows/61b9b44042e856e71b98576a/show-cover.jpg",
-"release_date": 1617004983
+"release_date": 1617004983,
+"seriesType": "SERIAL"
 )
 
 podcast63 = Podcast.create(list_id: 9,
@@ -988,7 +1051,8 @@ podcast63 = Podcast.create(list_id: 9,
 "totalEpisodeCount": 318,
 "rssUrl": "https://feeds.simplecast.com/FO6kxYGj",
 "image": "https://image.simplecastcdn.com/images/89060b63-e603-4297-b6e8-5a654e50244e/f9713c33-7eca-4512-8d96-7a668e274cb2/3000x3000/image.jpg?aid=rss_feed",
-"release_date": 1504501979
+"release_date": 1504501979,
+"seriesType": "EPISODIC"
 )
 
 podcast64 = Podcast.create(list_id: 12,
@@ -1003,7 +1067,8 @@ podcast64 = Podcast.create(list_id: 12,
 "totalEpisodeCount": 32,
 "rssUrl": "https://publicfeeds.net/f/3492/feed-rss.xml",
 "image": "https://f.prxu.org/3492/images/01e4145d-1e06-4521-8548-d6c9072e53c3/Show_Cover_Normal_Gossip_red_v5.jpg",
-"release_date": 1637188021
+"release_date": 1637188021,
+"seriesType": "EPISODIC"
 )
 
 podcast65 = Podcast.create(list_id: 12,
@@ -1018,7 +1083,8 @@ podcast65 = Podcast.create(list_id: 12,
 "totalEpisodeCount": 369,
 "rssUrl": "https://feeds.simplecast.com/9YNI3WaL",
 "image": "https://image.simplecastcdn.com/images/2dcfae8f-b2e0-4826-a483-1306d3b8be06/d8c21569-e9eb-41d5-b1d0-70d9ea0c8ddc/3000x3000/dhj-podcastartwork-2021-v1.jpg?aid=rss_feed",
-"release_date": 1433764800
+"release_date": 1433764800,
+"seriesType": "EPISODIC"
 )
 
 podcast66 = Podcast.create(list_id: 12,
@@ -1033,7 +1099,8 @@ podcast66 = Podcast.create(list_id: 12,
 "totalEpisodeCount": 23,
 "rssUrl": "https://feed.articlesofinterest.club/",
 "image": "https://f.prxu.org/187/images/4610f1dc-cafa-4b1b-8dd0-52a384c81214/Articles_of_Interest.png",
-"release_date": 1544122140
+"release_date": 1544122140,
+"seriesType": "EPISODIC"
 )
 
 podcast67 = Podcast.create(list_id: 12,
@@ -1048,7 +1115,8 @@ podcast67 = Podcast.create(list_id: 12,
 "totalEpisodeCount": 100,
 "rssUrl": "https://feed.podbean.com/thefinancialdiet/feed.xml",
 "image": "https://deow9bq0xqvbj.cloudfront.net/image-logo/13701264/TFC_logo_2022_small-03_mvcyi4.png",
-"release_date": 1571068800
+"release_date": 1571068800,
+"seriesType": "EPISODIC"
 )
 
 podcast68 = Podcast.create(list_id: 13,
@@ -1063,7 +1131,8 @@ podcast68 = Podcast.create(list_id: 13,
 "totalEpisodeCount": 318,
 "rssUrl": "https://feeds.simplecast.com/FO6kxYGj",
 "image": "https://image.simplecastcdn.com/images/89060b63-e603-4297-b6e8-5a654e50244e/f9713c33-7eca-4512-8d96-7a668e274cb2/3000x3000/image.jpg?aid=rss_feed",
-"release_date": 1504501979
+"release_date": 1504501979,
+"seriesType": "EPISODIC"
 )
 
 podcast69 = Podcast.create(list_id: 13,
@@ -1078,7 +1147,8 @@ podcast69 = Podcast.create(list_id: 13,
 "totalEpisodeCount": 2,
 "rssUrl": "https://feeds.megaphone.fm/heavyweight",
 "image": "https://megaphone.imgix.net/podcasts/37595324-4dcc-11e6-8a94-1f35ab5d7e5c/image/uploads_2F1609675062631-hoodiqukxzm-9c7e11597f818053309e4199d37cd381_2FGimlet_Heavyweight_ShowArt_3000x3000.jpg?ixlib=rails-4.2.0&max-w=3000&max-h=3000&fit=crop&auto=format,compress",
-"release_date": 1472908440
+"release_date": 1472908440,
+"seriesType": "EPISODIC"
 )
 
 podcast70 = Podcast.create(list_id: 13,
@@ -1093,7 +1163,8 @@ podcast70 = Podcast.create(list_id: 13,
 "totalEpisodeCount": 360,
 "rssUrl": "https://www.omnycontent.com/d/playlist/e73c998e-6e60-432f-8610-ae210140c5b1/f6816727-c503-47ac-a7ac-ae2700391b1e/935c500f-8bb0-436b-ba7f-ae2700391b49/podcast.rss",
 "image": "https://www.omnycontent.com/d/playlist/e73c998e-6e60-432f-8610-ae210140c5b1/f6816727-c503-47ac-a7ac-ae2700391b1e/935c500f-8bb0-436b-ba7f-ae2700391b49/image.jpg?t=1648661742&size=Large",
-"release_date": 1457513820
+"release_date": 1457513820,
+"seriesType": "EPISODIC"
 )
 
 podcast71 = Podcast.create(list_id: 13,
@@ -1108,7 +1179,8 @@ podcast71 = Podcast.create(list_id: 13,
 "totalEpisodeCount": 35,
 "rssUrl": "https://www.omnycontent.com/d/playlist/77bedd50-a734-42aa-9c08-ad86013ca0f9/2d19c94e-5da0-4ea5-95b1-ad8d012c3386/3c109dc9-8fa7-4ea7-b84b-ad8d012c3390/podcast.rss",
 "image": "https://www.omnycontent.com/d/playlist/77bedd50-a734-42aa-9c08-ad86013ca0f9/2d19c94e-5da0-4ea5-95b1-ad8d012c3386/3c109dc9-8fa7-4ea7-b84b-ad8d012c3390/image.jpg?t=1629742380&size=Large",
-"release_date": 1578698174
+"release_date": 1578698174,
+"seriesType": "SERIAL"
 )
 
 podcast72 = Podcast.create(list_id: 13,
@@ -1123,7 +1195,8 @@ podcast72 = Podcast.create(list_id: 13,
 "totalEpisodeCount": 37,
 "rssUrl": "https://feeds.simplecast.com/p7S4nr_h",
 "image": "https://image.simplecastcdn.com/images/d48cf57e-8709-499d-a9c6-1c6264aff730/d7543167-91d7-455a-9048-b1843e740206/3000x3000/tar-complexly.jpg?aid=rss_feed",
-"release_date": 1517227200
+"release_date": 1517227200,
+"seriesType": "EPISODIC"
 )
 
 podcast74 = Podcast.create(list_id: 14,
@@ -1138,7 +1211,8 @@ podcast74 = Podcast.create(list_id: 14,
 "totalEpisodeCount": 300,
 "rssUrl": "https://feeds.npr.org/344098539/podcast.xml",
 "image": "https://media.npr.org/assets/img/2022/09/23/waitwait-don-t-tell-me_tile_npr-network-01_sq-d51413832c7ccf5301741d7f1ee2e1853fed9597.jpg?s=1400&c=66&f=jpg",
-"release_date": 1537903380
+"release_date": 1537903380,
+"seriesType": "EPISODIC"
 )
 
 podcast75 = Podcast.create(list_id: 14,
@@ -1153,7 +1227,8 @@ podcast75 = Podcast.create(list_id: 14,
 "totalEpisodeCount": 104,
 "rssUrl": "https://www.omnycontent.com/d/playlist/e73c998e-6e60-432f-8610-ae210140c5b1/0e563f45-9d14-4ce8-8ef0-ae32006cd7e7/0d4cc74d-fff7-4b89-8818-ae32006cd7f0/podcast.rss",
 "image": "https://www.omnycontent.com/d/playlist/e73c998e-6e60-432f-8610-ae210140c5b1/0e563f45-9d14-4ce8-8ef0-ae32006cd7e7/0d4cc74d-fff7-4b89-8818-ae32006cd7f0/image.jpg?t=1643956582&size=Large",
-"release_date": 1464956580
+"release_date": 1464956580,
+"seriesType": "EPISODIC"
 )
 
 podcast76 = Podcast.create(list_id: 14,
@@ -1168,7 +1243,8 @@ podcast76 = Podcast.create(list_id: 14,
 "totalEpisodeCount": 847,
 "rssUrl": "https://feeds.megaphone.fm/happier",
 "image": "https://megaphone.imgix.net/podcasts/32ecfb42-8289-11e5-b42a-8f36c3d2bc76/image/Happier_with_Gretchen_Rubin_FINAL.png?ixlib=rails-4.3.1&max-w=3000&max-h=3000&fit=crop&auto=format,compress",
-"release_date": 1424829480
+"release_date": 1424829480,
+"seriesType": "EPISODIC"
 )
 
 podcast77 = Podcast.create(list_id: 14,
@@ -1183,7 +1259,8 @@ podcast77 = Podcast.create(list_id: 14,
 "totalEpisodeCount": 35,
 "rssUrl": "https://www.omnycontent.com/d/playlist/77bedd50-a734-42aa-9c08-ad86013ca0f9/2d19c94e-5da0-4ea5-95b1-ad8d012c3386/3c109dc9-8fa7-4ea7-b84b-ad8d012c3390/podcast.rss",
 "image": "https://www.omnycontent.com/d/playlist/77bedd50-a734-42aa-9c08-ad86013ca0f9/2d19c94e-5da0-4ea5-95b1-ad8d012c3386/3c109dc9-8fa7-4ea7-b84b-ad8d012c3390/image.jpg?t=1629742380&size=Large",
-"release_date": 1578698174
+"release_date": 1578698174,
+"seriesType": "SERIAL"
 )
 
 podcast78 = Podcast.create(list_id: 8,
@@ -1198,7 +1275,8 @@ podcast78 = Podcast.create(list_id: 8,
 "totalEpisodeCount": 111,
 "rssUrl": "https://feeds.simplecast.com/byb4nhvN",
 "image": "https://image.simplecastcdn.com/images/a35fca4e-944a-4ccb-bc7b-d678b2c11e9d/ff9cb7ab-74e1-4a8a-98c5-48613e5d500b/3000x3000/ear-cover-comedybangbang-2018refresh-3000x3000-final-1.jpg?aid=rss_feed",
-"release_date": 1241136000
+"release_date": 1241136000,
+"seriesType": "EPISODIC"
 )
 
 podcast79 = Podcast.create(list_id: 8,
@@ -1213,7 +1291,8 @@ podcast79 = Podcast.create(list_id: 8,
 "totalEpisodeCount": 435,
 "rssUrl": "https://feeds.megaphone.fm/pivot",
 "image": "https://megaphone.imgix.net/podcasts/d6280242-e5c9-11e8-a7e3-d766bb7d2d3e/image/uploads_2F1589209751803-3cf2fk1zbft-d7b74cb4d52d7b18877546f240df7151_2FPivot_TileArt_FINAL.png?ixlib=rails-4.3.1&max-w=3000&max-h=3000&fit=crop&auto=format,compress",
-"release_date": 1537812480
+"release_date": 1537812480,
+"seriesType": "EPISODIC"
 )
 
 podcast80 = Podcast.create(list_id: 12,
@@ -1228,7 +1307,9 @@ podcast80 = Podcast.create(list_id: 12,
 "totalEpisodeCount": 362,
 "rssUrl": "https://feeds.simplecast.com/dHoohVNH",
 "image": "https://image.simplecastcdn.com/images/d139afc2-e8b0-4ec2-bc74-fdc3c88f649a/6223229f-44ee-42fe-af91-83a4bdd87f00/3000x3000/screen-shot-2023-04-03-at-9-34-20-am.jpg?aid=rss_feed",
-"release_date": 1538607600)
+"release_date": 1538607600,
+"seriesType": "EPISODIC"
+)
 
 podcast81 = Podcast.create(list_id: 15,
 "pod_uuid": "7e06d3c9-ecbe-49d6-8dc8-dbc93bd9fc06",
@@ -1242,7 +1323,8 @@ podcast81 = Podcast.create(list_id: 15,
 "totalEpisodeCount": 73,
 "rssUrl": "https://feeds.simplecast.com/fQ3mywpV",
 "image": "https://image.simplecastcdn.com/images/0bd57e71-09b5-4d3a-ba06-b896976fd540/c1a422c0-0e03-4e48-9e1a-95c2308fac4d/3000x3000/offline-final.png?aid=rss_feed",
-"release_date": 1635100080
+"release_date": 1635100080,
+"seriesType": "EPISODIC"
 )
 
 podcast82 = Podcast.create(list_id: 15,
@@ -1257,7 +1339,8 @@ podcast82 = Podcast.create(list_id: 15,
 "totalEpisodeCount": 111,
 "rssUrl": "https://feeds.simplecast.com/rP60Wf24",
 "image": "https://image.simplecastcdn.com/images/2b111688-246c-4b06-9e6e-c18015cf7bb1/b3a7096d-f531-4e1a-afc7-028dc826e57c/3000x3000/image.jpg?aid=rss_feed",
-"release_date": 1596211200
+"release_date": 1596211200,
+"seriesType": "EPISODIC"
 )
 
 podcast83 = Podcast.create(list_id: 15,
@@ -1272,7 +1355,9 @@ podcast83 = Podcast.create(list_id: 15,
 "totalEpisodeCount": 362,
 "rssUrl": "https://feeds.simplecast.com/dHoohVNH",
 "image": "https://image.simplecastcdn.com/images/d139afc2-e8b0-4ec2-bc74-fdc3c88f649a/6223229f-44ee-42fe-af91-83a4bdd87f00/3000x3000/screen-shot-2023-04-03-at-9-34-20-am.jpg?aid=rss_feed",
-"release_date": 1538607600)
+"release_date": 1538607600,
+"seriesType": "EPISODIC"
+)
 
 podcast84 = Podcast.create(list_id: 15,
 "pod_uuid": "5aa1a1b8-2879-46ae-b0ae-a25bd65af2f0",
@@ -1286,7 +1371,8 @@ podcast84 = Podcast.create(list_id: 15,
 "totalEpisodeCount": 286,
 "rssUrl": "https://feeds.simplecast.com/pjFgZKk1",
 "image": "https://image.simplecastcdn.com/images/2253ffaf-48ca-4d43-8cae-d5b0932e6e0a/c6e18a44-14e5-4c7a-bfa6-65a882ed04db/3000x3000/image.jpg?aid=rss_feed",
-"release_date": 1510776524
+"release_date": 1510776524,
+"seriesType": "EPISODIC"
 )
 
 podcast85 = Podcast.create(list_id: 15,
@@ -1301,7 +1387,8 @@ podcast85 = Podcast.create(list_id: 15,
 "totalEpisodeCount": 148,
 "rssUrl": "https://rss.art19.com/smartless",
 "image": "https://content.production.cdn.art19.com/images/f2/c3/d0/57/f2c3d057-7482-4a12-8275-64ab40fdec57/8219ba09564eb8780565c7a21f79f61ef73fe090e0a060136485a3b7cec6319fed0caa8e26af1dcb4487b1d4bc9254a4b43e2f1d446d939e275d11d7868dbd14.jpeg",
-"release_date": 1594126800
+"release_date": 1594126800,
+"seriesType": "EPISODIC"
 )
 
 podcast86 = Podcast.create(list_id: 5,
@@ -1316,7 +1403,8 @@ podcast86 = Podcast.create(list_id: 5,
 "totalEpisodeCount": 14,
 "rssUrl": "https://feeds.acast.com/public/shows/620c6279-d89b-4719-947d-a5f4b47b44eb",
 "image": "https://assets.pippa.io/shows/61b9b44042e856e71b98576a/show-cover.jpg",
-"release_date": 1617004983
+"release_date": 1617004983,
+"seriesType": "SERIAL"
 )
 
 podcast87 = Podcast.create(list_id: 1,
@@ -1331,7 +1419,8 @@ podcast87 = Podcast.create(list_id: 1,
 "totalEpisodeCount": 14,
 "rssUrl": "https://feeds.acast.com/public/shows/620c6279-d89b-4719-947d-a5f4b47b44eb",
 "image": "https://assets.pippa.io/shows/61b9b44042e856e71b98576a/show-cover.jpg",
-"release_date": 1617004983
+"release_date": 1617004983,
+"seriesType": "SERIAL"
 )
 
 podcast88 = Podcast.create(list_id: 1,
@@ -1346,7 +1435,8 @@ podcast88 = Podcast.create(list_id: 1,
 "totalEpisodeCount": 111,
 "rssUrl": "https://feeds.simplecast.com/rP60Wf24",
 "image": "https://image.simplecastcdn.com/images/2b111688-246c-4b06-9e6e-c18015cf7bb1/b3a7096d-f531-4e1a-afc7-028dc826e57c/3000x3000/image.jpg?aid=rss_feed",
-"release_date": 1596211200
+"release_date": 1596211200,
+"seriesType": "EPISODIC"
 )
 
 podcast89 = Podcast.create(list_id: 4,
@@ -1361,7 +1451,8 @@ podcast89 = Podcast.create(list_id: 4,
 "totalEpisodeCount": 73,
 "rssUrl": "https://feeds.simplecast.com/fQ3mywpV",
 "image": "https://image.simplecastcdn.com/images/0bd57e71-09b5-4d3a-ba06-b896976fd540/c1a422c0-0e03-4e48-9e1a-95c2308fac4d/3000x3000/offline-final.png?aid=rss_feed",
-"release_date": 1635100080
+"release_date": 1635100080,
+"seriesType": "EPISODIC"
 )
 
 podcast90 = Podcast.create(list_id: 7,
@@ -1376,7 +1467,8 @@ podcast90 = Podcast.create(list_id: 7,
 "totalEpisodeCount": 23,
 "rssUrl": "https://feed.articlesofinterest.club/",
 "image": "https://f.prxu.org/187/images/4610f1dc-cafa-4b1b-8dd0-52a384c81214/Articles_of_Interest.png",
-"release_date": 1544122140
+"release_date": 1544122140,
+"seriesType": "EPISODIC"
 )
 
 podcast91 = Podcast.create(list_id: 7,
@@ -1391,7 +1483,8 @@ podcast91 = Podcast.create(list_id: 7,
 "totalEpisodeCount": 100,
 "rssUrl": "https://feed.podbean.com/thefinancialdiet/feed.xml",
 "image": "https://deow9bq0xqvbj.cloudfront.net/image-logo/13701264/TFC_logo_2022_small-03_mvcyi4.png",
-"release_date": 1571068800
+"release_date": 1571068800,
+"seriesType": "EPISODIC"
 )
 
 podcast92 = Podcast.create(list_id: 6,
@@ -1406,7 +1499,8 @@ podcast92 = Podcast.create(list_id: 6,
 "totalEpisodeCount": 301,
 "rssUrl": "https://feeds.simplecast.com/pdSmCK46",
 "image": "https://image.simplecastcdn.com/images/ff5c9684-fb4e-4966-a33d-7941e89e2281/eb29e619-3c03-44a2-a05e-cc7106494617/3000x3000/loli-512x512.jpg?aid=rss_feed",
-"release_date": 1489683618
+"release_date": 1489683618,
+"seriesType": "EPISODIC"
 )
 
 podcast93 = Podcast.create(list_id: 6,
@@ -1421,7 +1515,8 @@ podcast93 = Podcast.create(list_id: 6,
 "totalEpisodeCount": 276,
 "rssUrl": "https://feeds.simplecast.com/CbCOMZ03",
 "image": "https://image.simplecastcdn.com/images/ff5c9684-fb4e-4966-a33d-7941e89e2281/1063f746-604d-4707-bd43-a1520175a218/3000x3000/keepit-ig-1080x1080.jpg?aid=rss_feed",
-"release_date": 1513091797
+"release_date": 1513091797,
+"seriesType": "EPISODIC"
 )
 
 podcast94 = Podcast.create(list_id: 6,
@@ -1436,7 +1531,8 @@ podcast94 = Podcast.create(list_id: 6,
 "totalEpisodeCount": 73,
 "rssUrl": "https://feeds.simplecast.com/fQ3mywpV",
 "image": "https://image.simplecastcdn.com/images/0bd57e71-09b5-4d3a-ba06-b896976fd540/c1a422c0-0e03-4e48-9e1a-95c2308fac4d/3000x3000/offline-final.png?aid=rss_feed",
-"release_date": 1635100080
+"release_date": 1635100080,
+"seriesType": "EPISODIC"
 )
 
 podcast95 = Podcast.create(list_id: 3,
@@ -1451,7 +1547,8 @@ podcast95 = Podcast.create(list_id: 3,
 "totalEpisodeCount": 301,
 "rssUrl": "https://feeds.simplecast.com/pdSmCK46",
 "image": "https://image.simplecastcdn.com/images/ff5c9684-fb4e-4966-a33d-7941e89e2281/eb29e619-3c03-44a2-a05e-cc7106494617/3000x3000/loli-512x512.jpg?aid=rss_feed",
-"release_date": 1489683618
+"release_date": 1489683618,
+"seriesType": "EPISODIC"
 )
 
 podcast96 = Podcast.create(list_id: 3,
@@ -1466,7 +1563,8 @@ podcast96 = Podcast.create(list_id: 3,
 "totalEpisodeCount": 286,
 "rssUrl": "https://feeds.simplecast.com/pjFgZKk1",
 "image": "https://image.simplecastcdn.com/images/2253ffaf-48ca-4d43-8cae-d5b0932e6e0a/c6e18a44-14e5-4c7a-bfa6-65a882ed04db/3000x3000/image.jpg?aid=rss_feed",
-"release_date": 1510776524
+"release_date": 1510776524,
+"seriesType": "EPISODIC"
 )
 
 podcast97 = Podcast.create(list_id: 6,
@@ -1481,7 +1579,8 @@ podcast97 = Podcast.create(list_id: 6,
 "totalEpisodeCount": 76,
 "rssUrl": "https://feeds.simplecast.com/xl36XBC2",
 "image": "https://image.simplecastcdn.com/images/420025f0-46ea-493d-bf27-5999548228e9/a4c10b58-706f-4037-bc5b-4ec0f60d759b/3000x3000/nyt-serialprod-album-1400.jpg?aid=rss_feed",
-"release_date": 1412343900
+"release_date": 1412343900,
+"seriesType": "SERIAL"
 )
 
 podcast98 = Podcast.create(list_id: 6,
@@ -1496,7 +1595,8 @@ podcast98 = Podcast.create(list_id: 6,
 "totalEpisodeCount": 9,
 "rssUrl": "https://feeds.simplecast.com/B9KgArY4",
 "image": "https://image.simplecastcdn.com/images/4105a47a-42e5-4ccc-887a-832af7989986/994e07c0-bda9-48e1-bc7f-729c161e685b/3000x3000/nyt-s-thorse-albumartwork-3000.jpg?aid=rss_feed",
-"release_date": 1643281200
+"release_date": 1643281200,
+"seriesType": "SERIAL"
 )
 
 podcast99 = Podcast.create(list_id: 15,
@@ -1511,7 +1611,8 @@ podcast99 = Podcast.create(list_id: 15,
 "totalEpisodeCount": 488,
 "rssUrl": "https://feeds.megaphone.fm/awardschatter",
 "image": "https://megaphone.imgix.net/podcasts/0e47b8aa-aa2d-11eb-b5fc-8f33003c4c08/image/THR_AwardsChatter2_Big.jpg?ixlib=rails-4.3.1&max-w=3000&max-h=3000&fit=crop&auto=format,compress",
-"release_date": 1441832400
+"release_date": 1441832400,
+"seriesType": "EPISODIC"
 )
 
 podcast100 = Podcast.create(list_id: 6,
@@ -1526,7 +1627,8 @@ podcast100 = Podcast.create(list_id: 6,
 "totalEpisodeCount": 30,
 "rssUrl": "https://www.omnycontent.com/d/playlist/e73c998e-6e60-432f-8610-ae210140c5b1/d1a662e7-59d9-45ef-b78f-af5d01370da4/545f16c0-b1a5-4522-8e5c-af5d01370dc0/podcast.rss",
 "image": "https://www.omnycontent.com/d/playlist/e73c998e-6e60-432f-8610-ae210140c5b1/d1a662e7-59d9-45ef-b78f-af5d01370da4/545f16c0-b1a5-4522-8e5c-af5d01370dc0/image.jpg?t=1670010855&size=Large",
-"release_date": 1536260400
+"release_date": 1536260400,
+"seriesType": "SERIAL"
 )
 
 podcast101 = Podcast.create(list_id: 14,
@@ -1541,7 +1643,8 @@ podcast101 = Podcast.create(list_id: 14,
 "totalEpisodeCount": 37,
 "rssUrl": "https://feeds.simplecast.com/p7S4nr_h",
 "image": "https://image.simplecastcdn.com/images/d48cf57e-8709-499d-a9c6-1c6264aff730/d7543167-91d7-455a-9048-b1843e740206/3000x3000/tar-complexly.jpg?aid=rss_feed",
-"release_date": 1517227200
+"release_date": 1517227200,
+"seriesType": "EPISODIC"
 )
 
 podcast102 = Podcast.create(list_id: 8,
@@ -1556,7 +1659,8 @@ podcast102 = Podcast.create(list_id: 8,
 "totalEpisodeCount": 360,
 "rssUrl": "https://www.omnycontent.com/d/playlist/e73c998e-6e60-432f-8610-ae210140c5b1/f6816727-c503-47ac-a7ac-ae2700391b1e/935c500f-8bb0-436b-ba7f-ae2700391b49/podcast.rss",
 "image": "https://www.omnycontent.com/d/playlist/e73c998e-6e60-432f-8610-ae210140c5b1/f6816727-c503-47ac-a7ac-ae2700391b1e/935c500f-8bb0-436b-ba7f-ae2700391b49/image.jpg?t=1648661742&size=Large",
-"release_date": 1457513820
+"release_date": 1457513820,
+"seriesType": "EPISODIC"
 )
 
 podcast103 = Podcast.create(list_id: 8,
@@ -1571,7 +1675,8 @@ podcast103 = Podcast.create(list_id: 8,
 "totalEpisodeCount": 37,
 "rssUrl": "https://feeds.simplecast.com/p7S4nr_h",
 "image": "https://image.simplecastcdn.com/images/d48cf57e-8709-499d-a9c6-1c6264aff730/d7543167-91d7-455a-9048-b1843e740206/3000x3000/tar-complexly.jpg?aid=rss_feed",
-"release_date": 1517227200
+"release_date": 1517227200,
+"seriesType": "EPISODIC"
 )
 
 podcast104 = Podcast.create(list_id: 12,
@@ -1586,7 +1691,8 @@ podcast104 = Podcast.create(list_id: 12,
 "totalEpisodeCount": 189,
 "rssUrl": "https://feeds.buzzsprout.com/1112270.rss",
 "image": "https://storage.buzzsprout.com/variants/2d605m8uneahqo4polewo18qw4f4/5cfec01b44f3e29fae1fb88ade93fc4aecd05b192fbfbc2c2f1daa412b7c1921.jpg",
-"release_date": 1525291200
+"release_date": 1525291200,
+"seriesType": "EPISODIC"
 )
 
 podcast105 = Podcast.create(list_id: 6,
@@ -1601,7 +1707,8 @@ podcast105 = Podcast.create(list_id: 6,
 "totalEpisodeCount": 36,
 "rssUrl": "https://feeds.simplecast.com/QItMsVfx",
 "image": "https://image.simplecastcdn.com/images/a35fca4e-944a-4ccb-bc7b-d678b2c11e9d/2950cfc8-b568-42e8-9f02-95f832192c93/3000x3000/earwolf-cover-bestfriends-3000x3000-final.jpg?aid=rss_feed",
-"release_date": 1420099200
+"release_date": 1420099200,
+"seriesType": "EPISODIC"
 )
 
 podcast106 = Podcast.create(list_id: 3,
@@ -1616,7 +1723,8 @@ podcast106 = Podcast.create(list_id: 3,
 "totalEpisodeCount": 36,
 "rssUrl": "https://feeds.simplecast.com/QItMsVfx",
 "image": "https://image.simplecastcdn.com/images/a35fca4e-944a-4ccb-bc7b-d678b2c11e9d/2950cfc8-b568-42e8-9f02-95f832192c93/3000x3000/earwolf-cover-bestfriends-3000x3000-final.jpg?aid=rss_feed",
-"release_date": 1420099200
+"release_date": 1420099200,
+"seriesType": "EPISODIC"
 )
 
 Friendship.create(user_id: 1, friend_id: 2)
