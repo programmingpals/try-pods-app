@@ -10,7 +10,10 @@ import {
   TwitterShareButton,
   FacebookIcon,
   TwitterIcon,
+  EmailShareButton,
+  EmailIcon
 } from "react-share";
+import mailIcon from  "../../assets/icons/mailIcon.png"
 
 export default function PodList(props) {
   const [listDetails, setListDetails] = useState([]);
@@ -93,7 +96,11 @@ export default function PodList(props) {
                 </a>
               )}
               <div className="share">
-                <p>share</p>
+                <EmailShareButton
+                subject="My Podcast List"
+                body={`http://localhost:3000/podcastlist/${params.id}`}
+                ><img src={mailIcon} style={{ width: "24px" }} />
+                </EmailShareButton>
                 <TwitterShareButton
                   url={`http://localhost:3000/podcastlist/${params.id}`}
                 >
