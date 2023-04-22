@@ -7,11 +7,10 @@ export default function PodListItem(props) {
   const { user } = useContext(userContext);
 
   const [height, setHeight] = useState(0);
+  const [showConfirmation, setShowConfirmation] = useState(false);
 
   const releaseFullDate = new Date(props.release_date * 1000);
   const release = releaseFullDate.toDateString();
-
-  const [showConfirmation, setShowConfirmation] = useState(false);
 
   const handleDelete = () => {
     props.delete(props.id);
@@ -33,7 +32,7 @@ export default function PodListItem(props) {
           </div>
           <div className="details-row-right">
             <div className="podlist-item-actions">
-              {(props.ownerId !== user && !showConfirmation) && (
+              {props.ownerId === user && !showConfirmation && (
                 <button onClick={() => setShowConfirmation(true)}>
                   Delete Podcast
                 </button>

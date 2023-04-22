@@ -10,6 +10,7 @@ export default function PodList(props) {
   const [listDetails, setListDetails] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [showConfirmation, setShowConfirmation] = useState(false);
+  const [owner, setOwner] = useState(0);
 
   const { user } = useContext(userContext);
 
@@ -26,13 +27,13 @@ export default function PodList(props) {
 
   const params = useParams();
 
-  let userId = 0;
   useEffect(() => {
     const getListData = function (id) {
       axios.get(`/api/lists/${id}`).then((response) => {
         setListDetails(response.data.data.attributes);
         setIsLoading(false);
-        userId = response.data.data.attributes.user_id;
+        const userId = response.data.data.attributes.user_id;
+        setOwner(userId);
       });
     };
     getListData(`${params.id}`);
@@ -42,6 +43,9 @@ export default function PodList(props) {
     return <p>...Loading</p>;
   }
 
+  console.log("user", user, "owner", owner);
+  console.log("listdetails", listDetails.name);
+
   return (
     <div class="podlist">
       <div class="page-header">
@@ -50,11 +54,14 @@ export default function PodList(props) {
             <div class="podlist-row-left">
               <h1>{listDetails.name}</h1>
               <h4>{listDetails.description}</h4>
-              {!showConfirmation && (
-                <button onClick={() => setShowConfirmation(true)}>
-                  Delete List
-                </button>
-              )}
+              {!showConfirmation &&
+                user === owner &&
+                listDetails.name !== "Up Next" &&
+                listDetails.name !== "Top 8" && (
+                  <button onClick={() => setShowConfirmation(true)}>
+                    Delete List
+                  </button>
+                )}
               <div>
                 {showConfirmation && (
                   <div className="deletion-confirmation">
@@ -86,7 +93,7 @@ export default function PodList(props) {
       </div>
 
       <div className="podlist-grid-container">
-        {!isLoading && <PodListGrid id={params.id} ownerId={userId} />}
+        {!isLoading && <PodListGrid id={params.id} ownerId={owner} />}
       </div>
     </div>
   );
