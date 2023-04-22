@@ -1,6 +1,7 @@
 import React, { useContext, useState, useEffect } from "react";
 import ListGrid from "./ListGrid";
 import Top8Grid from "./Top8Grid";
+import Friend from "./Friend";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import { userContext } from "../../providers/UserProvider";
@@ -8,6 +9,7 @@ import { userContext } from "../../providers/UserProvider";
 export default function Profile(props) {
   const [userLists, setUserLists] = useState([]);
   const [userDetails, setUserDetails] = useState([]);
+  const [userFriends, setUserFriends] = useState([]);
   const [listOrg, setListOrg] = useState({});
   const [isLoading, setIsLoading] = useState(true);
 
@@ -28,38 +30,72 @@ export default function Profile(props) {
       });
     };
 
+    const getFriendsByUser = function (userId) {
+      return axios.get(`/api/users/${userId}/friendships`).then((response) => {
+        return response.data.data;
+      });
+    };
+
     const apiCalls = function (userId) {
-      return Promise.all([getListsByUser(userId), getUserDetails(userId)]).then(
-        (results) => {
-          const userLists = results[0];
-          const userDetails = results[1];
-          setUserLists(userLists);
-          setUserDetails(userDetails);
+      return Promise.all([
+        getListsByUser(userId),
+        getUserDetails(userId),
+        getFriendsByUser(userId),
+      ]).then((results) => {
+        const userLists = results[0];
+        const userDetails = results[1];
+        const userFriends = results[2];
+        setUserLists(userLists);
+        setUserDetails(userDetails);
 
-          let listOrg = {
-            top8: {},
-            upNext: {},
-            customLists: [],
-          };
+        let listOrg = {
+          top8: {},
+          upNext: {},
+          customLists: [],
+        };
 
-          userLists.map((list) => {
-            if (list.attributes.name === "Top 8") {
-              listOrg.top8 = list;
-            } else if (list.attributes.name === "Up Next") {
-              listOrg.upNext = list;
-            } else {
-              listOrg.customLists.push(list);
-            }
+        userLists.map((list) => {
+          if (list.attributes.name === "Top 8") {
+            listOrg.top8 = list;
+          } else if (list.attributes.name === "Up Next") {
+            listOrg.upNext = list;
+          } else {
+            listOrg.customLists.push(list);
+          }
+        });
+
+        setListOrg(listOrg);
+
+        let friendOrg = [];
+
+        userFriends.map((friend) => {
+          const friendDetails = friend.attributes.friend;
+
+          friendOrg.push({
+            name: friendDetails.first_name,
+            avatar: friendDetails.avatar,
+            id: friendDetails.id,
           });
+        });
 
-          setListOrg(listOrg);
-          setIsLoading(false);
-        }
-      );
+        setUserFriends(friendOrg);
+        setIsLoading(false);
+      });
     };
 
     apiCalls(params.userId);
-  }, []);
+  }, [params.userId]);
+
+  const friends = userFriends.map((friend) => {
+    return (
+      <Friend
+        key={friend.id}
+        id={friend.id}
+        name={friend.name}
+        avatar={friend.avatar}
+      />
+    );
+  });
 
   return (
     <div className="profile">
@@ -74,6 +110,7 @@ export default function Profile(props) {
         </div>
       </div>
       <hr />
+      {!isLoading && <div className="friends-block">{friends}</div>}
       <hr />
       <div className="profile-friends"></div>
       <hr />
