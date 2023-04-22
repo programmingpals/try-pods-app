@@ -65,14 +65,18 @@ export default function Profile(props) {
     <div className="profile">
       <div className="profile-header">
         <div className="profile-details">
-          <img src={userDetails.avatar} style={{ width: "125px" }} />
+          <img src={userDetails.avatar} />
           <h2>{userDetails.first_name}</h2>
         </div>
         <div className="profile-top8">
           {!isLoading && <Top8Grid top8={listOrg.top8} />}
+          <h3>My Top 8</h3>
         </div>
       </div>
+      <hr />
+      <hr />
       <div className="profile-friends"></div>
+      <hr />
       <div>
         {!isLoading && (
           <ListGrid

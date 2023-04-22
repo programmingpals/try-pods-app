@@ -28,7 +28,9 @@ export default function ListGrid(props) {
       <div className="listgrid">
         <div className="list-section">
           <div className="section-title">
-            <h3>#The Standards</h3>
+            <h3>
+              <span className="hash-tag">#</span>The Standards
+            </h3>
           </div>
           <div className="lists">
             <List
@@ -55,7 +57,9 @@ export default function ListGrid(props) {
         </div>
         <div className="lists-section">
           <div className="section-title">
-            <h3>#The Custom</h3>
+            <h3>
+              <span className="hash-tag">#</span>The Custom
+            </h3>
           </div>
           <div className="lists">{lists}</div>
         </div>
