@@ -79,7 +79,12 @@ export default function QueryPodResults(props) {
       <div className="podlist-description">
         <h4>{queryPod.description}</h4>
       </div>
-      {playerSelected && <PodPlayer itunesId={queryPod.itunesId} />}
+      {playerSelected && 
+            <PodPlayer 
+            itunesId={queryPod.itunesId}
+            height={"500"}
+            />
+            }
       <div class="podlist-grid-container">
         <EpListGrid podImage={queryPod.imageUrl} />
       </div>

@@ -32,36 +32,40 @@ export default function AddListForm(props) {
 
   return (
     <div>
-      <form autoComplete="off" onSubmit={handleSubmit}>
-        <h1>Add a List Form</h1>
-        Name:
-        <input
-          type="text"
-          name="name"
-          placeholder="Add your list name"
-          value={listName}
-          onChange={(event) => {
-            setListName(event.target.value);
-          }}
-        />
-        Description:
-        <input
-          type="text"
-          name="description"
-          placeholder="Add a description"
-          value={listDescription}
-          onChange={(event) => {
-            setListDescription(event.target.value);
-          }}
-        />
-        <button
-          onClick={() => {
-            addList(user, listName, listDescription);
-          }}
-        >
-          Save
-        </button>
-      </form>
+      <h1>Add a List Form</h1>
+      <div className="add-form">
+        <form autoComplete="off" onSubmit={handleSubmit}>
+          <div className="name">Name:
+          <input
+            type="text"
+            name="name"
+            placeholder="Add your list name"
+            value={listName}
+            onChange={(event) => {
+              setListName(event.target.value);
+            }}
+          />
+          </div>
+          <div className="description">Description:
+          <input
+            type="text"
+            name="description"
+            placeholder="Add a description"
+            value={listDescription}
+            onChange={(event) => {
+              setListDescription(event.target.value);
+            }}
+          />
+          </div>
+          <button
+            onClick={() => {
+              addList(user, listName, listDescription);
+            }}
+          >
+            Save
+          </button>
+        </form>
+      </div>
     </div>
   );
 }
