@@ -6,15 +6,28 @@ import Search from "../search/Search";
 
 
 export default function Home() {
+  
+  const podArray = [
+    '2f93ed9e-8cf4-4b44-ac8f-8538ba2606a4', 
+    'bda1891d-94a3-4335-8fd9-0ddee5a8b4a4', 
+    'f6e7c39d-3bdb-4cd6-a33f-468bd893080b',
+    '1ea8ccc8-508c-4e9c-9c69-e3f65c820fd8',
+    '345212ed-525f-4383-86ca-b66f262fdcf3'
+  ]
+  
+  const random = Math.floor(Math.random() * podArray.length)
+  const randomPodId = podArray[random]
+
   return (
     <div>
-
     <section>
     <div className="home-main">
       <div className="home-main-left">
       <h2>Find Your New Fave</h2>
       <Search />
-      <button className="lucky-button">I'm feeling lucky!</button>
+      <Link to={`/querypodcast/${randomPodId}`}>
+        <button className="lucky-button">I'm feeling lucky!</button>
+      </Link>
       <h3>Popular in Celebrity Pods</h3>
         <a href="http://localhost:3000/querypodcast/2cf30b44-6965-4485-bded-77173f835077"><img src="https://image.simplecastcdn.com/images/9cfa2b6c-da19-4096-a178-91e4b3992a70/48e06851-50c2-4cff-a7da-29c1673df23b/3000x3000/armchair-expert-umbrella-cover.jpg?aid=rss_feed" width="100" className="home-find-new" /></a>
         <a href="http://localhost:3000/querypodcast/a99d609b-4f05-475c-b86d-864ebe7792ef"><img src="https://image.simplecastcdn.com/images/694c0bb5-785a-433e-ba62-0197fd51307e/d06cb4ba-2016-4d4d-b488-6b3118fcdb08/3000x3000/updated-sibling-artwork-aug-20.jpg?aid=rss_feed" width="100" className="home-find-new" /></a>

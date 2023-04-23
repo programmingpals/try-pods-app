@@ -39,8 +39,13 @@ export default function EpListItem(props) {
           </div>
         </div>
         <div className="details-row-left">
-          <p>Episode length: {time}</p>
+          {/* <p>Episode length: {time}</p> */}
           <p>Release date: {release}</p>
+        </div>
+        <div>
+        <audio controls>
+          <source src={`${props.audioUrl}`} type="audio/mpeg" />
+          </audio>
         </div>
         <div className="pod-list-item-description">
           <p>{props.description}</p>

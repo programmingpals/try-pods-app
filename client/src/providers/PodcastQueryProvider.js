@@ -32,6 +32,7 @@ export default function PodcastQueryProvider(props) {
               rssUrl
               episodes{
                 uuid
+                audioUrl
                 name
                 duration
                 datePublished
@@ -61,7 +62,7 @@ export default function PodcastQueryProvider(props) {
     queryPod,
     episodeList: (queryPod && queryPod.episodes) || [],
   };
-
+  
   return (
     <podcastQueryContext.Provider value={value}>
       {props.children}

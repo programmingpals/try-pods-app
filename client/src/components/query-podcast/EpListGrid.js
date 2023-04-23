@@ -18,6 +18,7 @@ export default function EpListGrid(props) {
         seasonNumber={episode.seasonNumber}
         description={episode.description}
         imageUrl={epImage}
+        audioUrl={episode.audioUrl}
       />
     );
   });
