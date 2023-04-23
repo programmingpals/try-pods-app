@@ -4,7 +4,7 @@ import AnimateHeight from "react-animate-height";
 
 export default function EpListItem(props) {
   const [showFullDescription, setShowFullDescription] = useState(false);
-  
+
   const toggleDescription = () => {
     setShowFullDescription(!showFullDescription);
   };
@@ -54,14 +54,16 @@ export default function EpListItem(props) {
           </audio>
         </div>
         <div className="pod-list-item-description">
-          <AnimateHeight
-            height={"auto"}
-          >
-            <p>{showFullDescription ? props.description : truncatedDescription}</p>
+          <AnimateHeight height={"auto"}>
+            <p>
+              {showFullDescription ? props.description : truncatedDescription}
+            </p>
           </AnimateHeight>
-          <button onClick={toggleDescription}>
-            {showFullDescription ? "Show less" : "Show more"}
-          </button>
+          {truncatedDescription.length > 150 && (
+            <button onClick={toggleDescription}>
+              {showFullDescription ? "Show less" : "Show more"}
+            </button>
+          )}
         </div>
       </div>
     </div>
