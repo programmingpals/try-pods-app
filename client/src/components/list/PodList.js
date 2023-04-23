@@ -14,6 +14,7 @@ import {
   EmailIcon,
 } from "react-share";
 import mailIcon from "../../assets/icons/mailIcon.png";
+import halfTone from "../../assets/backgrounds/half-tone-background.svg";
 
 export default function PodList(props) {
   const [listDetails, setListDetails] = useState([]);
@@ -77,19 +78,64 @@ export default function PodList(props) {
     return <p>...Loading</p>;
   }
 
-  console.log("ownerdetails outside of calls", listDetails.podcasts.length);
-
   return (
     <div class="podlist">
-      <div class="page-header">
+      <div
+        class="page-header podlist-header"
+        style={{ backgroundImage: `url(${halfTone})` }}
+      >
         <div class="podlist-details">
           <div class="podlist-row">
             <div class="podlist-row-left">
+              <h1>{listDetails.name}</h1>
+            </div>
+            <div class="podlist-row-right">
               <Link to={`/profilepage/${ownerDetails.id}`}>
                 <img src={ownerDetails.avatar} />
               </Link>
-              <h1>{listDetails.name}</h1>
+            </div>
+          </div>
+          <hr className="podlist-hr" />
+          <div className="podlist-row">
+            <div class="podlist-row-left">
               <h4>{listDetails.description}</h4>
+            </div>
+            <div class="podlist-row-right">
+              {user === owner && (
+                <a
+                  href="#"
+                  aria-expanded={height !== 0}
+                  aria-controls="example-panel"
+                  onClick={() => setHeight(height === 0 ? "auto" : 0)}
+                >
+                  {height === 0 ? "Add Podcasts" : "Close Search"}
+                </a>
+              )}
+            </div>
+          </div>
+          <hr className="podlist-hr" />
+          <div className="podlist-row">
+            <div className="podlist-row-left">
+              <div className="share">
+                <EmailShareButton
+                  subject="My Podcast List"
+                  body={`http://localhost:3000/podcastlist/${params.id}`}
+                >
+                  <img src={mailIcon} style={{ width: "24px" }} />
+                </EmailShareButton>
+                <TwitterShareButton
+                  url={`http://localhost:3000/podcastlist/${params.id}`}
+                >
+                  <TwitterIcon size={24} round />
+                </TwitterShareButton>
+                <FacebookShareButton
+                  url={`http://localhost:3000/podcastlist/${params.id}`}
+                >
+                  <FacebookIcon size={24} round />
+                </FacebookShareButton>
+              </div>
+            </div>
+            <div className="podlist-row-right">
               {!showConfirmation &&
                 user === owner &&
                 listDetails.name !== "Up Next" &&
@@ -112,36 +158,6 @@ export default function PodList(props) {
                     </button>
                   </div>
                 )}
-              </div>
-            </div>
-            <div className="podlist-row-right">
-              {user === owner && (
-                <a
-                  href="#"
-                  aria-expanded={height !== 0}
-                  aria-controls="example-panel"
-                  onClick={() => setHeight(height === 0 ? "auto" : 0)}
-                >
-                  {height === 0 ? "Add Podcasts" : "Close Search"}
-                </a>
-              )}
-              <div className="share">
-                <EmailShareButton
-                  subject="My Podcast List"
-                  body={`http://localhost:3000/podcastlist/${params.id}`}
-                >
-                  <img src={mailIcon} style={{ width: "24px" }} />
-                </EmailShareButton>
-                <TwitterShareButton
-                  url={`http://localhost:3000/podcastlist/${params.id}`}
-                >
-                  <TwitterIcon size={24} round />
-                </TwitterShareButton>
-                <FacebookShareButton
-                  url={`http://localhost:3000/podcastlist/${params.id}`}
-                >
-                  <FacebookIcon size={24} round />
-                </FacebookShareButton>
               </div>
             </div>
           </div>
