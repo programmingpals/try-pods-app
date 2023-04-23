@@ -16,7 +16,7 @@ export default function Home() {
     <div className="home-main">
       <div className="home-main-left">
       <h2>Find Your New Fave</h2>
-      <img src={searchicon} style={{width: '50px'}} />
+      <img src={searchicon} style={{width: '50px'}} /><br></br>
       <button className="lucky-button">I'm feeling lucky!</button>
       <h2>See What Your Friends Are Listening To</h2>
       </div>
