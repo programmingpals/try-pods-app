@@ -8,16 +8,30 @@ import searchicon from "../../assets/icons/searchicon.png"
 
 export default function Home() {
 
+  
+  const podArray = [
+    '2f93ed9e-8cf4-4b44-ac8f-8538ba2606a4', 
+    'bda1891d-94a3-4335-8fd9-0ddee5a8b4a4', 
+    'f6e7c39d-3bdb-4cd6-a33f-468bd893080b',
+    '1ea8ccc8-508c-4e9c-9c69-e3f65c820fd8',
+    '345212ed-525f-4383-86ca-b66f262fdcf3'
+  ]
+  
+  const random = Math.floor(Math.random() * podArray.length)
+  const randomPodId = podArray[random]
 
   return (
     <div>
-
     <section>
     <div className="home-main">
       <div className="home-main-left">
       <h2>Find Your New Fave</h2>
+
       <img src={searchicon} style={{width: '50px'}} /><br></br>
-      <button className="lucky-button">I'm feeling lucky!</button>
+  
+      <Link to={`/querypodcast/${randomPodId}`}>
+        <button className="lucky-button">I'm feeling lucky!</button>
+      </Link>
       <h2>See What Your Friends Are Listening To</h2>
       </div>
       <div className="home-main-centre">
