@@ -5,6 +5,7 @@ import Friend from "./Friend";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import { userContext } from "../../providers/UserProvider";
+import Heart from "../../assets/icons/heart.png";
 
 export default function Profile(props) {
   const [userLists, setUserLists] = useState([]);
@@ -110,9 +111,17 @@ export default function Profile(props) {
         </div>
       </div>
       <hr />
-      {!isLoading && <div className="friends-block">{friends}</div>}
+      <div className="add-friend">
+        <p>Add {userDetails.first_name}</p>
+        <img src={Heart} />
+      </div>
       <hr />
-      <div className="profile-friends"></div>
+      {!isLoading && (
+        <div className="friends-block">
+          <p>The Inner Circle</p>
+          {friends}
+        </div>
+      )}
       <hr />
       <div>
         {!isLoading && (
