@@ -42,7 +42,7 @@
 }
 
 hr {
-  margin: 0px -500px 30px -500px;
+  margin: 0px -500px 0px -500px;
   border: 0;
   border-top: 3px solid #c9c7c7;
   z-index: -1;
@@ -101,8 +101,11 @@ h5 {
 }
 
 .listgrid-addpodcast {
+  width: 100%;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .list-section {
@@ -122,11 +125,37 @@ h5 {
   flex-direction: row;
 }
 
-.listitem {
-  width: 25%;
+.listitem-main {
+  width: 225px;
+  height: 225px;
   margin: 20px;
   padding: 20px;
   border: 2px solid #3af0d7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.listitem-add {
+  width: 150px;
+  height: 150px;
+  margin: 20px;
+  padding: 20px;
+  border: 2px solid #3af0d7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.add-list-icon {
+  width: 30px;
+}
+
+p.add-list {
+  font-family: "Barlow";
+  font-size: 26px;
+  font-weight: 200;
+  margin-top: 10px;
 }
 
 //user podlist page
@@ -173,6 +202,10 @@ h5 {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+}
+
+.podlist-row-left img {
+  width: 75px;
 }
 
 .podlist-row-right {
@@ -253,6 +286,19 @@ h5 {
   color: #ffffff;
   font-size: 20px;
   height: 120px;
+  border-bottom: 5px solid #d2e93c;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+
+.nav-left a,
+.nav-right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .nav-link {
@@ -260,6 +306,17 @@ h5 {
   font-size: 20px;
 }
 
+.nav-left img {
+  width: 80px;
+}
+
+.nav-left .logo-name {
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  margin-left: 10px;
+}
 .nav-right {
   display: flex;
   justify-content: space-between;
@@ -267,8 +324,35 @@ h5 {
   align-items: center;
 }
 
+.nav-right .login-user a {
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+  justify-content: center;
+  align-items: end;
+  margin-left: 40px;
+}
+
 .nav-right p {
-  padding-left: 10px;
+  margin: 0px;
+}
+
+.nav-right .login-user img {
+  width: 40px;
+  border: solid 2px #d2e93c;
+  border-radius: 100%;
+  margin: 0px 5px 0px 5px;
+}
+
+.nav-right .nav-search img {
+  width: 35px;
+  margin: 0px 5px 0px 5px;
+}
+
+.nav-search {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
 }
 
 //search
@@ -392,6 +476,22 @@ button :hover {
   width: 75px;
 }
 
+.friends-block,
+.add-friend {
+  display: flex;
+  flex-direction: row;
+}
+
+.add-friend {
+  width: 270px;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-friend p {
+  padding-right: 10px;
+}
+
 .recommend-item,
 .friend-item {
   display: flex;
@@ -401,15 +501,16 @@ button :hover {
 }
 
 .recommend-item img,
-.friend-item img {
+.friend-item img,
+.add-friend img {
   width: 40px;
   margin-right: 10px;
 }
 
 .add-form {
-display: flex;
-flex-direction: row;
-justify-content: start;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
 }
 
 .add-form input {
@@ -421,7 +522,7 @@ justify-content: start;
 // Homepage css
 .home-main {
   display: flex;
-  width: 1300px
+  width: 1300px;
 }
 
 .home-main-left {
@@ -464,5 +565,5 @@ justify-content: start;
   font-size: 20px;
   padding: 20px;
   margin-bottom: 30px;
-  margin-top: 30px ;
+  margin-top: 30px;
 }

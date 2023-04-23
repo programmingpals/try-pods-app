@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 //receives props.attributes which contains all podcast details
@@ -8,7 +8,6 @@ export default function PodResultItem(props) {
     props.setPodcast([]);
   }
 
-  console.log("props.attributes", props.attributes);
   return (
     <div className="search-results-item">
       {/* reloadDocument added to force reload and get updated query results- readdress as time permits */}

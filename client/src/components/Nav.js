@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 import Search from "./search/Search";
 import { searchContext } from "../providers/SearchToggleProvider";
 import AnimateHeight from "react-animate-height";
+import Rowan from "../assets/1Rowan.png";
+import Logo from "../assets/icons/logo.png";
+import SearchWhite from "../assets/icons/search-white.png";
 
 export default function Nav() {
   const { height, setHeight } = useContext(searchContext);
@@ -12,25 +15,34 @@ export default function Nav() {
       <div class="nav">
         <div class="nav-left">
           <Link to={"/"} class="nav-link">
-            <h4>Try-Pods</h4>
+            <img src={Logo} />
+            <h4 className="logo-name">Try-Pods</h4>
           </Link>
         </div>
         <div class="nav-right">
-          <a
-            class="nav-link"
-            href="#"
-            aria-expanded={height !== 0}
-            aria-controls="example-panel"
-            onClick={() => setHeight(height === 0 ? "auto" : 0)}
-          >
-            {height === 0 ? "Search" : "Close Search"}
-          </a>
-          <p>
+          <div className="nav-search">
+            <a
+              class="nav-link"
+              href="#"
+              aria-expanded={height !== 0}
+              aria-controls="example-panel"
+              onClick={() => setHeight(height === 0 ? "auto" : 0)}
+            >
+              {height === 0 ? "Search" : "Close Search"}
+              <img src={SearchWhite} />
+            </a>
+          </div>
+          {/* <p>
             <Link to={"profilepage/1"} class="nav-link">
               My Profile
             </Link>
-          </p>
-          <p>Rowan</p>
+          </p> */}
+          <div className="login-user">
+            <Link to={"profilepage/1"} class="nav-link">
+              <p>Rowan</p>
+              <img src={Rowan} />
+            </Link>
+          </div>
         </div>
       </div>
       <div className="toggle-search">
