@@ -11,9 +11,16 @@ export default function PodListItem(props) {
   const [height, setHeight] = useState(0);
   const [showConfirmation, setShowConfirmation] = useState(false);
   const [playerSelected, setPlayerSelected] = useState(false);
+  const [showFullDescription, setShowFullDescription] = useState(false);
 
   const releaseFullDate = new Date(props.release_date * 1000);
   const release = releaseFullDate.toDateString();
+
+  const truncatedDescription = props.description.substring(0, 150) + "...";
+
+  const toggleDescription = () => {
+    setShowFullDescription(!showFullDescription);
+  };
 
   const handleDelete = () => {
     props.delete(props.id);
@@ -96,7 +103,20 @@ export default function PodListItem(props) {
             <p>serial/episodic details go here</p>
           </div>
           <div className="drop-down-test">
-            <a
+            <div className="pod-list-item-description">
+                <p>
+                  {showFullDescription
+                    ? props.description
+                    : truncatedDescription}
+                </p>
+              {truncatedDescription.length > 150 && (
+                <button onClick={toggleDescription}>
+                  {showFullDescription ? "Show less" : "Show more"}
+                </button>
+              )}
+            </div>
+
+            {/* <a
               href="#"
               aria-expanded={height !== 0}
               aria-controls="example-panel"
@@ -112,14 +132,18 @@ export default function PodListItem(props) {
               <div className="pod-list-item-description">
                 <p>{props.description}</p>
               </div>
-            </AnimateHeight>
+            </AnimateHeight> */}
           </div>
         </div>
       </div>
-      {playerSelected && <PodPlayer 
-      itunesId={props.attributes.itunes_id} 
-      height={"450"}
-      />}
+      <div style={{ display: playerSelected ? "block" : "none"}}>
+        <PodPlayer itunesId={props.attributes.itunes_id} height={"450"} />
+        </div>
     </div>
   );
 }
+
+{/* {playerSelected && (
+        <PodPlayer itunesId={props.attributes.itunes_id} height={"450"} />
+      )}
+    </div> */}
