@@ -600,3 +600,16 @@ button :hover {
   flex-direction: row;
   align-items: flex-end;
 }
+
+.home-friends {
+  margin: 10px;
+  border: solid 2px #2FC2AE;
+  border-radius: 100%;
+}
+
+.home-secondary-left h2,
+.home-secondary-left p,
+.home-secondary-right h2,
+.home-secondary-right p {
+  text-align: left;
+}
