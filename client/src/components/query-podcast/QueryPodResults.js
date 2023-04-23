@@ -44,8 +44,9 @@ export default function QueryPodResults(props) {
             <div className="podlist-row-right">
               <Link
                 to="/addpodcast"
-                className="button-add"
+                className="button-add-underline"
                 state={{ attributes: queryPod }}
+                style={{ textDecoration: "none" }}
               >
                 <p>Add to list +</p>
               </Link>
@@ -55,9 +56,7 @@ export default function QueryPodResults(props) {
           <div className="podlist-row-mix">
             <p>Series type: {seriesTypeTitleCase}</p>
             <p>Total episodes: {queryPod.totalEpisodesCount}</p>
-            <button>
-              <a href={`${queryPod.websiteUrl}`}>Website</a>
-            </button>
+            <a href={`${queryPod.websiteUrl}`}>Website</a>
           </div>
           <hr className="podcast-hr" />
           <div className="podlist-row">

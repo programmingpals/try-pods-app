@@ -4,36 +4,6 @@
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 .main {
   display: flex;
   justify-content: center;
@@ -45,7 +15,6 @@ hr {
   margin: 0px -500px 0px -500px;
   border: 0;
   border-top: 3px solid;
-  // z-index: -1;
 }
 
 .profile,
@@ -181,7 +150,7 @@ p.add-list {
 }
 
 .podcast-header {
-  border-style: solid;
+  border-style: dotted;
   border-width: 5px;
   border-color: #d2e93c;
   margin: 40px auto;
@@ -309,129 +278,6 @@ p.add-list {
   justify-content: flex-end;
 }
 
-.nav {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  background-color: #370545;
-  padding-left: 30px;
-  padding-right: 30px;
-  color: #ffffff;
-  font-size: 20px;
-  height: 120px;
-  border-bottom: 5px solid #d2e93c;
-}
-
-.nav-left {
-  display: flex;
-  align-items: center;
-}
-
-.nav-left a,
-.nav-right {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.nav-link {
-  color: #ffffff;
-  font-size: 20px;
-}
-
-.nav-left img {
-  width: 80px;
-}
-
-.nav-left .logo-name {
-  color: white;
-  font-size: 40px;
-  font-weight: bold;
-  margin-bottom: 40px;
-  margin-left: 10px;
-}
-.nav-right {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  align-items: center;
-}
-
-.nav-right .login-user a {
-  display: flex;
-  flex-direction: row;
-  margin: 10px;
-  justify-content: center;
-  align-items: end;
-  margin-left: 40px;
-}
-
-.nav-right p {
-  margin: 0px;
-}
-
-.nav-right .login-user img {
-  width: 40px;
-  border: solid 2px #d2e93c;
-  border-radius: 100%;
-  margin: 0px 5px 0px 5px;
-}
-
-.nav-right .nav-search img {
-  width: 35px;
-  margin: 0px 5px 0px 5px;
-}
-
-.nav-search {
-  display: flex;
-  align-items: center;
-  margin-top: 5px;
-}
-
-//search
-
-.search {
-  width: 70%;
-  margin: 20px auto 20px;
-}
-
-.search-form {
-  max-width: 100%;
-}
-
-.search input {
-  height: 28px;
-  width: 75%;
-}
-
-.search button {
-  height: 34px;
-  width: 20%;
-}
-
-.search-results-container {
-  padding: 20px;
-  margin: auto;
-}
-
-.search-results-item {
-  display: flex;
-  flex-direction: row;
-  padding-bottom: 5px;
-}
-
-.search-results-item img {
-  width: 60px;
-  padding-right: 20px;
-}
-
-.item-details {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-}
-
 a {
   color: #370545;
 }
@@ -464,6 +310,27 @@ button {
   padding-right: 5px;
   padding-left: 5px;
   margin-bottom: 20px;
+}
+
+.button-add-underline,
+.podlist-row-mix a .podlist-row-right a {
+  border-bottom: solid #2fc2ae 5px;
+  background-color: #ffffff;
+  font-family: "Chivo Mono";
+  font-size: 16px;
+  padding-right: 5px;
+  padding-left: 5px;
+  text-decoration: none;
+}
+
+.button-add-underline:hover,
+.podlist-row-mix a:hover,
+.podlist-row-right a:hover {
+  border-bottom: solid #d2e93c 5px;
+}
+
+.button-add-underline p {
+  margin-bottom: 0px;
 }
 
 .profile-header {
@@ -552,97 +419,9 @@ button {
   border-color: #d2e93c;
 }
 
-// Homepage css
-.home-main {
-  display: flex;
-  width: 1300px;
-}
-
-.home-main-left {
-  width: 33.3%;
-  border: solid #d2e93c;
-}
-
-.home-main-centre {
-  width: 33.3%;
-  border: solid #d2e93c;
-}
-
-.home-main-right {
-  width: 33.3%;
-  border: solid #d2e93c;
-}
-
-.home-up-next {
-  padding: 5px;
-  margin: 5px;
-  border: solid #d2e93c;
-}
-
-.home-find-new {
-  padding: 5px;
-  margin: 5px;
-  border: solid #2fc2ae;
-}
-
-.home-secondary-left {
-  width: 33.3%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  padding: 30px;
-  border: solid #d2e93c;
-}
-
-.home-secondary-centre {
-  width: 33.3%;
-  border: solid #d2e93c;
-  padding: 30px;
-}
-
-.home-secondary-right {
-  width: 33.3%;
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  padding: 30px;
-  flex-wrap: wrap;
-  border: solid #d2e93c;
-}
-
-.home-carousel {
-  width: 75%;
-  justify-content: center;
-}
-
-.lucky-button {
-  border-style: solid;
-  background-color: #ffffff;
-  border-color: #2fc2ae;
-  font-family: "Chivo Mono";
-  font-size: 20px;
-  padding: 20px;
-  margin-bottom: 30px;
-  margin-top: 30px;
-}
-
 .footer {
   height: 100px;
   display: flex;
   flex-direction: row;
   align-items: flex-end;
-}
-
-.home-friends {
-  margin: 10px;
-  border: solid 2px #2FC2AE;
-  border-radius: 100%;
-}
-
-.home-secondary-left h2,
-.home-secondary-left p,
-.home-secondary-right h2,
-.home-secondary-right p {
-  text-align: left;
 }
