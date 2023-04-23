@@ -31,41 +31,44 @@ export default function EpListItem(props) {
   const release = releaseFullDate.toDateString();
 
   return (
-    <div className="podlist-item">
-      <div className="podlist-item-image">
-        <img src={`${props.imageUrl}`} style={{ width: "125px" }} />
-      </div>
-      <div className="podlist-item-details">
-        <div className="details-first-row">
+    <div className="podlist-item-container">
+      <div className="podlist-item">
+        <div className="podlist-item-image">
+          <img src={`${props.imageUrl}`} style={{ width: "125px" }} />
+        </div>
+        <div className="podlist-item-details">
+          <div className="details-first-row">
+            <div className="details-row-left">
+              <h3>{props.name}</h3>
+            </div>
+            <div className="details-row-right">
+              <div className="podlist-item-actions">{seasonText}</div>
+            </div>
+          </div>
           <div className="details-row-left">
-            <h3>{props.name}</h3>
+            {/* <p>Episode length: {time}</p> */}
+            <p>Release date: {release}</p>
           </div>
-          <div className="details-row-right">
-            <div className="podlist-item-actions">{seasonText}</div>
+          <div>
+            <audio controls>
+              <source src={`${props.audioUrl}`} type="audio/mpeg" />
+            </audio>
           </div>
-        </div>
-        <div className="details-row-left">
-          {/* <p>Episode length: {time}</p> */}
-          <p>Release date: {release}</p>
-        </div>
-        <div>
-          <audio controls>
-            <source src={`${props.audioUrl}`} type="audio/mpeg" />
-          </audio>
-        </div>
-        <div className="pod-list-item-description">
-          <AnimateHeight height={"auto"}>
-            <p>
-              {showFullDescription ? props.description : truncatedDescription}
-            </p>
-          </AnimateHeight>
-          {truncatedDescription.length > 150 && (
-            <button onClick={toggleDescription}>
-              {showFullDescription ? "Show less" : "Show more"}
-            </button>
-          )}
+          <div className="pod-list-item-description">
+            <AnimateHeight height={"auto"}>
+              <p>
+                {showFullDescription ? props.description : truncatedDescription}
+              </p>
+            </AnimateHeight>
+            {truncatedDescription.length > 150 && (
+              <button onClick={toggleDescription}>
+                {showFullDescription ? "Show less" : "Show more"}
+              </button>
+            )}
+          </div>
         </div>
       </div>
+      <hr className="podcast-hr" />
     </div>
   );
 }
