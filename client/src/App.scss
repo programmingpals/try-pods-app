@@ -418,14 +418,14 @@ button :hover {
 .button-blue {
   border-style: solid;
   background-color: #ffffff;
-  border-color: #3af0d7;
+  border-color: #2FC2AE;
   font-family: "Chivo Mono";
 }
 
 .button-add {
   border-style: solid;
   background-color: #ffffff;
-  border-color: #3af0d7;
+  border-color: #2FC2AE;
   font-family: "Chivo Mono";
   font-size: 16px;
   padding-right: 5px;
@@ -549,7 +549,33 @@ button :hover {
 .home-find-new {
   padding: 5px;
   margin: 5px;
-  border: solid #3af0d7;
+  border: solid #2FC2AE;
+}
+
+.home-secondary-left {
+  width: 33.3%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 30px;
+  border: solid #d2e93c;
+}
+
+.home-secondary-centre {
+  width: 33.3%;
+  border: solid #d2e93c;
+  padding: 30px;
+}
+
+.home-secondary-right {
+  width: 33.3%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 30px;
+  flex-wrap: wrap;
+  border: solid #d2e93c;
 }
 
 .home-carousel {
@@ -560,10 +586,17 @@ button :hover {
 .lucky-button {
   border-style: solid;
   background-color: #ffffff;
-  border-color: #3af0d7;
+  border-color: #2FC2AE;
   font-family: "Chivo Mono";
   font-size: 20px;
   padding: 20px;
   margin-bottom: 30px;
   margin-top: 30px;
+}
+
+.footer {
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
 }
