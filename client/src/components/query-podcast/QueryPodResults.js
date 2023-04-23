@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import PodPlayer from "./PodPlayer";
 import RecommendByFriend from "./RecommendsByFriend";
+import speakerIcon from "../../assets/icons/speakericon.png";
 
 export default function QueryPodResults(props) {
   const [playerSelected, setPlayerSelected] = useState(false);
@@ -31,7 +32,7 @@ export default function QueryPodResults(props) {
 
   return (
     <div className="podlist">
-      <div className="page-header">
+      <div className="page-header podcast-header">
         <div className="page-image">
           <img src={queryPod.imageUrl} style={{ width: "125px" }} />
         </div>
@@ -50,41 +51,43 @@ export default function QueryPodResults(props) {
               </Link>
             </div>
           </div>
+          <hr className="podcast-hr" />
           <div className="podlist-row-mix">
-            <button className="button-blue">
-              Series type: {seriesTypeTitleCase}
-            </button>
-            <button className="button-blue">
-              Total episodes: {queryPod.totalEpisodesCount}
-            </button>
-            <button
-              className="button-blue"
-              onClick={() => {
-                if (!playerSelected) {
-                  setPlayerSelected(true);
-                } else {
-                  setPlayerSelected(false);
-                }
-              }}
-            >
-              {playerSelected ? "Close Player" : "Open Player"}
-            </button>
+            <p>Series type: {seriesTypeTitleCase}</p>
+            <p>Total episodes: {queryPod.totalEpisodesCount}</p>
             <button>
               <a href={`${queryPod.websiteUrl}`}>Website</a>
             </button>
           </div>
-          <div className="podlist-row-left">{recommends}</div>
+          <hr className="podcast-hr" />
+          <div className="podlist-row">
+            <div className="podlist-row-left">
+              <p>Your friends are followers: </p>
+              {recommends}
+            </div>
+            <div className="podlist-row-right">
+              <button
+                className="button"
+                onClick={() => {
+                  if (!playerSelected) {
+                    setPlayerSelected(true);
+                  } else {
+                    setPlayerSelected(false);
+                  }
+                }}
+              >
+                {playerSelected ? "Close Player" : "Open Player"}
+              </button>
+            </div>
+          </div>
         </div>
       </div>
       <div className="podlist-description">
         <h4>{queryPod.description}</h4>
       </div>
-      {playerSelected && 
-            <PodPlayer 
-            itunesId={queryPod.itunesId}
-            height={"500"}
-            />
-            }
+      {playerSelected && (
+        <PodPlayer itunesId={queryPod.itunesId} height={"500"} />
+      )}
       <div class="podlist-grid-container">
         <EpListGrid podImage={queryPod.imageUrl} />
       </div>
