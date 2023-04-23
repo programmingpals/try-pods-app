@@ -6,6 +6,7 @@ import AnimateHeight from "react-animate-height";
 import Rowan from "../assets/1Rowan.png";
 import Logo from "../assets/icons/logo.png";
 import SearchWhite from "../assets/icons/search-white.png";
+import "./Nav.scss";
 
 export default function Nav() {
   const { height, setHeight } = useContext(searchContext);

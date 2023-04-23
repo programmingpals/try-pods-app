@@ -1,0 +1,128 @@
+// Homepage css
+.home-main {
+  display: flex;
+  width: 1300px;
+  justify-content: space-between;
+}
+
+.home-main-left,
+.home-main-right {
+  width: 32%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  // border: solid #d2e93c;
+}
+
+.home-main-centre {
+  width: 32%;
+  // border: solid #d2e93c;
+}
+
+// .home-main-right {
+//   width: 33.3%;
+//   // border: solid #d2e93c;
+// }
+
+.home-search,
+.home-lucky,
+.home-friends-container,
+.home-up-next-container,
+.home-add-container,
+.home-main-centre {
+  border: solid #d2e93c;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.home-up-next {
+  padding: 5px;
+  margin: 5px;
+  border: solid #d2e93c;
+}
+
+.home-find-new {
+  padding: 5px;
+  margin: 5px;
+  border: solid #2fc2ae;
+}
+
+.home-secondary-left {
+  width: 32%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 30px;
+  border: solid #d2e93c;
+}
+
+.home-secondary-centre {
+  width: 32%;
+  border: solid #d2e93c;
+  padding: 30px;
+}
+
+.home-secondary-right {
+  width: 32%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 30px;
+  flex-wrap: wrap;
+  border: solid #d2e93c;
+}
+
+.home-carousel-container {
+  padding: 32px;
+}
+
+.home-carousel {
+  width: 75%;
+  justify-content: center;
+}
+
+.lucky-button {
+  border-style: solid;
+  background-color: #ffffff;
+  border-color: #2fc2ae;
+  font-family: "Chivo Mono";
+  font-size: 20px;
+  padding: 20px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.home-friends {
+  margin: 10px;
+  border: solid 2px #2fc2ae;
+  border-radius: 100%;
+}
+
+.list-option {
+  margin-top: 10px;
+  margin-bottom: 0px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+}
+
+.list-option img {
+  margin-right: 20px;
+}
+
+.home-add-container div {
+  max-width: 70%;
+  margin: auto;
+}
+
+.home-add-container h2 {
+  margin-top: 0px;
+}
+
+.home-secondary-left h2,
+.home-secondary-left p,
+.home-secondary-right h2,
+.home-secondary-right p {
+  text-align: left;
+}
