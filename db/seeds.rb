@@ -927,21 +927,7 @@ podcast55 = Podcast.create(list_id: 11,
 "seriesType": "EPISODIC"
 )
 
-podcast56 = Podcast.create(list_id: 9,
-"pod_uuid": "242fa01e-65ae-40a8-af66-96d07c1ce605",
-"title": "Heavyweight",
-"itunes_id": 1150800298,
-"description": "Maybe you’ve laid awake imagining how it could have been, how it might yet be, but the moment to act was never right. Well, the moment is here and the podcast making it happen is Heavyweight. Join Jonathan Goldstein for road trips, thorny reunions, and difficult conversations as he backpedals his way into the past like a therapist with a time machine. From Gimlet Media.",
-"link": "https://gimletmedia.com/show/heavyweight/",
-"language": "ENGLISH",
-"authorName": "Gimlet",
-"isCompleted": false,
-"totalEpisodeCount": 2,
-"rssUrl": "https://feeds.megaphone.fm/heavyweight",
-"image": "https://megaphone.imgix.net/podcasts/37595324-4dcc-11e6-8a94-1f35ab5d7e5c/image/uploads_2F1609675062631-hoodiqukxzm-9c7e11597f818053309e4199d37cd381_2FGimlet_Heavyweight_ShowArt_3000x3000.jpg?ixlib=rails-4.2.0&max-w=3000&max-h=3000&fit=crop&auto=format,compress",
-"release_date": 1472908440,
-"seriesType": "EPISODIC"
-)
+
 
 podcast57 = Podcast.create(list_id: 9,
 "pod_uuid": "5c38907e-fd99-493d-a82f-c442f8705f3f",
@@ -959,21 +945,7 @@ podcast57 = Podcast.create(list_id: 9,
 "seriesType": "SERIAL"
 )
 
-podcast58 = Podcast.create(list_id: 9,
-"pod_uuid": "c4cd80a4-3105-491c-8cd3-20b77cb54290",
-"title": "Off Menu with Ed Gamble and James Acaster",
-"itunes_id": 1442950743,
-"description": "Comedians Ed Gamble and James Acaster invite special guests into their magical restaurant to each choose their favourite starter, main course, side dish, dessert and drink. Ever wanted to eat your dream meal? It's time to order Off Menu. Hosted on Acast.",
-"link": "https://www.offmenupodcast.co.uk",
-"language": "ENGLISH",
-"authorName": "Plosive",
-"isCompleted": false,
-"totalEpisodeCount": 216,
-"rssUrl": "https://feeds.acast.com/public/shows/b19ac1f5-6adf-4c8b-aa1a-2af2160f99e4",
-"image": "https://assets.pippa.io/shows/61ba04aa1a8cbee88a3cf0d8/show-cover.jpg",
-"release_date": 1542391959,
-"seriesType": "EPISODIC"
-)
+
 
 podcast59 = Podcast.create(list_id: 9,
 "pod_uuid": "075bef27-dcf2-470f-861d-2f1213d06fee",
@@ -1724,6 +1696,38 @@ podcast106 = Podcast.create(list_id: 3,
 "rssUrl": "https://feeds.simplecast.com/QItMsVfx",
 "image": "https://image.simplecastcdn.com/images/a35fca4e-944a-4ccb-bc7b-d678b2c11e9d/2950cfc8-b568-42e8-9f02-95f832192c93/3000x3000/earwolf-cover-bestfriends-3000x3000-final.jpg?aid=rss_feed",
 "release_date": 1420099200,
+"seriesType": "EPISODIC"
+)
+
+podcast56 = Podcast.create(list_id: 9,
+"pod_uuid": "242fa01e-65ae-40a8-af66-96d07c1ce605",
+"title": "Heavyweight",
+"itunes_id": 1150800298,
+"description": "Maybe you’ve laid awake imagining how it could have been, how it might yet be, but the moment to act was never right. Well, the moment is here and the podcast making it happen is Heavyweight. Join Jonathan Goldstein for road trips, thorny reunions, and difficult conversations as he backpedals his way into the past like a therapist with a time machine. From Gimlet Media.",
+"link": "https://gimletmedia.com/show/heavyweight/",
+"language": "ENGLISH",
+"authorName": "Gimlet",
+"isCompleted": false,
+"totalEpisodeCount": 2,
+"rssUrl": "https://feeds.megaphone.fm/heavyweight",
+"image": "https://megaphone.imgix.net/podcasts/37595324-4dcc-11e6-8a94-1f35ab5d7e5c/image/uploads_2F1609675062631-hoodiqukxzm-9c7e11597f818053309e4199d37cd381_2FGimlet_Heavyweight_ShowArt_3000x3000.jpg?ixlib=rails-4.2.0&max-w=3000&max-h=3000&fit=crop&auto=format,compress",
+"release_date": 1472908440,
+"seriesType": "EPISODIC"
+)
+
+podcast58 = Podcast.create(list_id: 9,
+"pod_uuid": "c4cd80a4-3105-491c-8cd3-20b77cb54290",
+"title": "Off Menu with Ed Gamble and James Acaster",
+"itunes_id": 1442950743,
+"description": "Comedians Ed Gamble and James Acaster invite special guests into their magical restaurant to each choose their favourite starter, main course, side dish, dessert and drink. Ever wanted to eat your dream meal? It's time to order Off Menu. Hosted on Acast.",
+"link": "https://www.offmenupodcast.co.uk",
+"language": "ENGLISH",
+"authorName": "Plosive",
+"isCompleted": false,
+"totalEpisodeCount": 216,
+"rssUrl": "https://feeds.acast.com/public/shows/b19ac1f5-6adf-4c8b-aa1a-2af2160f99e4",
+"image": "https://assets.pippa.io/shows/61ba04aa1a8cbee88a3cf0d8/show-cover.jpg",
+"release_date": 1542391959,
 "seriesType": "EPISODIC"
 )
 
