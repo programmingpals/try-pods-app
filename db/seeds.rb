@@ -16,6 +16,26 @@ user2 = User.create(first_name: "Liz", last_name: "Fosdick", email: "lf@gmail.co
 
 user3 = User.create(first_name: "Kate", last_name: "Booton", email: "kb@gmail.com", password: "123123", avatar: "https://raw.githubusercontent.com/bootonk/try-pods-app/master/client/src/assets/3Kate.png")
 
+user4 = User.create(first_name: "Mike", last_name: "V", email: "mv@gmail.com", password: "123123", avatar: "https://raw.githubusercontent.com/bootonk/try-pods-app/master/client/src/assets/4Mike.png")
+
+user5 = User.create(first_name: "James", last_name: "EV", email: "jev@gmail.com", password: "123123", avatar: "https://raw.githubusercontent.com/bootonk/try-pods-app/master/client/src/assets/5James.png")
+
+user6 = User.create(first_name: "Torie", last_name: "VDZ", email: "tvdz@gmail.com", password: "123123", avatar: "https://raw.githubusercontent.com/bootonk/try-pods-app/master/client/src/assets/6Torie.png")
+
+user7 = User.create(first_name: "Mo", last_name: "W", email: "mow@gmail.com", password: "123123", avatar: "https://raw.githubusercontent.com/bootonk/try-pods-app/master/client/src/assets/7Mo.png")
+
+user8 = User.create(first_name: "Pete", last_name: "F", email: "pf@gmail.com", password: "123123", avatar: "https://raw.githubusercontent.com/bootonk/try-pods-app/master/client/src/assets/8Pete.png")
+
+user9 = User.create(first_name: "Meaghan", last_name: "C", email: "mc@gmail.com", password: "123123", avatar: "https://raw.githubusercontent.com/bootonk/try-pods-app/master/client/src/assets/9Meaghan.png")
+
+user10 = User.create(first_name: "Melanie", last_name: "F", email: "mf@gmail.com", password: "123123", avatar: "https://raw.githubusercontent.com/bootonk/try-pods-app/master/client/src/assets/10Melanie.png")
+
+user11 = User.create(first_name: "Bill", last_name: "F", email: "bf@gmail.com", password: "123123", avatar: "https://raw.githubusercontent.com/bootonk/try-pods-app/master/client/src/assets/11Bill.png")
+
+user12 = User.create(first_name: "Roger", last_name: "F", email: "roger@gmail.com", password: "123123", avatar: "https://raw.githubusercontent.com/bootonk/try-pods-app/master/client/src/assets/12Roger.png")
+
+user13 = User.create(first_name: "Emma", last_name: "V", email: "emma@gmail.com", password: "123123", avatar: "https://raw.githubusercontent.com/bootonk/try-pods-app/master/client/src/assets/13Emma.png")
+
 katelist1 = List.create(user_id: 3, name: "A Few extras", description: "Some miscellaneous podcasts!", series: true)
 
 rowlist2 = List.create(user_id: 1, name: "Entertainment", description: "Movies, music, tv and more", series: true)
