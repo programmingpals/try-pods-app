@@ -10,6 +10,7 @@ export const podcastQueryContext = createContext([]);
 export default function PodcastQueryProvider(props) {
   const [queryPod, setQueryPod] = useState([]);
   const [recommendByFriend, setRecommendByFriend] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   const { user } = useContext(userContext);
   const params = useParams();
@@ -76,6 +77,7 @@ export default function PodcastQueryProvider(props) {
 
         setQueryPod(podcastData);
         setRecommendByFriend(recommendByFriend);
+        setIsLoading(false);
       });
     };
 
@@ -87,7 +89,11 @@ export default function PodcastQueryProvider(props) {
     episodeList: (queryPod && queryPod.episodes) || [],
     recommendByFriend,
   };
-  
+
+  if (isLoading) {
+    return <p>...Loading</p>;
+  }
+
   return (
     <podcastQueryContext.Provider value={value}>
       {props.children}
