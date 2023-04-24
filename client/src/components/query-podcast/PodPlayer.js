@@ -29,6 +29,7 @@
 // }
 
 import React, { useState } from "react";
+import allDots from "../../assets/backgrounds/all-dot-background.svg";
 
 export default function PodPlayer(props) {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -40,7 +41,10 @@ export default function PodPlayer(props) {
   const itunesId = `https://embed.podcasts.apple.com/us/podcast/id${props.itunesId}`;
 
   return (
-    <>
+    <div
+      className="itunes-player-block"
+      style={{ backgroundImage: `url(${allDots})` }}
+    >
       {!isLoaded && <p>Loading...</p>}
       <iframe
         title="My Podcast Episode"
@@ -50,8 +54,12 @@ export default function PodPlayer(props) {
         allowtransparency="true"
         src={itunesId}
         onLoad={handleLoad}
-        style={{ display: isLoaded ? "block" : "none" }}
+        style={{
+          display: isLoaded ? "block" : "none",
+          border: "5px solid #e5f2f8",
+          "border-radius": "15px",
+        }}
       />
-    </>
+    </div>
   );
 }
