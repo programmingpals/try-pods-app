@@ -115,24 +115,6 @@ export default function PodListItem(props) {
                 </button>
               )}
             </div>
-
-            {/* <a
-              href="#"
-              aria-expanded={height !== 0}
-              aria-controls="example-panel"
-              onClick={() => setHeight(height === 0 ? "auto" : 0)}
-            >
-              {height === 0 ? "Open" : "Close"}
-            </a>
-            <AnimateHeight
-              id="example-panel"
-              duration={500}
-              height={height} // see props documentation below
-            >
-              <div className="pod-list-item-description">
-                <p>{props.description}</p>
-              </div>
-            </AnimateHeight> */}
           </div>
         </div>
       </div>
@@ -142,8 +124,3 @@ export default function PodListItem(props) {
     </div>
   );
 }
-
-{/* {playerSelected && (
-        <PodPlayer itunesId={props.attributes.itunes_id} height={"450"} />
-      )}
-    </div> */}
