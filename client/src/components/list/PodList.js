@@ -118,8 +118,11 @@ export default function PodList(props) {
             <div className="podlist-row-left">
               <div className="share">
                 <EmailShareButton
+                  url="http://try-pods.com/podcastlist/Moms-List"
                   subject="My Podcast List"
-                  body={`http://localhost:3000/podcastlist/${params.id}`}
+                  body={
+                    "Hey Mom! Heres that list of podcasts you should checkout: "
+                  }
                 >
                   <img
                     src={mailIcon}
