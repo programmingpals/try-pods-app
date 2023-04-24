@@ -5,18 +5,25 @@ import { useParams } from "react-router-dom";
 
 export default function PodListGrid(props) {
   const [list, setList] = useState([]);
+  const [listLength, setListLength] = useState(0);
+  const [isLoading, setIsLoading] = useState(true);
 
   const params = useParams();
 
-  useEffect((props) => {
-    const getListData = function (id) {
-      axios.get(`/api/lists/${id}`).then((response) => {
-        setList(response.data.data.attributes.podcasts);
-      });
-    };
+  useEffect(
+    (props) => {
+      const getListData = function (id) {
+        axios.get(`/api/lists/${id}`).then((response) => {
+          setList(response.data.data.attributes.podcasts);
+          setListLength(listLength);
+        });
+      };
 
-    getListData(params.id);
-  }, []);
+      getListData(params.id);
+      setIsLoading(false);
+    },
+    [listLength]
+  );
 
   const deleteFromList = function (id) {
     axios
@@ -51,6 +58,10 @@ export default function PodListGrid(props) {
       />
     );
   });
+
+  if (isLoading) {
+    return <p>...Loading</p>;
+  }
 
   return <div className="podlist-grid">{podcasts}</div>;
 }

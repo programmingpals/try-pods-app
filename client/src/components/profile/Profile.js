@@ -138,7 +138,7 @@ export default function Profile(props) {
         <p>Add {userDetails.first_name}</p>
         <img src={Heart} />
       </div>
-      <hr />
+      <hr className="profile-hr" />
       {!isLoading && (
         <div className="friends-block">
           <p>The Inner Circle</p>
