@@ -17,6 +17,8 @@ export default function Home() {
     "f6e7c39d-3bdb-4cd6-a33f-468bd893080b",
     "1ea8ccc8-508c-4e9c-9c69-e3f65c820fd8",
     "345212ed-525f-4383-86ca-b66f262fdcf3",
+    "3a8d3cdf-b2aa-4c97-abdf-5b6787cbf0fe",
+    
   ];
 
   const random = Math.floor(Math.random() * podArray.length);
@@ -37,7 +39,6 @@ export default function Home() {
               >
                 {<img src={searchblack} style={{ width: "50px" }} />}
               </a>
-              {/* <img src={searchblack} style={{ width: "50px" }} /> */}
             </div>
             <div className="home-lucky">
               <Link to={`/querypodcast/${randomPodId}`}>
@@ -120,7 +121,7 @@ export default function Home() {
                 <img src={speakericon} style={{ width: "25px" }} />
               </h2>
               <p>
-                <Link to={"podcastlist/12"}>Go listen -></Link>
+                <Link to={"podcastlist/12"}>Go listen</Link>
               </p>
               <a href="http://localhost:3000/querypodcast/2cf30b44-6965-4485-bded-77173f835077">
                 <img
@@ -219,7 +220,7 @@ export default function Home() {
                 startups...
               </p>
               <p>
-                <a href="#">Show more >></a>
+                <a href="#">Show more</a>
               </p>
             </div>
             <div className="home-secondary-centre">
@@ -319,7 +320,7 @@ export default function Home() {
                 investing in...
               </p>
               <p>
-                <a href="#">Show more >></a>
+                <a href="#">Show more</a>
               </p>
             </div>
           </div>
