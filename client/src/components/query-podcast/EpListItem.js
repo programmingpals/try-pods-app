@@ -3,7 +3,6 @@ import { useState } from "react";
 import AnimateHeight from "react-animate-height";
 
 export default function EpListItem(props) {
-  const [isLoading, setIsLoading] = useState(true);
   const [showFullDescription, setShowFullDescription] = useState(false);
 
   const toggleDescription = () => {
