@@ -52,7 +52,7 @@ export default function Home() {
               <h2>See What Your Friends Are Listening To</h2>
               <Link to="profilepage/3">
                 <img
-                  src="https://raw.githubusercontent.com/bootonk/try-pods-app/master/client/src/assets/3Kate.png"
+                  src="https://raw.githubusercontent.com/bootonk/try-pods-app/master/client/src/assets/10Melanie.png"
                   width="60"
                   className="home-friends"
                 ></img>
