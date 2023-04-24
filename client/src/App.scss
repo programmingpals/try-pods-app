@@ -438,6 +438,11 @@ button {
   margin: 0px 10px 0px 10px;
 }
 
+.friend-item img:hover {
+  border: solid 2px #d2e93c;
+  border-radius: 100%;
+}
+
 .recommend-item img,
 .friend-item img,
 .add-friend img {

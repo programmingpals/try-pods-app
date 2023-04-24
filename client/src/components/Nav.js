@@ -30,8 +30,8 @@ export default function Nav() {
               onClick={() => setHeight(height === 0 ? "auto" : 0)}
             >
               {height === 0 ? "Search" : "Close Search"}
-              <img src={SearchWhite} />
             </a>
+            <img src={SearchWhite} />
           </div>
           <div className="login-user">
             <Link to={"profilepage/1"} class="nav-link">
