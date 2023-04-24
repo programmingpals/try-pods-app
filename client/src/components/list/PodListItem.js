@@ -21,7 +21,7 @@ export default function PodListItem(props) {
   const truncatedDescription = props.description.substring(0, 150) + "...";
 
   const seriesType = props.seriesType;
-  console.log(seriesType);
+
   let seriesTypeTitleCase = "";
   if (seriesType) {
     const seriesTypeLowerCase = seriesType.toLowerCase();
@@ -82,7 +82,11 @@ export default function PodListItem(props) {
                   }}
                 >
                   {playerSelected ? (
-                    "Close Player"
+                    <img
+                      src={speakerIcon}
+                      className="action-button"
+                      alt="Listen"
+                    />
                   ) : (
                     <img
                       src={speakerIcon}
@@ -109,10 +113,12 @@ export default function PodListItem(props) {
                   {showConfirmation && (
                     <div className="deletion-confirmation">
                       <p>Are you sure you want to delete this podcast?</p>
-                      <button onClick={handleDelete}>Confirm Deletion</button>
-                      <button onClick={() => setShowConfirmation(false)}>
-                        Cancel
-                      </button>
+                      <div className="delete-buttons-block">
+                        <button onClick={handleDelete}>Delete</button>
+                        <button onClick={() => setShowConfirmation(false)}>
+                          Cancel
+                        </button>
+                      </div>
                     </div>
                   )}
                 </div>

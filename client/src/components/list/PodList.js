@@ -15,6 +15,7 @@ import {
 } from "react-share";
 import mailIcon from "../../assets/icons/mailIcon.png";
 import halfTone from "../../assets/backgrounds/half-tone-background.svg";
+import halfToneSmall from "../../assets/backgrounds/half-tone-small-dot-background.svg";
 
 export default function PodList(props) {
   const [listDetails, setListDetails] = useState([]);
@@ -82,7 +83,7 @@ export default function PodList(props) {
     <div class="podlist">
       <div
         class="page-header podlist-header"
-        style={{ backgroundImage: `url(${halfTone})` }}
+        style={{ backgroundImage: `url(${halfToneSmall})` }}
       >
         <div class="podlist-details">
           <div class="podlist-row">
@@ -100,10 +101,11 @@ export default function PodList(props) {
             <div class="podlist-row-left">
               <h4>{listDetails.description}</h4>
             </div>
-            <div class="podlist-row-right">
+            <div className="podlist-row-right">
               {user === owner && (
                 <a
                   href="#/"
+                  className="underline"
                   aria-expanded={height !== 0}
                   aria-controls="example-panel"
                   onClick={() => setHeight(height === 0 ? "auto" : 0)}
@@ -124,10 +126,7 @@ export default function PodList(props) {
                     "Hey Mom! Heres that list of podcasts you should checkout: "
                   }
                 >
-                  <img
-                    src={mailIcon}
-                    style={{ width: "24px", "padding-right": "10px" }}
-                  />
+                  <img src={mailIcon} />
                 </EmailShareButton>
                 <TwitterShareButton
                   url={`http://localhost:3000/podcastlist/${params.id}`}
@@ -154,14 +153,18 @@ export default function PodList(props) {
                 {showConfirmation && (
                   <div className="deletion-confirmation">
                     <p>Are you sure you want to delete this list?</p>
-                    <Link to={`/profilepage/${user}`}>
-                      <button onClick={() => deleteList(user, params.id)}>
-                        Confirm Deletion
-                      </button>
-                    </Link>
-                    <button onClick={() => setShowConfirmation(false)}>
-                      Cancel
-                    </button>
+                    <div className="delete-buttons-block">
+                      <Link to={`/profilepage/${user}`}>
+                        <button onClick={() => deleteList(user, params.id)}>
+                          Delete
+                        </button>
+                      </Link>
+                      <a href="#/">
+                        <button onClick={() => setShowConfirmation(false)}>
+                          Cancel
+                        </button>
+                      </a>
+                    </div>
                   </div>
                 )}
               </div>
