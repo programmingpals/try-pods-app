@@ -17,8 +17,10 @@ export default function Nav() {
         <div class="nav-left">
           <Link to={"/"} class="nav-link">
             <img src={Logo} />
+            </Link>
             <h4 className="logo-name">Try-Pods</h4>
-          </Link>
+          
+          
         </div>
         <div class="nav-right">
           <div className="nav-search">
