@@ -11,6 +11,7 @@ import SearchToggleProvider from "./providers/SearchToggleProvider";
 import AddPodcast from "./components/add-podcast/AddPodcast";
 import Nav from "./components/Nav";
 import AddListForm from "./components/profile/AddListForm";
+import WrapUp from "./components/pages/WrapUp";
 
 export default function App(props) {
   return (
@@ -35,6 +36,7 @@ export default function App(props) {
                     </PodcastQueryProvider>
                   }
                 />
+                <Route path="/wrapup" element={<WrapUp />} />
               </Routes>
             </div>
           </BrowserRouter>

@@ -8,6 +8,7 @@ import searchblack from "../../assets/icons/search-black.png";
 import folder from "../../assets/icons/folder.png";
 import "./Home.scss";
 import allDots from "../../assets/backgrounds/all-dot-background.svg";
+import WrapUp from "./WrapUp";
 
 export default function Home() {
   const { height, setHeight } = useContext(searchContext);
@@ -344,6 +345,7 @@ export default function Home() {
       </section>
       <section>
         <div className="footer">Copyright 2023 Bootcamp Buds</div>
+        <Link to="/wrapup">Wrap Up!</Link>
       </section>
     </div>
   );
