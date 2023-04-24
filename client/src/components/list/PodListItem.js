@@ -21,9 +21,14 @@ export default function PodListItem(props) {
   const truncatedDescription = props.description.substring(0, 150) + "...";
 
   const seriesType = props.seriesType;
-  const seriesTypeLowerCase = seriesType.toLowerCase();
-  const seriesTypeTitleCase =
-    seriesTypeLowerCase.charAt(0).toUpperCase() + seriesTypeLowerCase.slice(1);
+  console.log(seriesType);
+  let seriesTypeTitleCase = "";
+  if (seriesType) {
+    const seriesTypeLowerCase = seriesType.toLowerCase();
+    seriesTypeTitleCase =
+      seriesTypeLowerCase.charAt(0).toUpperCase() +
+      seriesTypeLowerCase.slice(1);
+  }
 
   const toggleDescription = () => {
     setShowFullDescription(!showFullDescription);
@@ -116,7 +121,7 @@ export default function PodListItem(props) {
           </div>
           <div className="details-row-left">
             <p>Released: {release}</p>
-            <p>Series type: {seriesTypeTitleCase} </p>
+            {seriesTypeTitleCase && <p>Series type: {seriesTypeTitleCase} </p>}
           </div>
           <div className="drop-down-test">
             <div className="pod-list-item-description">
@@ -134,10 +139,8 @@ export default function PodListItem(props) {
       </div>
       <div style={{ display: playerSelected ? "block" : "none" }}>
         <PodPlayer itunesId={props.attributes.itunes_id} height={"450"} />
-
       </div>
       <hr className="podcast-hr" />
     </div>
   );
 }
-
