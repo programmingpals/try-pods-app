@@ -14,7 +14,7 @@ user1 = User.create(first_name: "Rowan", last_name: "Mackenzie", email: "row.row
 
 user2 = User.create(first_name: "Liz", last_name: "Fosdick", email: "lf@gmail.com", password: "123123", avatar: "https://raw.githubusercontent.com/bootonk/try-pods-app/master/client/src/assets/2Liz.png")
 
-user3 = User.create(first_name: "Kate", last_name: "Booton", email: "kb@gmail.com", password: "123123", avatar: "https://raw.githubusercontent.com/bootonk/try-pods-app/master/client/src/assets/3Kate.png")
+user3 = User.create(first_name: "Melanie", last_name: "F", email: "mf@gmail.com", password: "123123", avatar: "https://raw.githubusercontent.com/bootonk/try-pods-app/master/client/src/assets/10Melanie.png")
 
 user4 = User.create(first_name: "Mike", last_name: "V", email: "mv@gmail.com", password: "123123", avatar: "https://raw.githubusercontent.com/bootonk/try-pods-app/master/client/src/assets/4Mike.png")
 
@@ -28,7 +28,7 @@ user8 = User.create(first_name: "Pete", last_name: "F", email: "pf@gmail.com", p
 
 user9 = User.create(first_name: "Meaghan", last_name: "C", email: "mc@gmail.com", password: "123123", avatar: "https://raw.githubusercontent.com/bootonk/try-pods-app/master/client/src/assets/9Meaghan.png")
 
-user10 = User.create(first_name: "Melanie", last_name: "F", email: "mf@gmail.com", password: "123123", avatar: "https://raw.githubusercontent.com/bootonk/try-pods-app/master/client/src/assets/10Melanie.png")
+user10 = User.create(first_name: "Kate", last_name: "Booton", email: "kb@gmail.com", password: "123123", avatar: "https://raw.githubusercontent.com/bootonk/try-pods-app/master/client/src/assets/3Kate.png")
 
 user11 = User.create(first_name: "Bill", last_name: "F", email: "bf@gmail.com", password: "123123", avatar: "https://raw.githubusercontent.com/bootonk/try-pods-app/master/client/src/assets/11Bill.png")
 
@@ -50,7 +50,7 @@ lizlist6 = List.create(user_id: 2, name: "All-time Top Pods", description: "My a
 
 katelist7 = List.create(user_id: 3, name: "My Favourites", description: "All-time fave podcasts", series: true)
 
-rowlist8 = List.create(user_id: 1, name: "Miscellaneous Pods", description: "Just a bunch of randoms", series: true)
+rowlist8 = List.create(user_id: 1, name: "List for Mom 💜", description: "Some pods she might like", series: true)
 
 rowlisttop8id9 = List.create(user_id: 1, name: "Top 8", description: "My Top 8 Podcasts", series: true)
 
@@ -258,7 +258,7 @@ podcast12 = Podcast.create(list_id: 8,
 "seriesType": "SERIAL"
 )
 
-podcast13 = Podcast.create(list_id: 2,
+podcast13 = Podcast.create(list_id: 15,
 "pod_uuid": "e81999d2-0ece-4794-b41e-489763a6237b",
 "title": "Song Exploder",
 "itunes_id": 788236947,
@@ -1019,7 +1019,7 @@ podcast62 = Podcast.create(list_id: 9,
 "pod_uuid": "c1983754-2112-45b9-959d-4415f25e8474",
 "title": "West Cork",
 "itunes_id": 1556472772,
-"description": "In West Cork, it’s simply known as ‘the murder’. In 1996 French film producer Sophie Toscan du Plantier is found dead near her holiday home. There are no witnesses and no known motive. The police suspect one man in this community but they can’t make a charge stick and he refuses to leave, living under the glare of suspicion ever since.&nbsp;This series brings together an incredible cast of characters, many of whom have never spoken publicly before. The family of the victim bring to life a woman lost; the suspect puts forward his defence; and local people explain what it’s like to have the living embodiment of their unsettled nerves still resolutely among them. Reported and hosted by Jennifer Forde and Sam Bungey.&nbsp;To be first to listen to bonus episodes of West Cork and Sam and Jennifer's incredible next series, sign up at www.westcorkpodcast.com“The hosts beautifully communicate how a tragedy can impact a town and its people in devastating ways.” Time magazine&nbsp;“Meticulous and thoughtful … The podcast is vastly more soulful than so many of its peers, in large part by functioning as an exploration of how a tragedy, mixed with spectacle, can redefine and consume the terms of a place, a person, and a time.\" Nick Quah, Vulture&nbsp;“One of the few podcasts that caused us to drive in pointless extra loops in total silence, just so we could hear another episode. West Cork is the new Serial. It may even be better.”&nbsp;India Knight, The Times&nbsp;\"Knocked me out like no other podcast since S-Town. A masterpiece.\" Patrick Radden Keefe, author of Say Nothing&nbsp; Hosted on Acast. See acast.com/privacy for more information.",
+"description": "In West Cork, it’s simply known as ‘the murder’. In 1996 French film producer Sophie Toscan du Plantier is found dead near her holiday home. There are no witnesses and no known motive. The police suspect one man in this community but they can’t make a charge stick and he refuses to leave, living under the glare of suspicion ever since. This series brings together an incredible cast of characters, many of whom have never spoken publicly before. The family of the victim bring to life a woman lost; the suspect puts forward his defence; and local people explain what it’s like to have the living embodiment of their unsettled nerves still resolutely among them. Reported and hosted by Jennifer Forde and Sam Bungey. To be first to listen to bonus episodes of West Cork and Sam and Jennifer's incredible next series, sign up at www.westcorkpodcast.com“The hosts beautifully communicate how a tragedy can impact a town and its people in devastating ways.” Time magazine, “Meticulous and thoughtful … The podcast is vastly more soulful than so many of its peers, in large part by functioning as an exploration of how a tragedy, mixed with spectacle, can redefine and consume the terms of a place, a person, and a time.\" Nick Quah, Vulture;“One of the few podcasts that caused us to drive in pointless extra loops in total silence, just so we could hear another episode. West Cork is the new Serial. It may even be better.\"; India Knight, The Times\"Knocked me out like no other podcast since S-Town. A masterpiece.\" Patrick Radden Keefe, author of Say Nothing; Hosted on Acast. See acast.com/privacy for more information.",
 "link": "https://www.westcorkpodcast.com",
 "language": "ENGLISH",
 "authorName": "yarn fm",
@@ -1223,22 +1223,6 @@ podcast75 = Podcast.create(list_id: 14,
 "seriesType": "EPISODIC"
 )
 
-podcast76 = Podcast.create(list_id: 14,
-"pod_uuid": "515997a2-2e3c-4b5a-b2a2-55d947db0eb9",
-"title": "Happier with Gretchen Rubin",
-"itunes_id": 969519520,
-"description": "Gretchen Rubin is HAPPIER, and she wants you to be happier too. The #1 bestselling author of The Happiness Project and Better Than Before gets more personal than ever as she brings her practical, manageable advice about happiness and good habits to this lively, thought-provoking podcast. Gretchen’s cohost and guinea pig is her younger sister, Elizabeth Craft, a TV writer and producer living in Los Angeles, who (lovingly) refers to Gretchen as her happiness bully. Part of the Cadence13 Network.",
-"link": "http://www.gretchenrubin.com",
-"language": "ENGLISH",
-"authorName": "Gretchen Rubin / The Onward Project",
-"isCompleted": false,
-"totalEpisodeCount": 847,
-"rssUrl": "https://feeds.megaphone.fm/happier",
-"image": "https://megaphone.imgix.net/podcasts/32ecfb42-8289-11e5-b42a-8f36c3d2bc76/image/Happier_with_Gretchen_Rubin_FINAL.png?ixlib=rails-4.3.1&max-w=3000&max-h=3000&fit=crop&auto=format,compress",
-"release_date": 1424829480,
-"seriesType": "EPISODIC"
-)
-
 podcast77 = Podcast.create(list_id: 14,
 "pod_uuid": "9d20127e-7a08-4de1-b249-7b0db87f5862",
 "title": "Dead Eyes",
@@ -1387,7 +1371,7 @@ podcast86 = Podcast.create(list_id: 5,
 "pod_uuid": "c1983754-2112-45b9-959d-4415f25e8474",
 "title": "West Cork",
 "itunes_id": 1556472772,
-"description": "In West Cork, it’s simply known as ‘the murder’. In 1996 French film producer Sophie Toscan du Plantier is found dead near her holiday home. There are no witnesses and no known motive. The police suspect one man in this community but they can’t make a charge stick and he refuses to leave, living under the glare of suspicion ever since.&nbsp;This series brings together an incredible cast of characters, many of whom have never spoken publicly before. The family of the victim bring to life a woman lost; the suspect puts forward his defence; and local people explain what it’s like to have the living embodiment of their unsettled nerves still resolutely among them. Reported and hosted by Jennifer Forde and Sam Bungey.&nbsp;To be first to listen to bonus episodes of West Cork and Sam and Jennifer's incredible next series, sign up at www.westcorkpodcast.com“The hosts beautifully communicate how a tragedy can impact a town and its people in devastating ways.” Time magazine&nbsp;“Meticulous and thoughtful … The podcast is vastly more soulful than so many of its peers, in large part by functioning as an exploration of how a tragedy, mixed with spectacle, can redefine and consume the terms of a place, a person, and a time.\" Nick Quah, Vulture&nbsp;“One of the few podcasts that caused us to drive in pointless extra loops in total silence, just so we could hear another episode. West Cork is the new Serial. It may even be better.”&nbsp;India Knight, The Times&nbsp;\"Knocked me out like no other podcast since S-Town. A masterpiece.\" Patrick Radden Keefe, author of Say Nothing&nbsp; Hosted on Acast. See acast.com/privacy for more information.",
+"description": "In West Cork, it’s simply known as ‘the murder’. In 1996 French film producer Sophie Toscan du Plantier is found dead near her holiday home. There are no witnesses and no known motive. The police suspect one man in this community but they can’t make a charge stick and he refuses to leave, living under the glare of suspicion ever since.;This series brings together an incredible cast of characters, many of whom have never spoken publicly before. The family of the victim bring to life a woman lost; the suspect puts forward his defence; and local people explain what it’s like to have the living embodiment of their unsettled nerves still resolutely among them. Reported and hosted by Jennifer Forde and Sam Bungey.;To be first to listen to bonus episodes of West Cork and Sam and Jennifer's incredible next series, sign up at www.westcorkpodcast.com“The hosts beautifully communicate how a tragedy can impact a town and its people in devastating ways.” Time magazine;“Meticulous and thoughtful … The podcast is vastly more soulful than so many of its peers, in large part by functioning as an exploration of how a tragedy, mixed with spectacle, can redefine and consume the terms of a place, a person, and a time.\" Nick Quah, Vulture;“One of the few podcasts that caused us to drive in pointless extra loops in total silence, just so we could hear another episode. West Cork is the new Serial. It may even be better.”; India Knight, The Times ;\"Knocked me out like no other podcast since S-Town. A masterpiece.\" Patrick Radden Keefe, author of Say Nothing. Hosted on Acast. See acast.com/privacy for more information.",
 "link": "https://www.westcorkpodcast.com",
 "language": "ENGLISH",
 "authorName": "yarn fm",
@@ -1403,7 +1387,7 @@ podcast87 = Podcast.create(list_id: 1,
 "pod_uuid": "c1983754-2112-45b9-959d-4415f25e8474",
 "title": "West Cork",
 "itunes_id": 1556472772,
-"description": "In West Cork, it’s simply known as ‘the murder’. In 1996 French film producer Sophie Toscan du Plantier is found dead near her holiday home. There are no witnesses and no known motive. The police suspect one man in this community but they can’t make a charge stick and he refuses to leave, living under the glare of suspicion ever since.&nbsp;This series brings together an incredible cast of characters, many of whom have never spoken publicly before. The family of the victim bring to life a woman lost; the suspect puts forward his defence; and local people explain what it’s like to have the living embodiment of their unsettled nerves still resolutely among them. Reported and hosted by Jennifer Forde and Sam Bungey.&nbsp;To be first to listen to bonus episodes of West Cork and Sam and Jennifer's incredible next series, sign up at www.westcorkpodcast.com“The hosts beautifully communicate how a tragedy can impact a town and its people in devastating ways.” Time magazine&nbsp;“Meticulous and thoughtful … The podcast is vastly more soulful than so many of its peers, in large part by functioning as an exploration of how a tragedy, mixed with spectacle, can redefine and consume the terms of a place, a person, and a time.\" Nick Quah, Vulture&nbsp;“One of the few podcasts that caused us to drive in pointless extra loops in total silence, just so we could hear another episode. West Cork is the new Serial. It may even be better.”&nbsp;India Knight, The Times&nbsp;\"Knocked me out like no other podcast since S-Town. A masterpiece.\" Patrick Radden Keefe, author of Say Nothing&nbsp; Hosted on Acast. See acast.com/privacy for more information.",
+"description": "In West Cork, it’s simply known as ‘the murder’. In 1996 French film producer Sophie Toscan du Plantier is found dead near her holiday home. There are no witnesses and no known motive. The police suspect one man in this community but they can’t make a charge stick and he refuses to leave, living under the glare of suspicion ever since.;This series brings together an incredible cast of characters, many of whom have never spoken publicly before. The family of the victim bring to life a woman lost; the suspect puts forward his defence; and local people explain what it’s like to have the living embodiment of their unsettled nerves still resolutely among them. Reported and hosted by Jennifer Forde and Sam Bungey.;To be first to listen to bonus episodes of West Cork and Sam and Jennifer's incredible next series, sign up at www.westcorkpodcast.com“The hosts beautifully communicate how a tragedy can impact a town and its people in devastating ways.” Time magazine;“Meticulous and thoughtful … The podcast is vastly more soulful than so many of its peers, in large part by functioning as an exploration of how a tragedy, mixed with spectacle, can redefine and consume the terms of a place, a person, and a time.\" Nick Quah, Vulture;“One of the few podcasts that caused us to drive in pointless extra loops in total silence, just so we could hear another episode. West Cork is the new Serial. It may even be better.”; India Knight, The Times ;\"Knocked me out like no other podcast since S-Town. A masterpiece.\" Patrick Radden Keefe, author of Say Nothing. Hosted on Acast. See acast.com/privacy for more information.",
 "link": "https://www.westcorkpodcast.com",
 "language": "ENGLISH",
 "authorName": "yarn fm",
@@ -1623,22 +1607,6 @@ podcast100 = Podcast.create(list_id: 6,
 "seriesType": "SERIAL"
 )
 
-podcast101 = Podcast.create(list_id: 14,
-"pod_uuid": "e8710134-bbf1-4f44-b0e1-d56ebb30ce0a",
-"title": "The Anthropocene Reviewed",
-"itunes_id": 1342003491,
-"description": "The Anthropocene is the current geological age, in which human activity has profoundly shaped the planet and its biodiversity. On The Anthropocene Reviewed, #1 New York Times bestselling author John Green (The Fault in Our Stars, Turtles All the Way Down) reviews different facets of the human-centered planet on a five-star scale. WNYC Studios is a listener-supported producer of other leading podcasts including On the Media, Snap Judgment, Death, Sex & Money, Nancy and Here’s the Thing with Alec Baldwin. © WNYC Studios",
-"link": "https://www.wnycstudios.org/podcasts/anthropocene-reviewed",
-"language": "ENGLISH",
-"authorName": "Complexly, John Green",
-"isCompleted": false,
-"totalEpisodeCount": 37,
-"rssUrl": "https://feeds.simplecast.com/p7S4nr_h",
-"image": "https://image.simplecastcdn.com/images/d48cf57e-8709-499d-a9c6-1c6264aff730/d7543167-91d7-455a-9048-b1843e740206/3000x3000/tar-complexly.jpg?aid=rss_feed",
-"release_date": 1517227200,
-"seriesType": "EPISODIC"
-)
-
 podcast102 = Podcast.create(list_id: 8,
 "pod_uuid": "611680e6-13b1-40c7-9b5f-1c92ca373896",
 "title": "Las Culturistas with Matt Rogers and Bowen Yang",
@@ -1668,22 +1636,6 @@ podcast103 = Podcast.create(list_id: 8,
 "rssUrl": "https://feeds.simplecast.com/p7S4nr_h",
 "image": "https://image.simplecastcdn.com/images/d48cf57e-8709-499d-a9c6-1c6264aff730/d7543167-91d7-455a-9048-b1843e740206/3000x3000/tar-complexly.jpg?aid=rss_feed",
 "release_date": 1517227200,
-"seriesType": "EPISODIC"
-)
-
-podcast104 = Podcast.create(list_id: 12,
-"pod_uuid": "437b3e05-05e8-4723-aa4d-8933df7c9925",
-"title": "You're Wrong About",
-"itunes_id": 1380008439,
-"description": "Sarah is a journalist obsessed with the past. Every week she reconsiders a person or event that's been miscast in the public imagination.",
-"link": "https://www.buzzsprout.com/1112270",
-"language": "ENGLISH",
-"authorName": "Sarah Marshall",
-"isCompleted": false,
-"totalEpisodeCount": 189,
-"rssUrl": "https://feeds.buzzsprout.com/1112270.rss",
-"image": "https://storage.buzzsprout.com/variants/2d605m8uneahqo4polewo18qw4f4/5cfec01b44f3e29fae1fb88ade93fc4aecd05b192fbfbc2c2f1daa412b7c1921.jpg",
-"release_date": 1525291200,
 "seriesType": "EPISODIC"
 )
 
@@ -1748,6 +1700,22 @@ podcast58 = Podcast.create(list_id: 9,
 "rssUrl": "https://feeds.acast.com/public/shows/b19ac1f5-6adf-4c8b-aa1a-2af2160f99e4",
 "image": "https://assets.pippa.io/shows/61ba04aa1a8cbee88a3cf0d8/show-cover.jpg",
 "release_date": 1542391959,
+"seriesType": "EPISODIC"
+)
+
+podcast107 = Podcast.create(list_id: 14,
+"pod_uuid": "e81999d2-0ece-4794-b41e-489763a6237b",
+"title": "Song Exploder",
+"itunes_id": 788236947,
+"description": "Song Exploder is a podcast where musicians take apart their songs, and piece by piece, tell the story of how they were made. Each episode features an artist discussing a song of theirs, breaking down the sounds and ideas that went into the writing and recording. Hosted and produced by Hrishikesh Hirway.",
+"link": "http://www.songexploder.net",
+"language": "ENGLISH",
+"authorName": "Hrishikesh Hirway",
+"isCompleted": false,
+"totalEpisodeCount": 274,
+"rssUrl": "https://feed.songexploder.net/SongExploder",
+"image": "https://f.prxu.org/song-exploder/images/be38e299-c8df-4c7c-ac77-ea4b8723e23d/Song_Exploder.png",
+"release_date": 1388565000,
 "seriesType": "EPISODIC"
 )
 
