@@ -12,7 +12,7 @@
 }
 
 hr {
-  margin: 0px -300px 0px -500px;
+  margin: 0px -500px 0px -500px;
   border: 0;
   border-top: 3px solid;
 }
@@ -158,6 +158,7 @@ p.add-list {
 .podlist-header {
   border-color: none;
   margin: 40px auto;
+  background-repeat: no-repeat;
 }
 
 .podcast-header {
@@ -230,6 +231,16 @@ p.add-list {
   text-align: right;
 }
 
+.podlist-row-right a {
+  padding-top: 5px;
+  text-decoration: none;
+  border-bottom: 5px solid white;
+}
+
+.underline:hover {
+  border-bottom: 5px solid #2fc2ae;
+}
+
 .podlist-row-left img {
   width: 30px;
 }
@@ -241,11 +252,19 @@ p.add-list {
   justify-content: flex-end;
 }
 
-.podlist-row-right .share {
+.podlist-row-left .share {
   display: flex;
   flex-direction: row;
   padding-top: 10px;
-  justify-content: flex-end;
+  justify-content: space-between;
+  align-items: center;
+  width: 90px;
+}
+
+.podlist-row-left .share img,
+.podlist-row-left .react-share__ShareButton {
+  width: 25px;
+  padding-right: 10px;
 }
 
 .podlist-row-mix {
@@ -298,13 +317,42 @@ p.add-list {
   width: 80px;
 }
 
+.podlist-item-actions {
+  display: flex;
+  align-items: center;
+}
+
+.podlist-item-actions a {
+  text-decoration: none;
+  padding-bottom: 5px;
+  padding-right: 5px;
+}
+
 .action-button {
-  padding-left: 10px;
+  padding: 0px 5px;
   width: 25px;
+  border-bottom: 5px solid white;
 }
 
 .action-button:hover {
-  border-bottom: 5px solid #d2e93c;
+  border-bottom: 5px solid #2fc2ae;
+}
+
+.deletion-confirmation {
+  border: solid 3px #d2e93c;
+  padding: 10px;
+  margin-right: -100px;
+  width: 200px;
+  margin-top: 15px;
+}
+
+.deletion-confirmation p {
+  text-align: center;
+}
+
+.delete-buttons-block {
+  display: flex;
+  justify-content: space-between;
 }
 
 .pod-list-item-description p {
@@ -369,7 +417,7 @@ button {
 }
 
 .button-add-underline,
-.podlist-row-mix a .podlist-row-right a,
+.podlist-row-mix a,
 .underline,
 .button {
   border-bottom: solid #2fc2ae 5px;
@@ -486,4 +534,12 @@ button {
   display: flex;
   flex-direction: row;
   align-items: flex-end;
+}
+
+.itunes-player-block {
+  padding: 50px;
+  margin-bottom: 20px;
+  // background-color: #e5f2f8;
+  border: solid 5px #e5f2f8;
+  transform: translateY(0px);
 }
