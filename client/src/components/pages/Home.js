@@ -7,6 +7,7 @@ import { searchContext } from "../../providers/SearchToggleProvider";
 import searchblack from "../../assets/icons/search-black.png";
 import folder from "../../assets/icons/folder.png";
 import "./Home.scss";
+import allDots from "../../assets/backgrounds/all-dot-background.svg";
 
 export default function Home() {
   const { height, setHeight } = useContext(searchContext);
@@ -18,7 +19,6 @@ export default function Home() {
     "1ea8ccc8-508c-4e9c-9c69-e3f65c820fd8",
     "345212ed-525f-4383-86ca-b66f262fdcf3",
     "3a8d3cdf-b2aa-4c97-abdf-5b6787cbf0fe",
-    
   ];
 
   const random = Math.floor(Math.random() * podArray.length);
@@ -40,7 +40,10 @@ export default function Home() {
                 {<img src={searchblack} style={{ width: "50px" }} />}
               </a>
             </div>
-            <div className="home-lucky">
+            <div
+              className="home-lucky"
+              style={{ backgroundImage: `url(${allDots})` }}
+            >
               <Link to={`/querypodcast/${randomPodId}`}>
                 <button className="lucky-button">I'm feeling lucky!</button>
               </Link>
@@ -101,63 +104,67 @@ export default function Home() {
           </div>
 
           <div className="home-main-centre">
-            <h2>Now Trending</h2>
-            <div className="home-carousel-container">
-              <HomeCarousel />
+            <div className="main-block">
+              <h2>Now Trending</h2>
+              <div className="home-carousel-container">
+                <HomeCarousel />
+              </div>
             </div>
           </div>
 
           <div className="home-main-right">
-            <div className="home-up-next-container">
-              <h2>
-                Up next
+            <div
+              className="home-up-next-container"
+              style={{ backgroundImage: `url(${allDots})` }}
+            >
+              <div className="up-next-header">
+                <h2>Up next</h2>
                 <img src={speakericon} style={{ width: "25px" }} />
-              </h2>
-              <p>
-                <Link to={"podcastlist/12"}>Go listen</Link>
-              </p>
-              <a href="http://localhost:3000/querypodcast/2cf30b44-6965-4485-bded-77173f835077">
-                <img
-                  src="https://f.prxu.org/3492/images/01e4145d-1e06-4521-8548-d6c9072e53c3/Show_Cover_Normal_Gossip_red_v5.jpg"
-                  width="100"
-                  className="home-up-next"
-                />
-              </a>
-              <a href="http://localhost:3000/querypodcast/1f14df6e-a01c-4a11-ae98-cef95d27d42f">
-                <img
-                  src="https://image.simplecastcdn.com/images/2dcfae8f-b2e0-4826-a483-1306d3b8be06/d8c21569-e9eb-41d5-b1d0-70d9ea0c8ddc/3000x3000/dhj-podcastartwork-2021-v1.jpg?aid=rss_feed"
-                  width="100"
-                  className="home-up-next"
-                />
-              </a>
-              <a href="http://localhost:3000/querypodcast/dc3ad56c-340a-4f34-adab-53c25da672cd">
-                <img
-                  src="https://deow9bq0xqvbj.cloudfront.net/image-logo/13701264/TFC_logo_2022_small-03_mvcyi4.png"
-                  width="100"
-                  className="home-up-next"
-                />
-              </a>
-              <a href="http://localhost:3000/querypodcast/08146843-ae79-452c-b0c3-531c4ed8ef7f">
-                <img
-                  src="https://image.simplecastcdn.com/images/d139afc2-e8b0-4ec2-bc74-fdc3c88f649a/6223229f-44ee-42fe-af91-83a4bdd87f00/3000x3000/screen-shot-2023-04-03-at-9-34-20-am.jpg?aid=rss_feed"
-                  width="100"
-                  className="home-up-next"
-                />
-              </a>
-              <a href="http://localhost:3000/querypodcast/437b3e05-05e8-4723-aa4d-8933df7c9925">
-                <img
-                  src="https://storage.buzzsprout.com/variants/2d605m8uneahqo4polewo18qw4f4/5cfec01b44f3e29fae1fb88ade93fc4aecd05b192fbfbc2c2f1daa412b7c1921.jpg"
-                  width="100"
-                  className="home-up-next"
-                />
-              </a>
-              <a href="http://localhost:3000/querypodcast/f89212f2-3123-4b2a-884d-c2da66dc2e45">
-                <img
-                  src="https://f.prxu.org/187/images/4610f1dc-cafa-4b1b-8dd0-52a384c81214/Articles_of_Interest.png"
-                  width="100"
-                  className="home-up-next"
-                />
-              </a>
+              </div>
+              <div className="up-next-grid">
+                <a href="http://localhost:3000/querypodcast/2cf30b44-6965-4485-bded-77173f835077">
+                  <img
+                    src="https://f.prxu.org/3492/images/01e4145d-1e06-4521-8548-d6c9072e53c3/Show_Cover_Normal_Gossip_red_v5.jpg"
+                    width="100"
+                    className="home-up-next"
+                  />
+                </a>
+                <a href="http://localhost:3000/querypodcast/1f14df6e-a01c-4a11-ae98-cef95d27d42f">
+                  <img
+                    src="https://image.simplecastcdn.com/images/2dcfae8f-b2e0-4826-a483-1306d3b8be06/d8c21569-e9eb-41d5-b1d0-70d9ea0c8ddc/3000x3000/dhj-podcastartwork-2021-v1.jpg?aid=rss_feed"
+                    width="100"
+                    className="home-up-next"
+                  />
+                </a>
+                <a href="http://localhost:3000/querypodcast/dc3ad56c-340a-4f34-adab-53c25da672cd">
+                  <img
+                    src="https://deow9bq0xqvbj.cloudfront.net/image-logo/13701264/TFC_logo_2022_small-03_mvcyi4.png"
+                    width="100"
+                    className="home-up-next"
+                  />
+                </a>
+                <a href="http://localhost:3000/querypodcast/08146843-ae79-452c-b0c3-531c4ed8ef7f">
+                  <img
+                    src="https://image.simplecastcdn.com/images/d139afc2-e8b0-4ec2-bc74-fdc3c88f649a/6223229f-44ee-42fe-af91-83a4bdd87f00/3000x3000/screen-shot-2023-04-03-at-9-34-20-am.jpg?aid=rss_feed"
+                    width="100"
+                    className="home-up-next"
+                  />
+                </a>
+                <a href="http://localhost:3000/querypodcast/437b3e05-05e8-4723-aa4d-8933df7c9925">
+                  <img
+                    src="https://storage.buzzsprout.com/variants/2d605m8uneahqo4polewo18qw4f4/5cfec01b44f3e29fae1fb88ade93fc4aecd05b192fbfbc2c2f1daa412b7c1921.jpg"
+                    width="100"
+                    className="home-up-next"
+                  />
+                </a>
+                <a href="http://localhost:3000/querypodcast/f89212f2-3123-4b2a-884d-c2da66dc2e45">
+                  <img
+                    src="https://f.prxu.org/187/images/4610f1dc-cafa-4b1b-8dd0-52a384c81214/Articles_of_Interest.png"
+                    width="100"
+                    className="home-up-next"
+                  />
+                </a>
+              </div>
             </div>
             <div className="home-add-container">
               <h2>Add To Your Lists</h2>
@@ -165,6 +172,10 @@ export default function Home() {
                 <h4 className="list-option">
                   <img src={folder} style={{ width: "25px" }} />
                   <Link to={`/podcastlist/9`}>Top 8</Link>
+                </h4>
+                <h4 className="list-option">
+                  <img src={folder} style={{ width: "25px" }} />
+                  <Link to={`/podcastlist/12`}>Up Next</Link>
                 </h4>
                 <h4 className="list-option">
                   <img src={folder} style={{ width: "25px" }} />
@@ -178,6 +189,10 @@ export default function Home() {
                   <img src={folder} style={{ width: "25px" }} />
                   <Link to={`/podcastlist/8`}>Miscellaneous Pods</Link>
                 </h4>
+                <h4 className="list-option">
+                  <img src={folder} style={{ width: "25px" }} />
+                  <Link to={`/podcastlist/5`}>For Mom!</Link>
+                </h4>
               </div>
             </div>
           </div>
@@ -188,34 +203,40 @@ export default function Home() {
 
       <section>
         <div className="home-main">
-          <div className="home-main">
-            <div className="home-secondary-left">
+          <div className="home-secondary-left">
+            <div className="article-block">
               <h2>This Week's New Pods</h2>
               <p>
                 By Try-Pods Staff<br></br>
                 04/27/2023
               </p>
               <p>
-                Lots of new pods to discuss this week! First up, TV host Kelly Ripa has a new 
-                show called Let's Talk Off Camera. She says, "This is the show that goes on in 
-                my head, when the cameras stop rolling. I get to ask the questions that I really
-                 want to know and talk to friends and experts about the topics I really want
-                 to discuss. It's unfiltered and often unhinged." This new show is from Stitcher.
+                Lots of new pods to discuss this week! First up, TV host Kelly
+                Ripa has a new show called Let's Talk Off Camera. She says,
+                "This is the show that goes on in my head, when the cameras stop
+                rolling. I get to ask the questions that I really want to know
+                and talk to friends and experts about the topics I really want
+                to discuss. It's unfiltered and often unhinged." This new show
+                is from Stitcher.
               </p>
               <p>
-                Another new one is Table Read, a one-of-a-kind podcast experience that brings the 
-                excitement of a live theater performance to your ears. Each episode features a 
-                selection of exceptional, award-winning scripts performed live by a talented cast
-                 of 20 working actors in a world-class studio. Featuring some of the most respected 
-                 writers in the industry, including Sonny Postiglione, Bobby Smith Jr., and Peter 
-                 Lefcout, who have written hit shows like Vampire Diaries, Bloodline, Jason's Lyric, 
-                 and Desperate Housewives...
+                Another new one is Table Read, a one-of-a-kind podcast
+                experience that brings the excitement of a live theater
+                performance to your ears. Each episode features a selection of
+                exceptional, award-winning scripts performed live by a talented
+                cast of 20 working actors in a world-class studio. Featuring
+                some of the most respected writers in the industry, including
+                Sonny Postiglione, Bobby Smith Jr., and Peter Lefcout, who have
+                written hit shows like Vampire Diaries, Bloodline, Jason's
+                Lyric, and Desperate Housewives...
               </p>
               <p>
                 <a href="#/">Show more >></a>
               </p>
             </div>
-            <div className="home-secondary-centre">
+          </div>
+          <div className="home-secondary-centre">
+            <div className="popular-block celebrity">
               <h3>Popular in Celebrity Pods</h3>
               <a href="http://localhost:3000/querypodcast/ccd308a6-2c1e-4d97-9cd5-c2dbc2e737df">
                 <img
@@ -238,7 +259,8 @@ export default function Home() {
                   className="home-find-new"
                 />
               </a>
-              <br></br>
+            </div>
+            <div className="popular-block sports">
               <h3>Popular in Sports Pods</h3>
               <a href="http://localhost:3000/querypodcast/5e04ca0a-abe4-4a5c-b0e7-e374bb8498c1">
                 <img
@@ -261,7 +283,8 @@ export default function Home() {
                   className="home-find-new"
                 />
               </a>
-              <br></br>
+            </div>
+            <div className="popular-block news">
               <h3>Popular in News Pods</h3>
               <a href="http://localhost:3000/querypodcast/1af11028-eb05-495f-bd63-8ebc371b1018">
                 <img
@@ -284,9 +307,10 @@ export default function Home() {
                   className="home-find-new"
                 />
               </a>
-              <br></br>
             </div>
-            <div className="home-secondary-right">
+          </div>
+          <div className="home-secondary-right">
+            <div className="article-block">
               <h2>The Current State of the Podcast Industry</h2>
               <p>
                 By Try-Pods Staff<br></br>

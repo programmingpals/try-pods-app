@@ -3,11 +3,12 @@
   display: flex;
   width: 1300px;
   justify-content: space-between;
+  margin-top: 50px;
 }
 
 .home-main-left,
 .home-main-right {
-  width: 32%;
+  width: 400px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -15,8 +16,11 @@
 }
 
 .home-main-centre {
-  width: 32%;
-  // border: solid #d2e93c;
+  border: solid 5px #370545;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 // .home-main-right {
@@ -29,64 +33,111 @@
 .home-friends-container,
 .home-up-next-container,
 .home-add-container,
-.home-main-centre {
-  border: solid #d2e93c;
+.home-main-centre,
+.article-block {
+  // border: solid #d2e93c;
   padding: 20px;
   margin-bottom: 20px;
 }
 
+.home-search {
+  border: solid 5px #2fc2ae;
+}
+
 .home-lucky {
+  border: solid 5px #e5f2f8;
   transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
 }
 
 .home-lucky :hover {
-  color: #d2e93c;
-  background-color: rgb(133, 31, 201);
+  color: white;
+  background-color: #370545;
   transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
   border-color: #d2e93c;
 }
 
+.home-up-next-container {
+  border: solid 5px #e5f2f8;
+}
+
+.up-next-grid {
+  background: #e5f2f8;
+}
+
 .home-up-next {
-  padding: 5px;
-  margin: 5px;
-  border: solid #d2e93c;
+  padding: 7px;
+}
+
+.up-next-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.up-next-header img {
+  padding-left: 20px;
 }
 
 .home-find-new {
   padding: 5px;
   margin: 5px;
-  border: solid #2fc2ae;
+  border: solid #370545 5px;
 }
 
+.home-secondary-centre,
+.home-secondary-left,
+.home-secondary-right,
+.article-block {
+  height: 606.16px;
+}
 .home-secondary-left {
-  width: 32%;
+  width: 400px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   flex-wrap: wrap;
-  padding: 30px;
-  border: solid #d2e93c;
 }
 
 .home-secondary-centre {
-  width: 32%;
-  border: solid #d2e93c;
-  padding: 30px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  // border: solid 5px #d2e93c;
 }
 
 .home-secondary-right {
-  width: 32%;
+  width: 400px;
   display: flex;
   flex-direction: column;
   align-items: start;
-  padding: 30px;
   flex-wrap: wrap;
-  border: solid #d2e93c;
 }
 
-.home-carousel-container {
-  padding: 32px;
+.article-block .home-secondary-centre {
+  // border: solid #d2e93c;
+  padding: 20px;
+  margin-bottom: 20px;
 }
+
+.article-block {
+  border: solid 5px #370545;
+}
+
+.celebrity {
+  border: solid 5px #2fc2ae;
+}
+
+.sports {
+  border: solid 5px #e5f2f8;
+}
+
+.news {
+  border: solid 5px #d2e93c;
+}
+
+// .home-carousel-container {
+//   padding: 32px;
+// }
 
 .home-carousel {
   width: 75%;
@@ -94,26 +145,30 @@
 }
 
 .lucky-button {
-  border-style: solid;
-  background-color: #ffffff;
-  border-color: #2fc2ae;
+  border: none;
+  background-color: #e5f2f8;
   font-family: "Chivo Mono";
   font-size: 20px;
+  font-weight: bold;
   padding: 20px;
   margin-bottom: 30px;
   margin-top: 30px;
 }
 
+.home-friends-container {
+  border: solid 5px #d2e93c;
+}
+
 .home-friends {
-  margin: 10px;
-  border: solid 2px #2fc2ae;
+  margin: 7px;
+  border: solid 5px white;
   border-radius: 100%;
   transition: transform 0.5s ease-in-out;
 }
 
 .home-friends:hover {
   transform: rotate(10deg);
-  border: solid 2px #d2e93c;
+  border: solid 5px #2fc2ae;
   border-radius: 100%;
 }
 
@@ -129,13 +184,25 @@
   margin-right: 20px;
 }
 
+.list-option a {
+  text-decoration: none;
+  color: black;
+  border-bottom: 5px solid white;
+}
+
+.list-option a:hover {
+  text-decoration: none;
+  color: black;
+  border-bottom: 5px solid #d2e93c;
+}
+
+.home-add-container {
+  border: solid 5px #2fc2ae;
+}
+
 .home-add-container div {
   max-width: 70%;
   margin: auto;
-}
-
-.home-add-container h2 {
-  margin-top: 0px;
 }
 
 .home-secondary-left h2,
