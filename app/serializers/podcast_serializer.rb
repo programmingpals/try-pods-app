@@ -1,5 +1,5 @@
 class PodcastSerializer
   include JSONAPI::Serializer
-  attributes :title, :description
+  attributes :title, :description, :uuid
 
 end

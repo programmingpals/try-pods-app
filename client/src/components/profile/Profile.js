@@ -11,6 +11,7 @@ export default function Profile(props) {
   const [userLists, setUserLists] = useState([]);
   const [userDetails, setUserDetails] = useState([]);
   const [userFriends, setUserFriends] = useState([]);
+  const [userPodcasts, setUserPodcasts] = useState([]);
   const [listOrg, setListOrg] = useState({});
   const [isLoading, setIsLoading] = useState(true);
 
@@ -37,15 +38,23 @@ export default function Profile(props) {
       });
     };
 
+    const getPodcastsByUser = function (userId) {
+      return axios.get(`/api/users/${userId}/podcasts`).then((response) => {
+        return response.data;
+      });
+    };
+
     const apiCalls = function (userId) {
       return Promise.all([
         getListsByUser(userId),
         getUserDetails(userId),
         getFriendsByUser(userId),
+        getPodcastsByUser(userId),
       ]).then((results) => {
         const userLists = results[0];
         const userDetails = results[1];
         const userFriends = results[2];
+        const userPodcasts = results[3];
         setUserLists(userLists);
         setUserDetails(userDetails);
 
@@ -80,6 +89,20 @@ export default function Profile(props) {
         });
 
         setUserFriends(friendOrg);
+
+        let podcastsOrg = [];
+
+        const podcastArr = userPodcasts.map((podcast) => {
+          podcastsOrg.push({ image: podcast.image, uuid: podcast.pod_uuid });
+        });
+
+        // function removeDuplicates(arr) {
+        //   return [...new Set(arr)];
+        // }
+
+        // const podcasts = removeDuplicates(podcastArr);
+
+        setUserPodcasts(podcastsOrg);
         setIsLoading(false);
       });
     };
@@ -110,7 +133,7 @@ export default function Profile(props) {
           <h3>My Top 8</h3>
         </div>
       </div>
-      <hr />
+      <hr className="profile-hr" />
       <div className="add-friend">
         <p>Add {userDetails.first_name}</p>
         <img src={Heart} />
@@ -131,6 +154,7 @@ export default function Profile(props) {
             customLists={listOrg.customLists}
             top8={listOrg.top8}
             upNext={listOrg.upNext}
+            podcasts={userPodcasts}
           />
         )}
       </div>

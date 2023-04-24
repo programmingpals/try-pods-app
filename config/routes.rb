@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   namespace :api do
     resources :users do
-      resources :friendships, :lists, :recommends
+      resources :friendships, :lists, :recommends, :podcasts
     end
 
     resources :podcasts, :lists

@@ -1,4 +1,12 @@
 class Api::PodcastsController < ApplicationController
+
+  def index
+    user = User.find(params[:user_id])
+    podcasts = user.podcasts
+
+    render json: podcasts
+  end
+
   def create
     podcast = Podcast.create(podcast_params)
     render json: podcast

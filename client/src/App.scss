@@ -81,8 +81,14 @@ h5 {
   display: flex;
   flex-direction: column;
 }
+
 .section-title {
   text-align: left;
+  padding-top: 20px;
+}
+
+.section-title h3 {
+  font-size: 30px;
 }
 
 .hash-tag {
@@ -92,17 +98,22 @@ h5 {
 .lists {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .listitem-main {
-  width: 225px;
-  height: 225px;
-  margin: 20px;
+  width: 175px;
+  height: 175px;
   padding: 20px;
   border: 2px solid #3af0d7;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.listitem-main a h5 {
+  margin: 10px 0px;
 }
 
 .listitem-add {
@@ -154,6 +165,10 @@ p.add-list {
   border-width: 5px;
   border-color: #d2e93c;
   margin: 40px auto;
+}
+
+.profile-hr {
+  border-color: #370545;
 }
 
 .podlist-hr {
@@ -277,6 +292,10 @@ p.add-list {
 
 .pod-list-item-description button {
   font-size: 16px;
+}
+
+.podcast-item img {
+  width: 80px;
 }
 
 .action-button {
