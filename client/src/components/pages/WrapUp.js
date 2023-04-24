@@ -28,13 +28,13 @@ export default function WrapUp() {
         </div>
       </div>
 
-      <div className="tech-stack-container">
+      {/* <div className="tech-stack-container">
         <h2>The Tech Stack:</h2>
         <div>
         <h4><strong>- ReactJS</strong></h4>
         <h4><strong>- Rails</strong></h4>
         </div>
-      </div>
+      </div> */}
       <div className="seafood-tower">
         <h2>
           <em>What they will be eating:</em>
