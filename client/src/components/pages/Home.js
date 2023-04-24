@@ -71,13 +71,6 @@ export default function Home() {
 
               <a href="#/">
                 <img
-                  src="https://raw.githubusercontent.com/bootonk/try-pods-app/master/client/src/assets/5James.png"
-                  width="60"
-                  className="home-friends"
-                ></img>
-              </a>
-              <a href="#/">
-                <img
                   src="https://raw.githubusercontent.com/bootonk/try-pods-app/master/client/src/assets/12Roger.png"
                   width="60"
                   className="home-friends"
@@ -203,21 +196,20 @@ export default function Home() {
                 04/27/2023
               </p>
               <p>
-                Lots of new pods to discuss this week! First up, "The Daily
-                Shine" by Shine, a self-care app. This podcast offers daily,
-                bite-sized episodes that focus on mental health, mindfulness,
-                and overall wellbeing. Each episode is designed to help
-                listeners start their day on the right foot and feel more
-                grounded and centered throughout the day.
+                Lots of new pods to discuss this week! First up, TV host Kelly Ripa has a new 
+                show called Let's Talk Off Camera. She says, "This is the show that goes on in 
+                my head, when the cameras stop rolling. I get to ask the questions that I really
+                 want to know and talk to friends and experts about the topics I really want
+                 to discuss. It's unfiltered and often unhinged." This new show is from Stitcher.
               </p>
               <p>
-                For those interested in the world of business and
-                entrepreneurship, "Masters of Scale with Reid Hoffman" is a
-                must-listen. This podcast features interviews with some of the
-                most successful entrepreneurs in the world, including Mark
-                Zuckerberg, Arianna Huffington, and Reed Hastings, and explores
-                the strategies they used to scale their businesses from
-                startups...
+                Another new one is Table Read, a one-of-a-kind podcast experience that brings the 
+                excitement of a live theater performance to your ears. Each episode features a 
+                selection of exceptional, award-winning scripts performed live by a talented cast
+                 of 20 working actors in a world-class studio. Featuring some of the most respected 
+                 writers in the industry, including Sonny Postiglione, Bobby Smith Jr., and Peter 
+                 Lefcout, who have written hit shows like Vampire Diaries, Bloodline, Jason's Lyric, 
+                 and Desperate Housewives...
               </p>
               <p>
                 <a href="#/">Show more >></a>
