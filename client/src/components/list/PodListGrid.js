@@ -46,6 +46,7 @@ export default function PodListGrid(props) {
         totalEpisodeCount={podcast.totalEpisodeCount}
         release_date={podcast.release_date}
         authorName={podcast.authorName}
+        seriesType={podcast.seriesType}
         delete={deleteFromList}
       />
     );

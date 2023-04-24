@@ -20,6 +20,11 @@ export default function PodListItem(props) {
 
   const truncatedDescription = props.description.substring(0, 150) + "...";
 
+  const seriesType = props.seriesType;
+  const seriesTypeLowerCase = seriesType.toLowerCase();
+  const seriesTypeTitleCase =
+    seriesTypeLowerCase.charAt(0).toUpperCase() + seriesTypeLowerCase.slice(1);
+
   const toggleDescription = () => {
     setShowFullDescription(!showFullDescription);
   };
@@ -42,6 +47,7 @@ export default function PodListItem(props) {
     totalEpisodesCount: props.attributes.totalEpisodeCount,
     uuid: props.attributes.pod_uuid,
     websiteUrl: props.attributes.link,
+    seriesType: props.attributes.seriesType,
   };
 
   return (
@@ -109,8 +115,8 @@ export default function PodListItem(props) {
             </div>
           </div>
           <div className="details-row-left">
-            <p>genres details go here</p>
-            <p>serial/episodic details go here</p>
+            <p>Series release date: {release}</p>
+            <p>Series type: {seriesTypeTitleCase} </p>
           </div>
           <div className="drop-down-test">
             <div className="pod-list-item-description">
