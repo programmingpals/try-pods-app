@@ -35,6 +35,17 @@
   margin-bottom: 20px;
 }
 
+.home-lucky {
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+.home-lucky :hover {
+  color: #d2e93c;
+  background-color: rgb(133, 31, 201);
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+  border-color: #d2e93c;
+}
+
 .home-up-next {
   padding: 5px;
   margin: 5px;
@@ -96,6 +107,13 @@
 .home-friends {
   margin: 10px;
   border: solid 2px #2fc2ae;
+  border-radius: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.home-friends:hover {
+  transform: rotate(10deg);
+  border: solid 2px #d2e93c;
   border-radius: 100%;
 }
 

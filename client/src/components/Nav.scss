@@ -53,7 +53,7 @@
   flex-direction: row;
   margin: 10px;
   justify-content: center;
-  align-items: end;
+  align-items: center;
   margin-left: 40px;
 }
 
@@ -66,6 +66,11 @@
   border: solid 2px #d2e93c;
   border-radius: 100%;
   margin: 0px 5px 0px 5px;
+}
+
+.nav-right .login-user img:hover {
+  border: solid 2px #2fc2ae;
+  border-radius: 100%;
 }
 
 .nav-right .nav-search img {
