@@ -345,7 +345,7 @@ export default function Home() {
       </section>
       <section>
         <div className="footer">Copyright 2023 Bootcamp Buds</div>
-        <WrapUp />
+        <Link to="/wrapup">Wrap Up!</Link>
       </section>
     </div>
   );

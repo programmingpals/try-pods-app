@@ -1,5 +1,4 @@
 import React from "react";
-import "client/src/assets/1Rowan.png"
 
 export default function WrapUp() {
   return (
