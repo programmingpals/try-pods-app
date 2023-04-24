@@ -115,7 +115,7 @@ export default function PodListItem(props) {
             </div>
           </div>
           <div className="details-row-left">
-            <p>Series release date: {release}</p>
+            <p>Released: {release}</p>
             <p>Series type: {seriesTypeTitleCase} </p>
           </div>
           <div className="drop-down-test">
