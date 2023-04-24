@@ -20,6 +20,7 @@ export default function ListChoice(props) {
         rssUrl: podInfo.rssUrl,
         image: podInfo.imageUrl,
         release_date: podInfo.datePublished,
+        seriesType: podInfo.seriesType,
       })
 
       .then((response) => {
