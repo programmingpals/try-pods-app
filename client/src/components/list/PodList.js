@@ -103,7 +103,7 @@ export default function PodList(props) {
             <div class="podlist-row-right">
               {user === owner && (
                 <a
-                  href="#"
+                  href="#/"
                   aria-expanded={height !== 0}
                   aria-controls="example-panel"
                   onClick={() => setHeight(height === 0 ? "auto" : 0)}
@@ -121,7 +121,10 @@ export default function PodList(props) {
                   subject="My Podcast List"
                   body={`http://localhost:3000/podcastlist/${params.id}`}
                 >
-                  <img src={mailIcon} style={{ width: "24px" }} />
+                  <img
+                    src={mailIcon}
+                    style={{ width: "24px", "padding-right": "10px" }}
+                  />
                 </EmailShareButton>
                 <TwitterShareButton
                   url={`http://localhost:3000/podcastlist/${params.id}`}

@@ -24,7 +24,7 @@ export default function Nav() {
           <div className="nav-search">
             <a
               class="nav-link"
-              href="#"
+              href="#/"
               aria-expanded={height !== 0}
               aria-controls="example-panel"
               onClick={() => setHeight(height === 0 ? "auto" : 0)}
@@ -33,11 +33,6 @@ export default function Nav() {
               <img src={SearchWhite} />
             </a>
           </div>
-          {/* <p>
-            <Link to={"profilepage/1"} class="nav-link">
-              My Profile
-            </Link>
-          </p> */}
           <div className="login-user">
             <Link to={"profilepage/1"} class="nav-link">
               <p>Rowan</p>

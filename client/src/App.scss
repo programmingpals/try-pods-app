@@ -12,7 +12,7 @@
 }
 
 hr {
-  margin: 0px -500px 0px -500px;
+  margin: 0px -300px 0px -500px;
   border: 0;
   border-top: 3px solid;
 }
@@ -192,17 +192,27 @@ p.add-list {
   align-items: center;
 }
 
+.podlist-row-left h2 {
+  text-align: left;
+}
+
 .podlist-row-left h4,
 .podlist-row-left .share,
 .podlist-row-right a,
-.podlist-row-mix p {
+.podlist-row-mix p,
+.podlist-row-mix a {
   padding-bottom: 0px;
   margin-bottom: 10px;
   margin-top: 10px;
+  text-decoration: none;
 }
 
 .podlist-row-right img {
   width: 75px;
+}
+
+.podlist-row-right p {
+  text-align: right;
 }
 
 .podlist-row-left img {
@@ -242,6 +252,7 @@ p.add-list {
 .podlist-item {
   display: flex;
   margin: 20px;
+  width: 100%;
 }
 
 .podlist-description {
@@ -250,9 +261,35 @@ p.add-list {
   margin: auto;
 }
 
+.podlist-item-container {
+  width: 900px;
+}
+
+.podlist-item-block {
+  width: 100%;
+}
+
 .podlist-item-details {
   text-align: left;
   margin: 0px 20px 20px 20px;
+  width: 675px;
+}
+
+.pod-list-item-description button {
+  font-size: 16px;
+}
+
+.action-button {
+  padding-left: 10px;
+  width: 25px;
+}
+
+.action-button:hover {
+  border-bottom: 5px solid #d2e93c;
+}
+
+.pod-list-item-description p {
+  width: 100%;
 }
 
 .details-first-row {
@@ -313,7 +350,9 @@ button {
 }
 
 .button-add-underline,
-.podlist-row-mix a .podlist-row-right a {
+.podlist-row-mix a .podlist-row-right a,
+.underline,
+.button {
   border-bottom: solid #2fc2ae 5px;
   background-color: #ffffff;
   font-family: "Chivo Mono";
@@ -324,8 +363,7 @@ button {
 }
 
 .button-add-underline:hover,
-.podlist-row-mix a:hover,
-.podlist-row-right a:hover {
+.podlist-row-mix a:hover {
   border-bottom: solid #d2e93c 5px;
 }
 
