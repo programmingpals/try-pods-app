@@ -1,0 +1,50 @@
+.wrap-container {
+  width: 100%;
+}
+
+.wrap-container h1 {
+  padding-bottom: 20px;
+}
+
+.wrap-container h2 {
+  font-weight: lighter;
+}
+
+.buds-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.buds-container h4 {
+  font-weight: bold;
+}
+
+.buds-container img {
+  border: solid 5px #d2e93c;
+  border-radius: 100%;
+  transition: transform 7s ease-in-out;
+}
+
+.buds-container img:hover {
+  transform: rotate(600deg);
+  border: solid 5px #2fc2ae;
+  border-radius: 100%;
+}
+
+.seafood-tower img {
+  width: 500px;
+  border: dotted 9px #2fc2ae;
+}
+
+.seafood-tower img:hover {
+  border: dotted 9px #d2e93c;
+}
+
+.tech-stack-container {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+
