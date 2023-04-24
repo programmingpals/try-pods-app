@@ -33,7 +33,7 @@ export default function ListChoice(props) {
   return (
     <div className="listitem-add">
       <Link to={`/podcastlist/${props.id}`}>
-        <a href="#" onClick={() => addToList(props.podcast)}>
+        <a href="#/" onClick={() => addToList(props.podcast)}>
           <h4>{props.name}</h4>
         </a>
       </Link>

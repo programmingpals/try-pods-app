@@ -4,6 +4,8 @@ import { userContext } from "../../providers/UserProvider";
 import AnimateHeight from "react-animate-height";
 import deleteIcon from "../../assets/icons/deleteIcon.png";
 import PodPlayer from "../query-podcast/PodPlayer";
+import speakerIcon from "../../assets/icons/speakericon.png";
+import saveIcon from "../../assets/icons/save-icon.png";
 
 export default function PodListItem(props) {
   const { user } = useContext(userContext);
@@ -58,8 +60,8 @@ export default function PodListItem(props) {
             </div>
             <div className="details-row-right">
               <div className="podlist-item-actions">
-                <button
-                  className="button-blue"
+                <a
+                  href="#/"
                   onClick={() => {
                     if (!playerSelected) {
                       setPlayerSelected(true);
@@ -68,20 +70,28 @@ export default function PodListItem(props) {
                     }
                   }}
                 >
-                  {playerSelected ? "Close Player" : "Listen"}
-                </button>
+                  {playerSelected ? (
+                    "Close Player"
+                  ) : (
+                    <img
+                      src={speakerIcon}
+                      className="action-button"
+                      alt="Listen"
+                    />
+                  )}
+                </a>
                 {props.ownerId === user && !showConfirmation && (
-                  <button onClick={() => setShowConfirmation(true)}>
+                  <a href="#/" onClick={() => setShowConfirmation(true)}>
                     <img
                       src={deleteIcon}
+                      className="action-button"
                       alt="Delete"
-                      style={{ width: "18px", border: "none", color: "green" }}
                     />
-                  </button>
+                  </a>
                 )}
                 {props.ownerId !== user && (
                   <Link to="/addpodcast" state={{ attributes: podcast }}>
-                    <button>My List +</button>
+                    <img src={saveIcon} className="action-button" />
                   </Link>
                 )}
                 <div>
@@ -104,11 +114,9 @@ export default function PodListItem(props) {
           </div>
           <div className="drop-down-test">
             <div className="pod-list-item-description">
-                <p>
-                  {showFullDescription
-                    ? props.description
-                    : truncatedDescription}
-                </p>
+              <p>
+                {showFullDescription ? props.description : truncatedDescription}
+              </p>
               {truncatedDescription.length > 150 && (
                 <button onClick={toggleDescription}>
                   {showFullDescription ? "Show less" : "Show more"}
@@ -118,9 +126,12 @@ export default function PodListItem(props) {
           </div>
         </div>
       </div>
-      <div style={{ display: playerSelected ? "block" : "none"}}>
+      <div style={{ display: playerSelected ? "block" : "none" }}>
         <PodPlayer itunesId={props.attributes.itunes_id} height={"450"} />
-        </div>
+
+      </div>
+      <hr className="podcast-hr" />
     </div>
   );
 }
+

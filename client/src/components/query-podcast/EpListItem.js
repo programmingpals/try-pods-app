@@ -3,6 +3,7 @@ import { useState } from "react";
 import AnimateHeight from "react-animate-height";
 
 export default function EpListItem(props) {
+  const [isLoading, setIsLoading] = useState(true);
   const [showFullDescription, setShowFullDescription] = useState(false);
 
   const toggleDescription = () => {
@@ -31,7 +32,7 @@ export default function EpListItem(props) {
   const release = releaseFullDate.toDateString();
 
   return (
-    <div className="podlist-item-container">
+    <div className="podlist-item-block">
       <div className="podlist-item">
         <div className="podlist-item-image">
           <img src={`${props.imageUrl}`} style={{ width: "125px" }} />
@@ -46,7 +47,6 @@ export default function EpListItem(props) {
             </div>
           </div>
           <div className="details-row-left">
-            {/* <p>Episode length: {time}</p> */}
             <p>Release date: {release}</p>
           </div>
           <div>

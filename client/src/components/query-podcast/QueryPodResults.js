@@ -9,6 +9,7 @@ import speakerIcon from "../../assets/icons/speakericon.png";
 
 export default function QueryPodResults(props) {
   const [playerSelected, setPlayerSelected] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   const { queryPod, recommendByFriend } = useContext(podcastQueryContext);
 
@@ -48,7 +49,7 @@ export default function QueryPodResults(props) {
                 state={{ attributes: queryPod }}
                 style={{ textDecoration: "none" }}
               >
-                <p>Add to list +</p>
+                <p>+ to my List</p>
               </Link>
             </div>
           </div>
@@ -56,7 +57,9 @@ export default function QueryPodResults(props) {
           <div className="podlist-row-mix">
             <p>Series type: {seriesTypeTitleCase}</p>
             <p>Total episodes: {queryPod.totalEpisodesCount}</p>
-            <a href={`${queryPod.websiteUrl}`}>Website</a>
+            <a href={`${queryPod.websiteUrl}`} className="underline">
+              Website
+            </a>
           </div>
           <hr className="podcast-hr" />
           <div className="podlist-row">
@@ -65,7 +68,8 @@ export default function QueryPodResults(props) {
               {recommends}
             </div>
             <div className="podlist-row-right">
-              <button
+              <a
+                href="#/"
                 className="button"
                 onClick={() => {
                   if (!playerSelected) {
@@ -76,7 +80,7 @@ export default function QueryPodResults(props) {
                 }}
               >
                 {playerSelected ? "Close Player" : "Open Player"}
-              </button>
+              </a>
             </div>
           </div>
         </div>

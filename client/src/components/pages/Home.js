@@ -32,7 +32,7 @@ export default function Home() {
             <div className="home-search">
               <h2>Find Your New Fave</h2>
               <a
-                href="#"
+                href="#/"
                 aria-expanded={height !== 0}
                 aria-controls="example-panel"
                 onClick={() => setHeight(height === 0 ? "auto" : 0)}
@@ -61,7 +61,7 @@ export default function Home() {
                   className="home-friends"
                 ></img>
               </Link>
-              <a href="#">
+              <a href="#/">
                 <img
                   src="https://raw.githubusercontent.com/bootonk/try-pods-app/master/client/src/assets/4Mike.png"
                   width="60"
@@ -69,35 +69,35 @@ export default function Home() {
                 ></img>
               </a>
 
-              <a href="#">
+              <a href="#/">
                 <img
                   src="https://raw.githubusercontent.com/bootonk/try-pods-app/master/client/src/assets/5James.png"
                   width="60"
                   className="home-friends"
                 ></img>
               </a>
-              <a href="#">
+              <a href="#/">
                 <img
                   src="https://raw.githubusercontent.com/bootonk/try-pods-app/master/client/src/assets/12Roger.png"
                   width="60"
                   className="home-friends"
                 ></img>
               </a>
-              <a href="#">
+              <a href="#/">
                 <img
                   src="https://raw.githubusercontent.com/bootonk/try-pods-app/master/client/src/assets/11Bill.png"
                   width="60"
                   className="home-friends"
                 ></img>
               </a>
-              <a href="#">
+              <a href="#/">
                 <img
                   src="https://raw.githubusercontent.com/bootonk/try-pods-app/master/client/src/assets/9Meaghan.png"
                   width="60"
                   className="home-friends"
                 ></img>
               </a>
-              <a href="#">
+              <a href="#/">
                 <img
                   src="https://raw.githubusercontent.com/bootonk/try-pods-app/master/client/src/assets/8Pete.png"
                   width="60"
@@ -220,7 +220,7 @@ export default function Home() {
                 startups...
               </p>
               <p>
-                <a href="#">Show more</a>
+                <a href="#/">Show more >></a>
               </p>
             </div>
             <div className="home-secondary-centre">
@@ -320,7 +320,7 @@ export default function Home() {
                 investing in...
               </p>
               <p>
-                <a href="#">Show more</a>
+                <a href="#/">Show more >></a>
               </p>
             </div>
           </div>
