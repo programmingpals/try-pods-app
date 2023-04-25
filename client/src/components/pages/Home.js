@@ -119,7 +119,7 @@ export default function Home() {
               style={{ backgroundImage: `url(${allDots})` }}
             >
               <div className="up-next-header">
-                <h2>Up next</h2>
+                <h2>Up Next</h2>
                 <img src={speakericon} style={{ width: "25px" }} />
               </div>
               <div className="up-next-grid">
@@ -343,10 +343,9 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section>
-        <div className="footer">Copyright 2023 Bootcamp Buds</div>
-        <Link to="/wrapup">Wrap Up!</Link>
-      </section>
+      <div className="footer"><p>Copyright 2023 Bootcamp Buds</p>
+        <p><Link to="/wrapup">Wrap Up!</Link></p>
+        </div>
     </div>
   );
 }

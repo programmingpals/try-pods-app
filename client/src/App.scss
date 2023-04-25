@@ -529,11 +529,13 @@ button {
   border-color: #d2e93c;
 }
 
+
 .footer {
   height: 100px;
   display: flex;
   flex-direction: row;
   align-items: flex-end;
+  justify-content: space-between;
 }
 
 .itunes-player-block {
