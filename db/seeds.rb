@@ -50,7 +50,7 @@ lizlist6 = List.create(user_id: 2, name: "All-time Top Pods", description: "My a
 
 katelist7 = List.create(user_id: 3, name: "My Favourites", description: "All-time fave podcasts", series: true)
 
-rowlist8 = List.create(user_id: 1, name: "For Mom!", description: "Some pods she might like", series: true)
+rowlist8 = List.create(user_id: 1, name: "List For Mom 💜", description: "Some pods she might like", series: true)
 
 rowlisttop8id9 = List.create(user_id: 1, name: "Top 8", description: "My Top 8 Podcasts", series: true)
 
@@ -65,6 +65,23 @@ lizlistupnext13 = List.create(user_id: 2, name: "Up Next", description: "Podcast
 katelistupnext14 = List.create(user_id: 3, name: "Up Next", description: "Podcasts to Listen to Soon", series: true)
 
 lizlist15 = List.create(user_id: 2, name: "Interview Pods", description: "Podcasts featuring interesting hosts interviewing interesting guests", series: true)
+
+
+podcast51 = Podcast.create(list_id: 11,
+"pod_uuid": "3f99f9ca-a523-4cee-ba87-3ad3ce0fdd56",
+"title": "Til Death Do Us Blart",
+"itunes_id": 1059007762,
+"description": "The creators of My Brother, My Brother and Me and The Worst Idea of All Time review the film Paul Blart Mall Cop 2 every American Thanksgiving from now until the end of linear time. They may never yield. They will never be freed. This is their curse. This is their podcast.",
+"link": "http://blart.libsyn.com/podcast",
+"language": "ENGLISH",
+"authorName": "Tim Batt, Guy Montgomery, The McElroy Brothers",
+"isCompleted": false,
+"totalEpisodeCount": 10,
+"rssUrl": "https://blart.libsyn.com/rss",
+"image": "https://ssl-static.libsyn.com/p/assets/2/1/9/7/2197f92ee38c1b0e/BlartIconResample.jpg",
+"release_date": 1447444955,
+"seriesType": "EPISODIC"
+)
 
 podcast1 = Podcast.create(list_id: 4,
 pod_uuid: "0dd477b0-976e-4f37-98ac-28367a6f4b88",
@@ -867,21 +884,7 @@ podcast50 = Podcast.create(list_id: 11,
 "seriesType": "EPISODIC"
 )
 
-podcast51 = Podcast.create(list_id: 11,
-"pod_uuid": "3f99f9ca-a523-4cee-ba87-3ad3ce0fdd56",
-"title": "Til Death Do Us Blart",
-"itunes_id": 1059007762,
-"description": "The creators of My Brother, My Brother and Me and The Worst Idea of All Time review the film Paul Blart Mall Cop 2 every American Thanksgiving from now until the end of linear time. They may never yield. They will never be freed. This is their curse. This is their podcast.",
-"link": "http://blart.libsyn.com/podcast",
-"language": "ENGLISH",
-"authorName": "Tim Batt, Guy Montgomery, The McElroy Brothers",
-"isCompleted": false,
-"totalEpisodeCount": 10,
-"rssUrl": "https://blart.libsyn.com/rss",
-"image": "https://ssl-static.libsyn.com/p/assets/2/1/9/7/2197f92ee38c1b0e/BlartIconResample.jpg",
-"release_date": 1447444955,
-"seriesType": "EPISODIC"
-)
+
 
 podcast52 = Podcast.create(list_id: 11,
 "pod_uuid": "2cf30b44-6965-4485-bded-77173f835077",
@@ -1239,35 +1242,35 @@ podcast77 = Podcast.create(list_id: 14,
 "seriesType": "SERIAL"
 )
 
-podcast78 = Podcast.create(list_id: 8,
-"pod_uuid": "b62bb530-33ee-4745-8de6-34bf943b0484",
-"title": "Comedy Bang Bang: The Podcast",
-"itunes_id": 316045799,
-"description": "Join host Scott Aukerman (\"Comedy Bang! Bang!\" on IFC, \"Mr. Show\") for a weekly podcast that blends conversation and character work from today's funniest comedians. While Scott begins by traditionally interviewing the celebrities, the open-door policy means an assortment of eccentric oddballs can pop by at any moment to chat, compete in games, and engage in comic revelry. With all that, and regular bonus episodes, we bet your favorite part will still be the plugs!",
-"link": "http://www.earwolf.com/show/comedy-bang-bang/",
+podcast79 = Podcast.create(list_id: 8,
+"pod_uuid": "af6ec645-cc9d-4fd1-908d-605de2932ce2",
+"title": "Wiser Than Me with Julia Louis-Dreyfus",
+"itunes_id": 1678559416,
+"description": "Julia Louis-Dreyfus wants to know why the hell we don’t hear more from older women, so she’s sitting down with Jane Fonda, Carol Burnett, Amy Tan, Diane von Furstenberg, Isabel Allende and Fran Lebowitz (and more!) to get schooled in how to live a full and meaningful life. Join the Emmy award winning-est actress of all time on her first-ever podcast where each week she has funny, touching, personal conversations with unforgettable women who are always WISER THAN ME.Photo: Ryan Pfluger and August Image",
+"link": "https://www.lemonadamedia.com",
 "language": "ENGLISH",
-"authorName": "Earwolf and Scott Aukerman",
+"authorName": "Lemonada Media",
 "isCompleted": false,
-"totalEpisodeCount": 111,
-"rssUrl": "https://feeds.simplecast.com/byb4nhvN",
-"image": "https://image.simplecastcdn.com/images/a35fca4e-944a-4ccb-bc7b-d678b2c11e9d/ff9cb7ab-74e1-4a8a-98c5-48613e5d500b/3000x3000/ear-cover-comedybangbang-2018refresh-3000x3000-final-1.jpg?aid=rss_feed",
-"release_date": 1241136000,
-"seriesType": "EPISODIC"
+"totalEpisodeCount": 3,
+"rssUrl": "https://www.omnycontent.com/d/playlist/796469f9-ea34-46a2-8776-ad0f015d6beb/6bf95617-5ffc-4269-a957-afcc015a4d66/ca180b09-a8bc-4612-92fe-afcc015ae720/podcast.rss",
+"image": "https://www.omnycontent.com/d/programs/796469f9-ea34-46a2-8776-ad0f015d6beb/6bf95617-5ffc-4269-a957-afcc015a4d66/image.jpg?t=1679432582&size=Large",
+"release_date": 1679435988,
+"seriesType": "SERIAL"
 )
 
-podcast79 = Podcast.create(list_id: 8,
-"pod_uuid": "cdddcc43-68f2-4225-bd70-9204cfe734c6",
-"title": "Pivot",
-"itunes_id": 1073226719,
-"description": "Every Tuesday and Friday, tech journalist Kara Swisher and NYU Professor Scott Galloway offer sharp, unfiltered insights into the biggest stories in tech, business, and politics. They make bold predictions, pick winners and losers, and bicker and banter like no one else. After all, with great power comes great scrutiny. From New York Magazine and the Vox Media Podcast Network.",
-"link": "nymag.com/pivot",
+podcast78 = Podcast.create(list_id: 8,
+"pod_uuid": "415125c3-685b-4286-a176-0e11a3fe432b",
+"title": "Oprah's Super Soul",
+"itunes_id": 1264843400,
+"description": "Awaken, discover and connect to the deeper meaning of the world around you with Oprah's Super Soul. Hear Oprah’s personal selection of her interviews with thought-leaders, best-selling authors, spiritual luminaries, as well as health and wellness experts. All designed to light you up, guide you through life’s big questions and help bring you one step closer to your best self.",
+"link": "https://super-soul.simplecast.com",
 "language": "ENGLISH",
-"authorName": "New York Magazine",
+"authorName": "Oprah",
 "isCompleted": false,
-"totalEpisodeCount": 435,
-"rssUrl": "https://feeds.megaphone.fm/pivot",
-"image": "https://megaphone.imgix.net/podcasts/d6280242-e5c9-11e8-a7e3-d766bb7d2d3e/image/uploads_2F1589209751803-3cf2fk1zbft-d7b74cb4d52d7b18877546f240df7151_2FPivot_TileArt_FINAL.png?ixlib=rails-4.3.1&max-w=3000&max-h=3000&fit=crop&auto=format,compress",
-"release_date": 1537812480,
+"totalEpisodeCount": 441,
+"rssUrl": "https://feeds.simplecast.com/N0SFSFAS",
+"image": "https://image.simplecastcdn.com/images/c192fefa-68d2-4132-abb4-19d44fea785b/5bbc71b2-d54e-43d4-a270-eb823d3a2929/3000x3000/ss-podcast-keyart-ownpod-v2.jpg?aid=rss_feed",
+"release_date": 1501192512,
 "seriesType": "EPISODIC"
 )
 
@@ -1607,37 +1610,7 @@ podcast100 = Podcast.create(list_id: 6,
 "seriesType": "SERIAL"
 )
 
-podcast102 = Podcast.create(list_id: 8,
-"pod_uuid": "611680e6-13b1-40c7-9b5f-1c92ca373896",
-"title": "Las Culturistas with Matt Rogers and Bowen Yang",
-"itunes_id": 1092361338,
-"description": "Ding dong! Join your culture consultants, Matt Rogers and Bowen Yang, on an unforgettable journey into the beating heart of CULTURE. Alongside sizzling special guests, they GET INTO the hottest pop-culture moments of the day and the formative cultural experiences that turned them into Culturistas. Produced by the Big Money Players Network and iHeartRadio.",
-"link": "https://twitter.com/LasCulturistas",
-"language": "ENGLISH",
-"authorName": "Big Money Players Network and iHeartPodcasts",
-"isCompleted": false,
-"totalEpisodeCount": 360,
-"rssUrl": "https://www.omnycontent.com/d/playlist/e73c998e-6e60-432f-8610-ae210140c5b1/f6816727-c503-47ac-a7ac-ae2700391b1e/935c500f-8bb0-436b-ba7f-ae2700391b49/podcast.rss",
-"image": "https://www.omnycontent.com/d/playlist/e73c998e-6e60-432f-8610-ae210140c5b1/f6816727-c503-47ac-a7ac-ae2700391b1e/935c500f-8bb0-436b-ba7f-ae2700391b49/image.jpg?t=1648661742&size=Large",
-"release_date": 1457513820,
-"seriesType": "EPISODIC"
-)
 
-podcast103 = Podcast.create(list_id: 8,
-"pod_uuid": "e8710134-bbf1-4f44-b0e1-d56ebb30ce0a",
-"title": "The Anthropocene Reviewed",
-"itunes_id": 1342003491,
-"description": "The Anthropocene is the current geological age, in which human activity has profoundly shaped the planet and its biodiversity. On The Anthropocene Reviewed, #1 New York Times bestselling author John Green (The Fault in Our Stars, Turtles All the Way Down) reviews different facets of the human-centered planet on a five-star scale. WNYC Studios is a listener-supported producer of other leading podcasts including On the Media, Snap Judgment, Death, Sex & Money, Nancy and Here’s the Thing with Alec Baldwin. © WNYC Studios",
-"link": "https://www.wnycstudios.org/podcasts/anthropocene-reviewed",
-"language": "ENGLISH",
-"authorName": "Complexly, John Green",
-"isCompleted": false,
-"totalEpisodeCount": 37,
-"rssUrl": "https://feeds.simplecast.com/p7S4nr_h",
-"image": "https://image.simplecastcdn.com/images/d48cf57e-8709-499d-a9c6-1c6264aff730/d7543167-91d7-455a-9048-b1843e740206/3000x3000/tar-complexly.jpg?aid=rss_feed",
-"release_date": 1517227200,
-"seriesType": "EPISODIC"
-)
 
 podcast105 = Podcast.create(list_id: 6,
 "pod_uuid": "cbad2dd0-2f80-43f3-a55c-b404160016ff",
