@@ -89,6 +89,7 @@ export default function PodcastQueryProvider(props) {
           if (podcast.pod_uuid === uuid) {
             podcastMatch.push([podcast.list_id]);
           }
+          return podcastMatch;
         });
 
         setQueryPod(podcastData);

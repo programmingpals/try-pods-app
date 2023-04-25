@@ -272,15 +272,13 @@ p.add-list {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  // margin-top: 10px;
-  // margin-bottom: 10px;
 }
 
 .podlist-grid {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: start;
+  justify-content: flex-start;
 }
 
 .podlist-item {
@@ -443,7 +441,7 @@ button {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: start;
+  align-items: flex-start;
 }
 
 .profile-details {
@@ -520,7 +518,7 @@ button {
 .add-form {
   display: flex;
   flex-direction: row;
-  justify-content: start;
+  justify-content: flex-start;
 }
 
 .add-form input {

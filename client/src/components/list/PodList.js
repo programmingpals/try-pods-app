@@ -122,7 +122,7 @@ export default function PodList(props) {
                     "Hey Mom! Heres that list of podcasts you should checkout: "
                   }
                 >
-                  <img src={mailIcon} />
+                  <img src={mailIcon} alt="email-icon"/>
                 </EmailShareButton>
                 <TwitterShareButton
                   url={`http://localhost:3000/podcastlist/${params.id}`}

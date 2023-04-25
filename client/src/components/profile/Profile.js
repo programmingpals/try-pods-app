@@ -64,10 +64,13 @@ export default function Profile(props) {
         userLists.map((list) => {
           if (list.attributes.name === "Top 8") {
             listOrg.top8 = list;
+            return listOrg.top8
           } else if (list.attributes.name === "Up Next") {
             listOrg.upNext = list;
+            return listOrg.upNext
           } else {
             listOrg.customLists.push(list);
+            return listOrg.customLists
           }
         });
 
@@ -83,6 +86,7 @@ export default function Profile(props) {
             avatar: friendDetails.avatar,
             id: friendDetails.id,
           });
+          return friendOrg
         });
 
         setUserFriends(friendOrg);
@@ -91,6 +95,7 @@ export default function Profile(props) {
 
         userPodcasts.map((podcast) => {
           podcastsOrg.push({ image: podcast.image, uuid: podcast.pod_uuid });
+          return podcastsOrg
         });
 
         setUserPodcasts(podcastsOrg);
