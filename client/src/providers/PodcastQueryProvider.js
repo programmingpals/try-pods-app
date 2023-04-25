@@ -10,6 +10,7 @@ export const podcastQueryContext = createContext([]);
 export default function PodcastQueryProvider(props) {
   const [queryPod, setQueryPod] = useState([]);
   const [recommendByFriend, setRecommendByFriend] = useState([]);
+  const [podcastMatch, setPodcastMatch] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
   const { user } = useContext(userContext);
@@ -67,16 +68,32 @@ export default function PodcastQueryProvider(props) {
         });
     };
 
+    const getListCheck = function (uuid) {
+      return axios.get(`/api/users/${user}/podcasts`).then((response) => {
+        return response.data;
+      });
+    };
+
     const apiCalls = function (uuid) {
       return Promise.all([
         getPodcastData(uuid),
         getRecommendByFriend(uuid),
+        getListCheck(uuid),
       ]).then((results) => {
         const podcastData = results[0];
         const recommendByFriend = results[1].friends;
+        const podcastsByUser = results[2];
+
+        let podcastMatch = [];
+        podcastsByUser.map((podcast) => {
+          if (podcast.pod_uuid === uuid) {
+            podcastMatch.push([podcast.list_id]);
+          }
+        });
 
         setQueryPod(podcastData);
         setRecommendByFriend(recommendByFriend);
+        setPodcastMatch(podcastMatch);
         setIsLoading(false);
       });
     };
@@ -88,6 +105,7 @@ export default function PodcastQueryProvider(props) {
     queryPod,
     episodeList: (queryPod && queryPod.episodes) || [],
     recommendByFriend,
+    podcastMatch,
   };
 
   if (isLoading) {

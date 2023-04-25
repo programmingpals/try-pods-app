@@ -529,7 +529,13 @@ button {
   border-color: #d2e93c;
 }
 
-
+.footer {
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+}
 
 .itunes-player-block {
   padding: 50px;
@@ -537,4 +543,22 @@ button {
   // background-color: #e5f2f8;
   border: solid 5px #e5f2f8;
   transform: translateY(0px);
+}
+
+.podcast-match-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // padding: 5px;
+  background-color: #e5f2f8;
+  width: 80%;
+  margin: auto;
+}
+.podcast-match-block img {
+  width: 25px;
+  padding-right: 5px;
+}
+
+.podcast-match-block p {
+  margin: 10px;
 }
