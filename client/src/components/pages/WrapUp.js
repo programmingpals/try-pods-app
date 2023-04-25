@@ -10,7 +10,7 @@ export default function WrapUp() {
   return (
     <div className="wrap-container">
       <div className="hero">
-      <h1>~ Thats a wrap! ~</h1>
+      <h1>~ That's a wrap! ~</h1>
       </div>
       <h2>
         <em>The Try-Pods Team:</em>
@@ -31,13 +31,13 @@ export default function WrapUp() {
       </div>
 
       <div className="tech-stack-container">
-        <h2>The Tech Stack:</h2>
+        <h2><em>The Tech Stack:</em></h2>
         <div>
           <img src={TechStack} />
         </div>
       </div>
       <div className="future-features-container">
-        <h2>Future Features:</h2>
+        <h2><em>Future Features:</em></h2>
         <div className="future-features">
           <p>Heavy Rotation</p>
           <p>Find Friends</p>
@@ -47,7 +47,7 @@ export default function WrapUp() {
       </div>
       <div className="seafood-tower">
         <h2>
-          Up Next:
+          <em>Up Next:</em>
         </h2>
         <img src={Seafood} />
       </div>

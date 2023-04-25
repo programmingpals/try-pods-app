@@ -3,7 +3,7 @@
 }
 
 .wrap-container h1 {
-  padding: 40px;
+  padding: 20px;
 }
 
 .wrap-container h2 {
@@ -39,6 +39,7 @@
 }
 
 .seafood-tower img:hover {
+  transition:  0.3s ease-in-out;
   border: dotted 9px #d2e93c;
 }
 
@@ -46,7 +47,6 @@
   display: flex;
   flex-direction: column;
   margin-top: 40px;
-  padding: 25px;
 }
 
 .future-features {
@@ -55,12 +55,15 @@
   justify-content: space-evenly;
   font-size: larger;
   font-weight: 400;
-  font-style: italic;
   padding: 20px;
 }
 
+.tech-stack-container img {
+  border: dotted 7px #fff
+}
+
 .tech-stack-container img:hover {
-  transition:  0.3s ease-in-out;
+  transition:  0.6s ease-in-out;
   border: dotted 7px #370545
 }
 
@@ -70,10 +73,6 @@
 }
 
 .future-features p:hover {
-//   border: dashed 3px #2fc2ae;
-//   padding: 10px;
-// }
-
 color: white;
 background-color: #370545;
 transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
