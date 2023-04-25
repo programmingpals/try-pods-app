@@ -3,11 +3,12 @@
 }
 
 .wrap-container h1 {
-  padding-bottom: 20px;
+  padding: 40px;
 }
 
 .wrap-container h2 {
   font-weight: lighter;
+  padding-bottom: 20px;
 }
 
 .buds-container {
@@ -34,6 +35,7 @@
 .seafood-tower img {
   width: 500px;
   border: dotted 9px #2fc2ae;
+  margin-bottom: 100px;
 }
 
 .seafood-tower img:hover {
@@ -43,6 +45,40 @@
 .tech-stack-container {
   display: flex;
   flex-direction: column;
+  margin-top: 40px;
+  padding: 25px;
+}
+
+.future-features {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  font-size: larger;
+  font-weight: 400;
+  font-style: italic;
+  padding: 20px;
+}
+
+.tech-stack-container img:hover {
+  transition:  0.3s ease-in-out;
+  border: dotted 7px #370545
+}
+
+.future-features p {
+  border: dashed 3px #d2e93c;
+  padding: 10px;
+}
+
+.future-features p:hover {
+//   border: dashed 3px #2fc2ae;
+//   padding: 10px;
+// }
+
+color: white;
+background-color: #370545;
+transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+border: solid 3px #d2e93c;
+
 }
 
 
