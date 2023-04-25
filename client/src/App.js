@@ -12,6 +12,7 @@ import AddPodcast from "./components/add-podcast/AddPodcast";
 import Nav from "./components/Nav";
 import AddListForm from "./components/profile/AddListForm";
 import WrapUp from "./components/pages/WrapUp";
+import Footer from "./components/Footer";
 
 export default function App(props) {
   return (
@@ -39,6 +40,7 @@ export default function App(props) {
                 <Route path="/wrapup" element={<WrapUp />} />
               </Routes>
             </div>
+            <Footer />
           </BrowserRouter>
         </SearchToggleProvider>
       </UserProvider>

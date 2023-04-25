@@ -339,9 +339,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <div className="footer"><p>Copyright 2023 Bootcamp Buds</p>
-        <p><Link to="/wrapup">Wrap Up!</Link></p>
-        </div>
+  
     </div>
   );
 }
