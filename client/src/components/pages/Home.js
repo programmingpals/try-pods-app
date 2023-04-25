@@ -188,11 +188,7 @@ export default function Home() {
                 </h4>
                 <h4 className="list-option">
                   <img src={folder} style={{ width: "25px" }} />
-                  <Link to={`/podcastlist/8`}>Miscellaneous Pods</Link>
-                </h4>
-                <h4 className="list-option">
-                  <img src={folder} style={{ width: "25px" }} />
-                  <Link to={`/podcastlist/5`}>For Mom!</Link>
+                  <Link to={`/podcastlist/8`}>For Mom!</Link>
                 </h4>
               </div>
             </div>
