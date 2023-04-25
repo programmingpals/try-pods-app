@@ -50,7 +50,7 @@ lizlist6 = List.create(user_id: 2, name: "All-time Top Pods", description: "My a
 
 katelist7 = List.create(user_id: 3, name: "My Favourites", description: "All-time fave podcasts", series: true)
 
-rowlist8 = List.create(user_id: 1, name: "List for Mom 💜", description: "Some pods she might like", series: true)
+rowlist8 = List.create(user_id: 1, name: "For Mom!", description: "Some pods she might like", series: true)
 
 rowlisttop8id9 = List.create(user_id: 1, name: "Top 8", description: "My Top 8 Podcasts", series: true)
 
