@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import { gql, ApolloClient, InMemoryCache } from "@apollo/client";
+import { gql } from "@apollo/client";
 import PodResultItem from "./PodResultItem";
 import { client } from "../../taddyClient";
 
