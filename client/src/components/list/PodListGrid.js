@@ -22,7 +22,7 @@ export default function PodListGrid(props) {
       getListData(params.id);
       setIsLoading(false);
     },
-    [listLength]
+    [listLength, params.id]
   );
 
   const deleteFromList = function (id) {

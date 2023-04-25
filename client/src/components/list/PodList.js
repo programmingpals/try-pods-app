@@ -88,7 +88,7 @@ export default function PodList(props) {
             </div>
             <div className="podlist-row-right">
               <Link to={`/profilepage/${ownerDetails.id}`}>
-                <img src={ownerDetails.avatar} />
+                <img src={ownerDetails.avatar} alt="profile avatar"/>
               </Link>
             </div>
           </div>

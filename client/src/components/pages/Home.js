@@ -36,7 +36,7 @@ export default function Home() {
                 aria-controls="example-panel"
                 onClick={() => setHeight(height === 0 ? "auto" : 0)}
               >
-                {<img src={searchblack} style={{ width: "50px" }} />}
+                {<img src={searchblack} style={{ width: "50px" }} alt="search icon"/>}
               </a>
             </div>
             <div
@@ -54,6 +54,7 @@ export default function Home() {
                   src="https://raw.githubusercontent.com/bootonk/try-pods-app/master/client/src/assets/10Melanie.png"
                   width="60"
                   className="home-friends"
+                  alt="Melanie Avatar"
                 ></img>
               </Link>
               <Link to="profilepage/2">
@@ -61,6 +62,7 @@ export default function Home() {
                   src="https://raw.githubusercontent.com/bootonk/try-pods-app/master/client/src/assets/2Liz.png"
                   width="60"
                   className="home-friends"
+                  alt="Liz Avatar"
                 ></img>
               </Link>
               <a href="#/">
@@ -68,6 +70,7 @@ export default function Home() {
                   src="https://raw.githubusercontent.com/bootonk/try-pods-app/master/client/src/assets/4Mike.png"
                   width="60"
                   className="home-friends"
+                  alt="Mike Avatar"
                 ></img>
               </a>
 
@@ -76,6 +79,7 @@ export default function Home() {
                   src="https://raw.githubusercontent.com/bootonk/try-pods-app/master/client/src/assets/12Roger.png"
                   width="60"
                   className="home-friends"
+                  alt="Roger Avatar"
                 ></img>
               </a>
               <a href="#/">
@@ -83,6 +87,7 @@ export default function Home() {
                   src="https://raw.githubusercontent.com/bootonk/try-pods-app/master/client/src/assets/11Bill.png"
                   width="60"
                   className="home-friends"
+                  alt="Bill Avatar"
                 ></img>
               </a>
               <a href="#/">
@@ -90,6 +95,7 @@ export default function Home() {
                   src="https://raw.githubusercontent.com/bootonk/try-pods-app/master/client/src/assets/9Meaghan.png"
                   width="60"
                   className="home-friends"
+                  alt="Meaghan Avatar"
                 ></img>
               </a>
               <a href="#/">
@@ -97,6 +103,7 @@ export default function Home() {
                   src="https://raw.githubusercontent.com/bootonk/try-pods-app/master/client/src/assets/8Pete.png"
                   width="60"
                   className="home-friends"
+                  alt="Pete Avatar"
                 ></img>
               </a>
             </div>
@@ -118,7 +125,7 @@ export default function Home() {
             >
               <div className="up-next-header">
                 <h2>Up Next</h2>
-                <img src={speakericon} style={{ width: "25px" }} />
+                <img src={speakericon} style={{ width: "25px" }} alt="speaker icon"/>
               </div>
               <div className="up-next-grid">
                 <a href="http://localhost:3000/querypodcast/2cf30b44-6965-4485-bded-77173f835077">
@@ -126,6 +133,7 @@ export default function Home() {
                     src="https://f.prxu.org/3492/images/01e4145d-1e06-4521-8548-d6c9072e53c3/Show_Cover_Normal_Gossip_red_v5.jpg"
                     width="100"
                     className="home-up-next"
+                    alt="Normal Gossip"
                   />
                 </a>
                 <a href="http://localhost:3000/querypodcast/1f14df6e-a01c-4a11-ae98-cef95d27d42f">
@@ -133,6 +141,7 @@ export default function Home() {
                     src="https://image.simplecastcdn.com/images/2dcfae8f-b2e0-4826-a483-1306d3b8be06/d8c21569-e9eb-41d5-b1d0-70d9ea0c8ddc/3000x3000/dhj-podcastartwork-2021-v1.jpg?aid=rss_feed"
                     width="100"
                     className="home-up-next"
+                    alt="Dear Hank and John"
                   />
                 </a>
                 <a href="http://localhost:3000/querypodcast/dc3ad56c-340a-4f34-adab-53c25da672cd">
@@ -140,6 +149,7 @@ export default function Home() {
                     src="https://deow9bq0xqvbj.cloudfront.net/image-logo/13701264/TFC_logo_2022_small-03_mvcyi4.png"
                     width="100"
                     className="home-up-next"
+                    alt="The Financial Confessions"
                   />
                 </a>
                 <a href="http://localhost:3000/querypodcast/08146843-ae79-452c-b0c3-531c4ed8ef7f">
@@ -147,6 +157,7 @@ export default function Home() {
                     src="https://image.simplecastcdn.com/images/d139afc2-e8b0-4ec2-bc74-fdc3c88f649a/6223229f-44ee-42fe-af91-83a4bdd87f00/3000x3000/screen-shot-2023-04-03-at-9-34-20-am.jpg?aid=rss_feed"
                     width="100"
                     className="home-up-next"
+                    alt="Conan O'brien"
                   />
                 </a>
                 <a href="http://localhost:3000/querypodcast/437b3e05-05e8-4723-aa4d-8933df7c9925">
@@ -154,6 +165,7 @@ export default function Home() {
                     src="https://storage.buzzsprout.com/variants/2d605m8uneahqo4polewo18qw4f4/5cfec01b44f3e29fae1fb88ade93fc4aecd05b192fbfbc2c2f1daa412b7c1921.jpg"
                     width="100"
                     className="home-up-next"
+                    alt="You're Wrong About"
                   />
                 </a>
                 <a href="http://localhost:3000/querypodcast/f89212f2-3123-4b2a-884d-c2da66dc2e45">
@@ -161,6 +173,7 @@ export default function Home() {
                     src="https://f.prxu.org/187/images/4610f1dc-cafa-4b1b-8dd0-52a384c81214/Articles_of_Interest.png"
                     width="100"
                     className="home-up-next"
+                    alt="Articles of Interest"
                   />
                 </a>
               </div>
@@ -169,23 +182,23 @@ export default function Home() {
               <h2>Add To Your Lists</h2>
               <div>
                 <h4 className="list-option">
-                  <img src={folder} style={{ width: "25px" }} />
+                  <img src={folder} style={{ width: "25px" }} alt="top-list"/>
                   <Link to={`/podcastlist/9`}>Top 8</Link>
                 </h4>
                 <h4 className="list-option">
-                  <img src={folder} style={{ width: "25px" }} />
+                  <img src={folder} style={{ width: "25px" }} alt="next-list"/>
                   <Link to={`/podcastlist/12`}>Up Next</Link>
                 </h4>
                 <h4 className="list-option">
-                  <img src={folder} style={{ width: "25px" }} />
+                  <img src={folder} style={{ width: "25px" }} alt="ent-list"/>
                   <Link to={`/podcastlist/2`}>Entertainment</Link>
                 </h4>
                 <h4 className="list-option">
-                  <img src={folder} style={{ width: "25px" }} />
+                  <img src={folder} style={{ width: "25px" }} alt="crime-list"/>
                   <Link to={`/podcastlist/5`}>The Best True Crime</Link>
                 </h4>
                 <h4 className="list-option">
-                  <img src={folder} style={{ width: "25px" }} />
+                  <img src={folder} style={{ width: "25px" }} alt="mom-list"/>
                   <Link to={`/podcastlist/8`}>For Mom!</Link>
                 </h4>
               </div>
@@ -238,6 +251,7 @@ export default function Home() {
                   src="https://image.simplecastcdn.com/images/9cfa2b6c-da19-4096-a178-91e4b3992a70/48e06851-50c2-4cff-a7da-29c1673df23b/3000x3000/armchair-expert-umbrella-cover.jpg?aid=rss_feed"
                   width="80"
                   className="home-find-new"
+                  alt="CelebPods-1"
                 />
               </a>
               <a href="http://localhost:3000/querypodcast/a99d609b-4f05-475c-b86d-864ebe7792ef">
@@ -245,6 +259,7 @@ export default function Home() {
                   src="https://image.simplecastcdn.com/images/694c0bb5-785a-433e-ba62-0197fd51307e/d06cb4ba-2016-4d4d-b488-6b3118fcdb08/3000x3000/updated-sibling-artwork-aug-20.jpg?aid=rss_feed"
                   width="80"
                   className="home-find-new"
+                  alt="CelebPods-2"
                 />
               </a>
               <a href="http://localhost:3000/querypodcast/7b2659e9-849b-4469-b383-03dead87b71c">
@@ -252,6 +267,7 @@ export default function Home() {
                   src="https://image.simplecastcdn.com/images/d139afc2-e8b0-4ec2-bc74-fdc3c88f649a/2531b112-7436-47dc-8ed6-fb6b68296e3c/3000x3000/stitcher-cover-officeladies-3000x3000-final-1.jpg?aid=rss_feed"
                   width="80"
                   className="home-find-new"
+                  alt="CelebPods-3"
                 />
               </a>
             </div>
@@ -262,6 +278,7 @@ export default function Home() {
                   src="https://megaphone.imgix.net/podcasts/ca047470-781a-11ea-9a10-cfa05a5eeb3b/image/bill-simmons-podcast-FD-updated__1_.jpg?ixlib=rails-4.3.1&max-w=3000&max-h=3000&fit=crop&auto=format,compress"
                   width="80"
                   className="home-find-new"
+                  alt="SportsPods-1"
                 />
               </a>
               <a href="http://localhost:3000/querypodcast/d2abc3c3-a84c-4e8d-9009-779d0f916e6c">
@@ -269,6 +286,7 @@ export default function Home() {
                   src="https://megaphone.imgix.net/podcasts/f9a9d960-7831-11ea-921c-ff8b2140ab24/image/RingerNBA_FanDuel-updated-white__1_.jpg?ixlib=rails-4.3.1&max-w=3000&max-h=3000&fit=crop&auto=format,compress"
                   width="80"
                   className="home-find-new"
+                  alt="SportsPods-2"
                 />
               </a>
               <a href="http://localhost:3000/querypodcast/7a2a88ea-9662-43ee-9f55-d823eb1408f2">
@@ -276,6 +294,7 @@ export default function Home() {
                   src="https://podcasts.barstoolsports.com/_images/spittin_chiclets_itunes.1e3337ff729d.jpg"
                   width="80"
                   className="home-find-new"
+                  alt="SportsPods-3"
                 />
               </a>
             </div>
@@ -286,6 +305,7 @@ export default function Home() {
                   src="https://image.simplecastcdn.com/images/c77f2da6-ce42-4942-aa94-b3a327f6e6fe/24fdd7f3-0ba9-4a1d-af15-7f106fc16ad8/3000x3000/wad.jpg?aid=rss_feed"
                   width="80"
                   className="home-find-new"
+                  alt="newsPods-1"
                 />
               </a>
               <a href="http://localhost:3000/querypodcast/cb8d858a-3ef4-4645-8942-67e55c0927f2">
@@ -293,6 +313,7 @@ export default function Home() {
                   src="https://image.simplecastcdn.com/images/03d8b493-87fc-4bd1-931f-8a8e9b945d8a/2cce5659-f647-4366-b318-46e4b67afcfa/3000x3000/c81936f538106550b804e7e4fe2c236319bab7fba37941a6e8f7e5c3d3048b88fc5b2182fb790f7d446bdc820406456c94287f245db89d8656c105d5511ec3de.jpeg?aid=rss_feed"
                   width="80"
                   className="home-find-new"
+                  alt="newsPods-2"
                 />
               </a>
               <a href="http://localhost:3000/querypodcast/4e883d98-43d1-4ac7-8de8-4afc13244393">
@@ -300,6 +321,7 @@ export default function Home() {
                   src="https://media.npr.org/assets/img/2022/09/23/up-first_tile_npr-network-01_sq-cd1dc7e35846274fc57247cfcb9cd4dddbb2d635.jpg?s=1400&c=66&f=jpg"
                   width="80"
                   className="home-find-new"
+                  alt="newsPods-3"
                 />
               </a>
             </div>

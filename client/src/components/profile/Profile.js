@@ -93,13 +93,6 @@ export default function Profile(props) {
           podcastsOrg.push({ image: podcast.image, uuid: podcast.pod_uuid });
         });
 
-        // keep below:
-        // function removeDuplicates(arr) {
-        //   return [...new Set(arr)];
-        // }
-
-        // const podcasts = removeDuplicates(podcastArr);
-
         setUserPodcasts(podcastsOrg);
         setIsLoading(false);
       });
@@ -107,6 +100,8 @@ export default function Profile(props) {
 
     apiCalls(params.userId);
   }, [params.userId]);
+
+
 
   const friends = userFriends.map((friend) => {
     return (
@@ -123,7 +118,7 @@ export default function Profile(props) {
     <div className="profile">
       <div className="profile-header">
         <div className="profile-details">
-          <img src={userDetails.avatar} />
+          <img src={userDetails.avatar} alt="User Avatar"/>
           <h2>{userDetails.first_name}</h2>
         </div>
         <div className="profile-top8">
@@ -134,7 +129,7 @@ export default function Profile(props) {
       <hr className="profile-hr" />
       <div className="add-friend">
         <p>Add {userDetails.first_name}</p>
-        <img src={Heart} />
+        <img src={Heart} alt="heart-icon"/>
       </div>
       <hr className="profile-hr" />
       {!isLoading && (

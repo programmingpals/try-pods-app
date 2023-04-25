@@ -33,7 +33,7 @@ export default function WrapUp() {
       <div className="tech-stack-container">
         <h2><em>The Tech Stack:</em></h2>
         <div>
-          <img src={TechStack} alt="Image of out tech stack"/>
+          <img src={TechStack} alt="Tech stack"/>
         </div>
       </div>
       <div className="future-features-container">

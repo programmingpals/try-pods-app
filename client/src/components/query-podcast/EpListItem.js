@@ -1,6 +1,5 @@
 import React from "react";
 import { useState } from "react";
-import AnimateHeight from "react-animate-height";
 
 export default function EpListItem(props) {
   const [showFullDescription, setShowFullDescription] = useState(false);
@@ -13,18 +12,7 @@ export default function EpListItem(props) {
 
   let seasonText = "";
   if (props.seasonNumber) {
-    seasonText = "Season " + `${props.seasonNumber}`;
-  }
-
-  let time;
-  const totalMinutes = Math.floor(props.duration / 60);
-  const seconds = (props.duration % 60).toString().padStart(2, "0");
-  const hours = Math.floor(totalMinutes / 60);
-  const minutes = (totalMinutes % 60).toString().padStart(2, "0");
-  if (hours === 0) {
-    time = `${minutes}:${seconds}`;
-  } else {
-    time = `${hours}:${minutes}:${seconds}`;
+    seasonText = `Season ${props.seasonNumber}`;
   }
 
   const releaseFullDate = new Date(props.datePublished * 1000);
@@ -34,7 +22,7 @@ export default function EpListItem(props) {
     <div className="podlist-item-block">
       <div className="podlist-item">
         <div className="podlist-item-image">
-          <img src={`${props.imageUrl}`} style={{ width: "125px" }} />
+          <img src={`${props.imageUrl}`} style={{ width: "125px" }} alt={props.name}/>
         </div>
         <div className="podlist-item-details">
           <div className="details-first-row">

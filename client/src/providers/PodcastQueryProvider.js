@@ -99,7 +99,7 @@ export default function PodcastQueryProvider(props) {
     };
 
     apiCalls(`${params.podId}`);
-  }, []);
+  }, [user, params.podId]);
 
   const value = {
     queryPod,

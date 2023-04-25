@@ -44,7 +44,7 @@ export default function QueryPodResults(props) {
     <div className="podlist">
       <div className="page-header podcast-header">
         <div className="page-image">
-          <img src={queryPod.imageUrl} style={{ width: "125px" }} />
+          <img src={queryPod.imageUrl} style={{ width: "125px" }} alt={queryPod.name}/>
         </div>
         <div className="podlist-details">
           <div className="podlist-row">
@@ -96,7 +96,7 @@ export default function QueryPodResults(props) {
       </div>
       {podcastMatch.length > 0 && (
         <div className="podcast-match-block">
-          <img src={checkIcon} />
+          <img src={checkIcon} alt="check-icon"/>
           <p>Already on</p>
           {podcastDuplicate}
         </div>

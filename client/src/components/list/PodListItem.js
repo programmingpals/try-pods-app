@@ -57,7 +57,7 @@ export default function PodListItem(props) {
     <div>
       <div className="podlist-item">
         <div className="podlist-item-image">
-          <img src={props.image} style={{ width: "125px" }} />
+          <img src={props.image} style={{ width: "125px" }} alt={props.title}/>
         </div>
         <div className="podlist-item-details">
           <div className="details-first-row">
@@ -104,7 +104,7 @@ export default function PodListItem(props) {
                 )}
                 {props.ownerId !== user && (
                   <Link to="/addpodcast" state={{ attributes: podcast }}>
-                    <img src={saveIcon} className="action-button" />
+                    <img src={saveIcon} className="action-button" alt="save-icon"/>
                   </Link>
                 )}
                 <div>

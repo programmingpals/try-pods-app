@@ -5,7 +5,7 @@ export default function RecommendByFriend(props) {
   return (
     <div className="recommend-item">
       <Link to={`/profilepage/${props.id}`}>
-        <img src={props.avatar} />
+        <img src={props.avatar} alt={props.avatar}/>
       </Link>
       <p>{props.name}</p>
     </div>
