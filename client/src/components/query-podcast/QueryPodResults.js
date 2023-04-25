@@ -6,12 +6,15 @@ import { Link } from "react-router-dom";
 import PodPlayer from "./PodPlayer";
 import RecommendByFriend from "./RecommendsByFriend";
 import speakerIcon from "../../assets/icons/speakericon.png";
+import checkIcon from "../../assets/icons/check.png";
+import PodcastMatch from "./PodcastMatch";
 
 export default function QueryPodResults(props) {
   const [playerSelected, setPlayerSelected] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 
-  const { queryPod, recommendByFriend } = useContext(podcastQueryContext);
+  const { queryPod, recommendByFriend, podcastMatch } =
+    useContext(podcastQueryContext);
 
   const params = useParams();
 
@@ -30,6 +33,17 @@ export default function QueryPodResults(props) {
   const seriesTypeLowerCase = seriesType.toLowerCase();
   const seriesTypeTitleCase =
     seriesTypeLowerCase.charAt(0).toUpperCase() + seriesTypeLowerCase.slice(1);
+
+  let podcastDuplicate = [];
+  const podcastMatchList = function (podcastMatchArr) {
+    podcastDuplicate = podcastMatchArr.map((list) => {
+      return <PodcastMatch key={list} id={list} name={list.name} />;
+    });
+  };
+
+  if (podcastMatch.length > 0) {
+    podcastMatchList(podcastMatch);
+  }
 
   return (
     <div className="podlist">
@@ -85,13 +99,20 @@ export default function QueryPodResults(props) {
           </div>
         </div>
       </div>
+      {podcastMatch.length > 0 && (
+        <div className="podcast-match-block">
+          <img src={checkIcon} />
+          <p>Already on</p>
+          {podcastDuplicate}
+        </div>
+      )}
       <div className="podlist-description">
         <h4>{queryPod.description}</h4>
       </div>
       {playerSelected && (
         <PodPlayer itunesId={queryPod.itunesId} height={"500"} />
       )}
-      <div class="podlist-grid-container">
+      <div className="podlist-grid-container">
         <EpListGrid podImage={queryPod.imageUrl} />
       </div>
     </div>
