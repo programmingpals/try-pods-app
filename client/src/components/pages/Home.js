@@ -2,13 +2,11 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import speakericon from "../../assets/icons/speakericon.png";
 import HomeCarousel from "./Carousel.js";
-import Search from "../search/Search";
 import { searchContext } from "../../providers/SearchToggleProvider";
 import searchblack from "../../assets/icons/search-black.png";
 import folder from "../../assets/icons/folder.png";
 import "./Home.scss";
 import allDots from "../../assets/backgrounds/all-dot-background.svg";
-import WrapUp from "./WrapUp";
 
 export default function Home() {
   const { height, setHeight } = useContext(searchContext);

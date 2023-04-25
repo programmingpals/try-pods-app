@@ -1,7 +1,6 @@
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { userContext } from "../../providers/UserProvider";
-import AnimateHeight from "react-animate-height";
 import deleteIcon from "../../assets/icons/deleteIcon.png";
 import PodPlayer from "../query-podcast/PodPlayer";
 import speakerIcon from "../../assets/icons/speakericon.png";
@@ -10,7 +9,6 @@ import saveIcon from "../../assets/icons/save-icon.png";
 export default function PodListItem(props) {
   const { user } = useContext(userContext);
 
-  const [height, setHeight] = useState(0);
   const [showConfirmation, setShowConfirmation] = useState(false);
   const [playerSelected, setPlayerSelected] = useState(false);
   const [showFullDescription, setShowFullDescription] = useState(false);

@@ -1,10 +1,9 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import ListGrid from "./ListGrid";
 import Top8Grid from "./Top8Grid";
 import Friend from "./Friend";
 import axios from "axios";
 import { useParams } from "react-router-dom";
-import { userContext } from "../../providers/UserProvider";
 import Heart from "../../assets/icons/heart.png";
 
 export default function Profile(props) {
@@ -14,8 +13,6 @@ export default function Profile(props) {
   const [userPodcasts, setUserPodcasts] = useState([]);
   const [listOrg, setListOrg] = useState({});
   const [isLoading, setIsLoading] = useState(true);
-
-  const { user } = useContext(userContext);
 
   const params = useParams();
 
@@ -92,10 +89,11 @@ export default function Profile(props) {
 
         let podcastsOrg = [];
 
-        const podcastArr = userPodcasts.map((podcast) => {
+        userPodcasts.map((podcast) => {
           podcastsOrg.push({ image: podcast.image, uuid: podcast.pod_uuid });
         });
 
+        // keep below:
         // function removeDuplicates(arr) {
         //   return [...new Set(arr)];
         // }

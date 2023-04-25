@@ -11,10 +11,8 @@ import {
   FacebookIcon,
   TwitterIcon,
   EmailShareButton,
-  EmailIcon,
 } from "react-share";
 import mailIcon from "../../assets/icons/mailIcon.png";
-import halfTone from "../../assets/backgrounds/half-tone-background.svg";
 import halfToneSmall from "../../assets/backgrounds/half-tone-small-dot-background.svg";
 
 export default function PodList(props) {
@@ -24,7 +22,6 @@ export default function PodList(props) {
   const [owner, setOwner] = useState(0);
   const [ownerDetails, setOwnerDetails] = useState({});
   const [listLength, setListLength] = useState(0);
-  // const [currentList, setCurrentList] = useState(0);
 
   const { user } = useContext(userContext);
 
@@ -43,7 +40,6 @@ export default function PodList(props) {
 
   const getListOwnerDetails = function (owner) {
     axios.get(`/api/users/${owner}`).then((response) => {
-      console.log("response from owner details", response.data);
 
       const details = response.data;
       const ownerDetails = {
@@ -80,17 +76,17 @@ export default function PodList(props) {
   }
 
   return (
-    <div class="podlist">
+    <div className="podlist">
       <div
-        class="page-header podlist-header"
+        className="page-header podlist-header"
         style={{ backgroundImage: `url(${halfToneSmall})` }}
       >
-        <div class="podlist-details">
-          <div class="podlist-row">
-            <div class="podlist-row-left">
+        <div className="podlist-details">
+          <div className="podlist-row">
+            <div className="podlist-row-left">
               <h1>{listDetails.name}</h1>
             </div>
-            <div class="podlist-row-right">
+            <div className="podlist-row-right">
               <Link to={`/profilepage/${ownerDetails.id}`}>
                 <img src={ownerDetails.avatar} />
               </Link>
@@ -98,7 +94,7 @@ export default function PodList(props) {
           </div>
           <hr className="podlist-hr" />
           <div className="podlist-row">
-            <div class="podlist-row-left">
+            <div className="podlist-row-left">
               <h4>{listDetails.description}</h4>
             </div>
             <div className="podlist-row-right">

@@ -1,7 +1,5 @@
-import React, { useState, useContext } from "react";
-import { userContext } from "../../providers/UserProvider";
+import React from "react";
 import { Link } from "react-router-dom";
-import AddListForm from "./AddListForm";
 import Add from "../../assets/icons/add.png";
 
 export default function AddListBlock(props) {
@@ -10,7 +8,7 @@ export default function AddListBlock(props) {
   return (
     <div className="listitem-main">
       <Link to={"/addlist"} state={{ state: setUserLists }}>
-        <img src={Add} className="add-list-icon" />
+        <img src={Add} className="add-list-icon" alt="add icon" />
         <p className="add-list">Add New List</p>
       </Link>
       <p>Quick! Before you forget!</p>

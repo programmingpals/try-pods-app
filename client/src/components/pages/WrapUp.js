@@ -17,15 +17,15 @@ export default function WrapUp() {
       </h2>
       <div className="buds-container">
         <div>
-          <img src={Kate} style={{ width: "200px" }} />
+          <img src={Kate} style={{ width: "200px" }} alt="Avatar for Kate" />
           <h4>Kate Booton</h4>
         </div>
         <div>
-          <img src={Liz} style={{ width: "200px" }} />
+          <img src={Liz} style={{ width: "200px" }} alt="Avatar for Liz"/>
           <h4>Liz Fosdick</h4>
         </div>
         <div>
-          <img src={Rowan} style={{ width: "200px" }} />
+          <img src={Rowan} style={{ width: "200px" }} alt="Rowan-Avatar" />
           <h4>Rowan Mackenzie</h4>
         </div>
       </div>
@@ -33,7 +33,7 @@ export default function WrapUp() {
       <div className="tech-stack-container">
         <h2><em>The Tech Stack:</em></h2>
         <div>
-          <img src={TechStack} />
+          <img src={TechStack} alt="Image of out tech stack"/>
         </div>
       </div>
       <div className="future-features-container">
@@ -49,7 +49,7 @@ export default function WrapUp() {
         <h2>
           <em>Up Next:</em>
         </h2>
-        <img src={Seafood} />
+        <img src={Seafood} alt="seafood"/>
       </div>
     </div>
   );

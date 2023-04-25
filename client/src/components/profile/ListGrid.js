@@ -1,7 +1,5 @@
 import React, { useContext } from "react";
-import { userListsContext } from "../../providers/UserProvider";
 import List from "./List";
-import AddListForm from "./AddListForm";
 import AddListBlock from "./AddListBlock";
 import { userContext } from "../../providers/UserProvider";
 import PodcastItem from "./PodcastItem";
@@ -25,7 +23,6 @@ export default function ListGrid(props) {
   });
 
   const podcasts = props.podcasts.map((podcast) => {
-    console.log(podcast);
     return (
       <PodcastItem
         key={podcast.uuid}

@@ -51,7 +51,6 @@ export default function AddPodcast(props) {
     );
   });
 
-  console.log(sortedLists);
   if (isLoading) {
     return <p>...Loading</p>;
   }

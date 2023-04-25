@@ -54,11 +54,9 @@ export default function EpListItem(props) {
             </audio>
           </div>
           <div className="pod-list-item-description">
-            <AnimateHeight height={"auto"}>
               <p>
                 {showFullDescription ? props.description : truncatedDescription}
               </p>
-            </AnimateHeight>
             {truncatedDescription.length > 150 && (
               <button onClick={toggleDescription}>
                 {showFullDescription ? "Show less" : "Show more"}

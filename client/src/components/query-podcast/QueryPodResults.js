@@ -1,22 +1,17 @@
 import React, { useContext, useState } from "react";
 import { podcastQueryContext } from "../../providers/PodcastQueryProvider";
 import EpListGrid from "./EpListGrid";
-import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import PodPlayer from "./PodPlayer";
 import RecommendByFriend from "./RecommendsByFriend";
-import speakerIcon from "../../assets/icons/speakericon.png";
 import checkIcon from "../../assets/icons/check.png";
 import PodcastMatch from "./PodcastMatch";
 
 export default function QueryPodResults(props) {
   const [playerSelected, setPlayerSelected] = useState(false);
-  const [isLoading, setIsLoading] = useState(true);
 
   const { queryPod, recommendByFriend, podcastMatch } =
     useContext(podcastQueryContext);
-
-  const params = useParams();
 
   const recommends = recommendByFriend.map((rec) => {
     return (
