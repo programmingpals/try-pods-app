@@ -64,13 +64,13 @@ export default function Profile(props) {
         userLists.map((list) => {
           if (list.attributes.name === "Top 8") {
             listOrg.top8 = list;
-            return listOrg.top8
+            return listOrg.top8;
           } else if (list.attributes.name === "Up Next") {
             listOrg.upNext = list;
-            return listOrg.upNext
+            return listOrg.upNext;
           } else {
             listOrg.customLists.push(list);
-            return listOrg.customLists
+            return listOrg.customLists;
           }
         });
 
@@ -86,7 +86,7 @@ export default function Profile(props) {
             avatar: friendDetails.avatar,
             id: friendDetails.id,
           });
-          return friendOrg
+          return friendOrg;
         });
 
         setUserFriends(friendOrg);
@@ -95,18 +95,23 @@ export default function Profile(props) {
 
         userPodcasts.map((podcast) => {
           podcastsOrg.push({ image: podcast.image, uuid: podcast.pod_uuid });
-          return podcastsOrg
+          return podcastsOrg;
         });
 
-        setUserPodcasts(podcastsOrg);
+        const seen = new Set();
+        const uniquePodcasts = podcastsOrg.filter((item) => {
+          const duplicate = seen.has(item.uuid);
+          seen.add(item.uuid);
+          return !duplicate;
+        });
+
+        setUserPodcasts(uniquePodcasts);
         setIsLoading(false);
       });
     };
 
     apiCalls(params.userId);
   }, [params.userId]);
-
-
 
   const friends = userFriends.map((friend) => {
     return (
@@ -123,7 +128,7 @@ export default function Profile(props) {
     <div className="profile">
       <div className="profile-header">
         <div className="profile-details">
-          <img src={userDetails.avatar} alt="User Avatar"/>
+          <img src={userDetails.avatar} alt="User Avatar" />
           <h2>{userDetails.first_name}</h2>
         </div>
         <div className="profile-top8">
@@ -134,7 +139,7 @@ export default function Profile(props) {
       <hr className="profile-hr" />
       <div className="add-friend">
         <p>Add {userDetails.first_name}</p>
-        <img src={Heart} alt="heart-icon"/>
+        <img src={Heart} alt="heart-icon" />
       </div>
       <hr className="profile-hr" />
       {!isLoading && (
