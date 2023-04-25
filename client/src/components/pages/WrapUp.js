@@ -4,12 +4,14 @@ import Liz from "../../assets/2Liz.png";
 import Kate from "../../assets/3Kate.png";
 import Rowan from "../../assets/1Rowan.png";
 import Seafood from "../../assets/Seafood-Tower.png";
+import TechStack from "../../assets/tech_stack.png";
 
 export default function WrapUp() {
   return (
     <div className="wrap-container">
+      <div className="hero">
       <h1>~ Thats a wrap! ~</h1>
-
+      </div>
       <h2>
         <em>The Try-Pods Team:</em>
       </h2>
@@ -28,16 +30,24 @@ export default function WrapUp() {
         </div>
       </div>
 
-      {/* <div className="tech-stack-container">
+      <div className="tech-stack-container">
         <h2>The Tech Stack:</h2>
         <div>
-        <h4><strong>- ReactJS</strong></h4>
-        <h4><strong>- Rails</strong></h4>
+          <img src={TechStack} />
         </div>
-      </div> */}
+      </div>
+      <div className="future-features-container">
+        <h2>Future Features:</h2>
+        <div className="future-features">
+          <p>Heavy Rotation</p>
+          <p>Find Friends</p>
+          <p>Episode Lists</p>
+          <p>Spotify Integration</p>
+        </div>
+      </div>
       <div className="seafood-tower">
         <h2>
-          <em>What they will be eating:</em>
+          Up Next:
         </h2>
         <img src={Seafood} />
       </div>
