@@ -1,22 +1,17 @@
 import React, { useContext, useState } from "react";
 import { podcastQueryContext } from "../../providers/PodcastQueryProvider";
 import EpListGrid from "./EpListGrid";
-import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import PodPlayer from "./PodPlayer";
 import RecommendByFriend from "./RecommendsByFriend";
-import speakerIcon from "../../assets/icons/speakericon.png";
 import checkIcon from "../../assets/icons/check.png";
 import PodcastMatch from "./PodcastMatch";
 
 export default function QueryPodResults(props) {
   const [playerSelected, setPlayerSelected] = useState(false);
-  const [isLoading, setIsLoading] = useState(true);
 
   const { queryPod, recommendByFriend, podcastMatch } =
     useContext(podcastQueryContext);
-
-  const params = useParams();
 
   const recommends = recommendByFriend.map((rec) => {
     return (
@@ -49,7 +44,7 @@ export default function QueryPodResults(props) {
     <div className="podlist">
       <div className="page-header podcast-header">
         <div className="page-image">
-          <img src={queryPod.imageUrl} style={{ width: "125px" }} />
+          <img src={queryPod.imageUrl} style={{ width: "125px" }} alt={queryPod.name}/>
         </div>
         <div className="podlist-details">
           <div className="podlist-row">
@@ -101,7 +96,7 @@ export default function QueryPodResults(props) {
       </div>
       {podcastMatch.length > 0 && (
         <div className="podcast-match-block">
-          <img src={checkIcon} />
+          <img src={checkIcon} alt="check-icon"/>
           <p>Already on</p>
           {podcastDuplicate}
         </div>

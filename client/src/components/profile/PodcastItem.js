@@ -5,7 +5,7 @@ export default function PodcastItem(props) {
   return (
     <div className="podcast-item">
       <Link to={`/querypodcast/${props.uuid}`}>
-        <img src={`${props.image}`} />
+        <img src={`${props.image}`} alt="podcast name"/>
       </Link>
     </div>
   );

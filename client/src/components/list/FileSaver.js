@@ -9,9 +9,6 @@ export default function FileSaver(props) {
     doc.text(listData, 10, 10);
     const pdfBlob = doc.output("blob");
     saveAs(pdfBlob, `${listData}.pdf`);
-
-    // const blob = new Blob([JSON.stringify(listData)], { type: 'text/plain;charset=utf-8' });
-    // saveAs(blob, `${listData}.pdf`);
   }
 
   return (

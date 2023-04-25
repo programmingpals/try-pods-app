@@ -1,10 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { useState } from "react";
 import axios from "axios";
 
 export default function ListChoice(props) {
-  const [state, setState] = useState([]);
 
   const addToList = function (podInfo) {
     axios
@@ -24,7 +22,6 @@ export default function ListChoice(props) {
       })
 
       .then((response) => {
-        // console.log("Axios Post AddToList", response);
       })
       .catch((err) => {
         console.log("axios addToList error:", err);
@@ -34,9 +31,9 @@ export default function ListChoice(props) {
   return (
     <div className="listitem-add">
       <Link to={`/podcastlist/${props.id}`}>
-        <a href="#/" onClick={() => addToList(props.podcast)}>
+        <button className="unstyled-button" onClick={() => addToList(props.podcast)}>
           <h4>{props.name}</h4>
-        </a>
+        </button>
       </Link>
     </div>
   );

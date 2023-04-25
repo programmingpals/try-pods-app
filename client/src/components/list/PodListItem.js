@@ -1,7 +1,6 @@
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { userContext } from "../../providers/UserProvider";
-import AnimateHeight from "react-animate-height";
 import deleteIcon from "../../assets/icons/deleteIcon.png";
 import PodPlayer from "../query-podcast/PodPlayer";
 import speakerIcon from "../../assets/icons/speakericon.png";
@@ -10,7 +9,6 @@ import saveIcon from "../../assets/icons/save-icon.png";
 export default function PodListItem(props) {
   const { user } = useContext(userContext);
 
-  const [height, setHeight] = useState(0);
   const [showConfirmation, setShowConfirmation] = useState(false);
   const [playerSelected, setPlayerSelected] = useState(false);
   const [showFullDescription, setShowFullDescription] = useState(false);
@@ -59,7 +57,7 @@ export default function PodListItem(props) {
     <div>
       <div className="podlist-item">
         <div className="podlist-item-image">
-          <img src={props.image} style={{ width: "125px" }} />
+          <img src={props.image} style={{ width: "125px" }} alt={props.title}/>
         </div>
         <div className="podlist-item-details">
           <div className="details-first-row">
@@ -106,7 +104,7 @@ export default function PodListItem(props) {
                 )}
                 {props.ownerId !== user && (
                   <Link to="/addpodcast" state={{ attributes: podcast }}>
-                    <img src={saveIcon} className="action-button" />
+                    <img src={saveIcon} className="action-button" alt="save-icon"/>
                   </Link>
                 )}
                 <div>

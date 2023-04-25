@@ -1,5 +1,4 @@
-import React, { createContext, useState, useEffect, useContext } from "react";
-import AnimateHeight from "react-animate-height";
+import React, { createContext, useState } from "react";
 
 export const searchContext = createContext();
 

@@ -14,7 +14,7 @@ import AddListForm from "./components/profile/AddListForm";
 import WrapUp from "./components/pages/WrapUp";
 import Footer from "./components/Footer";
 
-export default function App(props) {
+export default function App() {
   return (
     <div className="App">
       <UserProvider>

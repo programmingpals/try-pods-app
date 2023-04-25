@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from "react";
+import React from "react";
 import Top8Item from "./Top8Item";
 
 export default function Top8Grid(props) {

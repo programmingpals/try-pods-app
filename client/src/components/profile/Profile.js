@@ -1,10 +1,9 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import ListGrid from "./ListGrid";
 import Top8Grid from "./Top8Grid";
 import Friend from "./Friend";
 import axios from "axios";
 import { useParams } from "react-router-dom";
-import { userContext } from "../../providers/UserProvider";
 import Heart from "../../assets/icons/heart.png";
 
 export default function Profile(props) {
@@ -14,8 +13,6 @@ export default function Profile(props) {
   const [userPodcasts, setUserPodcasts] = useState([]);
   const [listOrg, setListOrg] = useState({});
   const [isLoading, setIsLoading] = useState(true);
-
-  const { user } = useContext(userContext);
 
   const params = useParams();
 
@@ -67,10 +64,13 @@ export default function Profile(props) {
         userLists.map((list) => {
           if (list.attributes.name === "Top 8") {
             listOrg.top8 = list;
+            return listOrg.top8
           } else if (list.attributes.name === "Up Next") {
             listOrg.upNext = list;
+            return listOrg.upNext
           } else {
             listOrg.customLists.push(list);
+            return listOrg.customLists
           }
         });
 
@@ -86,21 +86,17 @@ export default function Profile(props) {
             avatar: friendDetails.avatar,
             id: friendDetails.id,
           });
+          return friendOrg
         });
 
         setUserFriends(friendOrg);
 
         let podcastsOrg = [];
 
-        const podcastArr = userPodcasts.map((podcast) => {
+        userPodcasts.map((podcast) => {
           podcastsOrg.push({ image: podcast.image, uuid: podcast.pod_uuid });
+          return podcastsOrg
         });
-
-        // function removeDuplicates(arr) {
-        //   return [...new Set(arr)];
-        // }
-
-        // const podcasts = removeDuplicates(podcastArr);
 
         setUserPodcasts(podcastsOrg);
         setIsLoading(false);
@@ -109,6 +105,8 @@ export default function Profile(props) {
 
     apiCalls(params.userId);
   }, [params.userId]);
+
+
 
   const friends = userFriends.map((friend) => {
     return (
@@ -125,7 +123,7 @@ export default function Profile(props) {
     <div className="profile">
       <div className="profile-header">
         <div className="profile-details">
-          <img src={userDetails.avatar} />
+          <img src={userDetails.avatar} alt="User Avatar"/>
           <h2>{userDetails.first_name}</h2>
         </div>
         <div className="profile-top8">
@@ -136,7 +134,7 @@ export default function Profile(props) {
       <hr className="profile-hr" />
       <div className="add-friend">
         <p>Add {userDetails.first_name}</p>
-        <img src={Heart} />
+        <img src={Heart} alt="heart-icon"/>
       </div>
       <hr className="profile-hr" />
       {!isLoading && (

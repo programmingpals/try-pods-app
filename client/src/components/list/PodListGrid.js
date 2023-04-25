@@ -1,4 +1,4 @@
-import React, { Component, useState, useEffect, useContext } from "react";
+import React, { useState, useEffect } from "react";
 import PodListItem from "./PodListItem";
 import axios from "axios";
 import { useParams } from "react-router-dom";
@@ -22,7 +22,7 @@ export default function PodListGrid(props) {
       getListData(params.id);
       setIsLoading(false);
     },
-    [listLength]
+    [listLength, params.id]
   );
 
   const deleteFromList = function (id) {

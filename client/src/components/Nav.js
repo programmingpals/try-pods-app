@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import Search from "./search/Search";
 import { searchContext } from "../providers/SearchToggleProvider";
@@ -13,19 +13,19 @@ export default function Nav() {
 
   return (
     <div>
-      <div class="nav">
-        <div class="nav-left">
-          <Link to={"/"} class="nav-link">
-            <img src={Logo} />
+      <div className="nav">
+        <div className="nav-left">
+          <Link to={"/"} className="nav-link">
+            <img src={Logo} alt="Try-Pods logo"/>
             </Link>
             <h4 className="logo-name">Try-Pods</h4>
           
           
         </div>
-        <div class="nav-right">
+        <div className="nav-right">
           <div className="nav-search">
             <a
-              class="nav-link"
+              className="nav-link"
               href="#/"
               aria-expanded={height !== 0}
               aria-controls="example-panel"
@@ -33,12 +33,12 @@ export default function Nav() {
             >
               {height === 0 ? "Search" : "Close Search"}
             </a>
-            <img src={SearchWhite} />
+            <img src={SearchWhite} alt="search icon"/>
           </div>
           <div className="login-user">
-            <Link to={"profilepage/1"} class="nav-link">
+            <Link to={"profilepage/1"} className="nav-link">
               <p>Rowan</p>
-              <img src={Rowan} />
+              <img src={Rowan} alt="profile-avatar"/>
             </Link>
           </div>
         </div>
