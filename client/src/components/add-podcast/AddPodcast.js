@@ -29,16 +29,16 @@ export default function AddPodcast(props) {
     customLists: [],
   };
 
- userLists.map((list) => {
+  userLists.map((list) => {
     if (list.attributes.name === "Top 8") {
       listOrg.top8 = list;
-      return listOrg.top8
+      return listOrg.top8;
     } else if (list.attributes.name === "Up Next") {
       listOrg.upNext = list;
-      return listOrg.upNext
+      return listOrg.upNext;
     } else {
       listOrg.customLists.push(list);
-      return listOrg.customLists
+      return listOrg.customLists;
     }
   });
 
@@ -59,9 +59,14 @@ export default function AddPodcast(props) {
   }
 
   return (
-    <div>
-      <p>{podcast.name}</p>
-      <img src={podcast.imageUrl} style={{ width: "125px" }} alt={podcast.name}/>
+    <div className="add-list-container">
+      <img
+        className="add-podcast-img"
+        src={podcast.imageUrl}
+        style={{ width: "125px" }}
+        alt={podcast.name}
+      />
+      <h3>{podcast.name}</h3>
       <p>What list would like to add it to?</p>
       <div className="listgrid-addpodcast">
         <ListChoice

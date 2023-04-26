@@ -70,10 +70,10 @@ h5 {
 }
 
 .listgrid-addpodcast {
-  width: 100%;
+  width: 350px;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-direction: column;
+  // flex-wrap: wrap;
   justify-content: center;
 }
 
@@ -88,7 +88,8 @@ h5 {
 }
 
 .section-title h3 {
-  font-size: 30px;
+  font-size: 23px;
+  font-weight: bold;
 }
 
 .hash-tag {
@@ -102,26 +103,60 @@ h5 {
   justify-content: space-around;
 }
 
+.podcasts {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
 .listitem-main {
   width: 175px;
   height: 175px;
-  padding: 20px;
-  border: 2px solid #3af0d7;
+  margin: 20px;
+  padding: 10px;
+  // border: 2px solid #3af0d7;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background: white;
 }
 
-.listitem-main a h5 {
-  margin: 10px 0px;
+.lists .top8-block {
+  border: solid 5px #2fc2ae;
+}
+
+.lists .up-next-block {
+  border: solid 5px #64167a;
+}
+
+.lists .add-list-block {
+  border: solid 5px #d2e93c;
+}
+
+.lists .custom-block {
+  border: solid 5px #e5f2f8;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.listitem-main a h5,
+.add-list,
+.list-background a h5 {
+  margin: 0px;
+  font-family: "Chivo Mono";
+  font-size: 22px;
+}
+
+.listitem-main p,
+.add-list,
+.list-background p,
+.listitem-main img {
+  margin: 10px 0px 0px 0px;
 }
 
 .listitem-add {
-  width: 150px;
-  height: 150px;
-  margin: 20px;
-  padding: 20px;
-  border: 2px solid #3af0d7;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -131,12 +166,12 @@ h5 {
   width: 30px;
 }
 
-p.add-list {
-  font-family: "Barlow";
-  font-size: 26px;
-  font-weight: 200;
-  margin-top: 10px;
-}
+// p.add-list {
+//   font-family: "Barlow";
+//   font-size: 26px;
+//   font-weight: 200;
+//   margin-top: 10px;
+// }
 
 //user podlist page
 
@@ -169,7 +204,7 @@ p.add-list {
 }
 
 .profile-hr {
-  border-color: #370545;
+  border-color: #64167a;
 }
 
 .podlist-hr {
@@ -456,16 +491,29 @@ button {
   width: 200px;
 }
 
+.profile-top8 {
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.profile-top8 a {
+  text-decoration: none;
+}
+
 .profile-top8 h3 {
-  margin-top: 40px;
+  margin-top: 0px;
   margin-bottom: 5px;
+  text-align: left;
+  margin-left: 6px;
+  border-bottom: 5px solid #2fc2ae;
 }
 
 .top8-grid {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-top: 10px;
 }
 
 .top8-item {
@@ -476,13 +524,25 @@ button {
 }
 
 .top8-item img {
-  width: 75px;
+  width: 100px;
 }
 
-.friends-block,
 .add-friend {
   display: flex;
   flex-direction: row;
+  align-items: center;
+}
+
+.friends-block {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0px -50px 0px -50px;
+  justify-content: center;
+}
+
+.friends-block .friends-title {
+  margin: 0px;
 }
 
 .add-friend {
@@ -495,6 +555,11 @@ button {
   padding-right: 10px;
 }
 
+.add-friend img {
+  width: 30px;
+  padding: 10px;
+}
+
 .recommend-item,
 .friend-item {
   display: flex;
@@ -503,16 +568,27 @@ button {
   margin: 0px 10px 0px 10px;
 }
 
+.friend-item img {
+  border: solid 5px white;
+  border-radius: 100%;
+}
+
 .friend-item img:hover {
-  border: solid 2px #d2e93c;
+  border: solid 5px #d2e93c;
   border-radius: 100%;
 }
 
 .recommend-item img,
-.friend-item img,
-.add-friend img {
-  width: 40px;
+.friend-item img {
+  width: 50px;
   margin-right: 10px;
+  border: solid 5px white;
+  border-radius: 100%;
+}
+
+.recommend-item img:hover {
+  border: solid 5px #d2e93c;
+  border-radius: 100%;
 }
 
 .add-form {
@@ -563,4 +639,26 @@ button {
 
 .unstyled-button {
   border: none;
+  display: flex;
+  flex-direction: row;
+}
+
+.unstyled-button img {
+  width: 40px;
+  padding-right: 20px;
+}
+
+.unstyled-button h4 {
+  font-family: "Chivo Mono";
+  margin: 10px 0px;
+  font-size: 20px;
+}
+
+.add-podcast-img {
+  margin-top: 30px;
+}
+
+.add-list-container p {
+  font-weight: bold;
+  padding-bottom: 20px;
 }

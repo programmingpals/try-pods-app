@@ -3,6 +3,7 @@ import List from "./List";
 import AddListBlock from "./AddListBlock";
 import { userContext } from "../../providers/UserProvider";
 import PodcastItem from "./PodcastItem";
+import allDots from "../../assets/backgrounds/all-dot-background.svg";
 
 export default function ListGrid(props) {
   const { user } = useContext(userContext);
@@ -42,25 +43,30 @@ export default function ListGrid(props) {
             </h3>
           </div>
           <div className="lists">
-            <List
-              key={props.top8.id}
-              id={props.top8.id}
-              name={props.top8.attributes.name}
-              description={props.top8.attributes.description}
-              ownerId={userId}
-              setUserLists={props.setUserLists}
-            />
-
-            <List
-              key={props.upNext.id}
-              id={props.upNext.id}
-              name={props.upNext.attributes.name}
-              description={props.upNext.attributes.description}
-              ownerId={userId}
-              setUserLists={props.setUserLists}
-            />
+            <div className="top8-block">
+              <List
+                key={props.top8.id}
+                id={props.top8.id}
+                name={props.top8.attributes.name}
+                description={props.top8.attributes.description}
+                ownerId={userId}
+                setUserLists={props.setUserLists}
+              />
+            </div>
+            <div className="up-next-block">
+              <List
+                key={props.upNext.id}
+                id={props.upNext.id}
+                name={props.upNext.attributes.name}
+                description={props.upNext.attributes.description}
+                ownerId={userId}
+                setUserLists={props.setUserLists}
+              />
+            </div>
             {userId === user && (
-              <AddListBlock setUserLists={props.setUserLists} />
+              <div className="add-list-block">
+                <AddListBlock setUserLists={props.setUserLists} />
+              </div>
             )}
           </div>
         </div>
@@ -70,13 +76,20 @@ export default function ListGrid(props) {
               <span className="hash-tag">#</span>The Custom
             </h3>
           </div>
-          <div className="lists">{lists}</div>
+          <div className="lists custom-block">
+            <div
+              className="custom-block"
+              style={{ backgroundImage: `url(${allDots})` }}
+            >
+              {lists}
+            </div>
+          </div>
           <div className="section-title">
             <h3>
               <span className="hash-tag">#</span>The Specifics
             </h3>
           </div>
-          <div className="lists">{podcasts}</div>
+          <div className="podcasts">{podcasts}</div>
         </div>
       </div>
     </div>

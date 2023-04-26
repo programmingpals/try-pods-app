@@ -69,7 +69,7 @@
   width: 40px;
   border: solid 2px #d2e93c;
   border-radius: 100%;
-  margin: 0px 5px 0px 5px;
+  margin: 0px 10px 0px 10px;
 }
 
 .nav-right .login-user img:hover {
@@ -79,7 +79,7 @@
 
 .nav-right .nav-search img {
   width: 35px;
-  margin: 0px 5px 0px 5px;
+  margin: 0px 10px 0px 10px;
 }
 
 .nav-search {
@@ -131,6 +131,8 @@
   display: flex;
   flex-direction: row;
   padding-bottom: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .search-results-item img {
@@ -154,4 +156,12 @@
 
 .item-details p:hover {
   border-bottom: 5px solid #2fc2ae;
+}
+
+.search-podcast {
+  font-size: 25px;
+}
+
+.podcast-hr {
+  border-color: #e5f2f8;
 }
