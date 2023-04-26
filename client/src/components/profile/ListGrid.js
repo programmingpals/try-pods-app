@@ -76,7 +76,7 @@ export default function ListGrid(props) {
               <span className="hash-tag">#</span>The Specifics
             </h3>
           </div>
-          <div className="lists">{podcasts}</div>
+          <div className="podcasts">{podcasts}</div>
         </div>
       </div>
     </div>

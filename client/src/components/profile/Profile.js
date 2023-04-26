@@ -1,10 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
+import { Link } from "react-router-dom";
+import { userContext } from "../../providers/UserProvider";
 import ListGrid from "./ListGrid";
 import Top8Grid from "./Top8Grid";
 import Friend from "./Friend";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import Heart from "../../assets/icons/heart.png";
+import blank from "../../assets/icons/blank.png";
 
 export default function Profile(props) {
   const [userLists, setUserLists] = useState([]);
@@ -14,7 +17,9 @@ export default function Profile(props) {
   const [listOrg, setListOrg] = useState({});
   const [isLoading, setIsLoading] = useState(true);
 
+  const { user } = useContext(userContext);
   const params = useParams();
+  const userIdInt = parseInt(params.userId);
 
   useEffect(() => {
     const getListsByUser = function (userId) {
@@ -124,6 +129,10 @@ export default function Profile(props) {
     );
   });
 
+  const top8Link = listOrg.top8?.id;
+
+  console.log("user", user, "params.userId", params.userId);
+
   return (
     <div className="profile">
       <div className="profile-header">
@@ -132,23 +141,33 @@ export default function Profile(props) {
           <h2>{userDetails.first_name}</h2>
         </div>
         <div className="profile-top8">
+          <Link to={`/podcastlist/${top8Link}`}>
+            <h3>My Top 8</h3>
+          </Link>
           {!isLoading && <Top8Grid top8={listOrg.top8} />}
-          <h3>My Top 8</h3>
         </div>
       </div>
       <hr className="profile-hr" />
-      <div className="add-friend">
-        <p>Add {userDetails.first_name}</p>
-        <img src={Heart} alt="heart-icon" />
-      </div>
+      {user !== userIdInt && (
+        <div className="add-friend">
+          <p>Add {userDetails.first_name}</p>
+          <img src={Heart} alt="heart-icon" />
+        </div>
+      )}
+      {user === userIdInt && (
+        <div className="add-friend">
+          <img src={blank} alt="blank placeholder" />
+        </div>
+      )}
+
       <hr className="profile-hr" />
       {!isLoading && (
         <div className="friends-block">
-          <p>The Inner Circle</p>
+          <p className="friends-title">The Inner Circle</p>
           {friends}
         </div>
       )}
-      <hr />
+      <hr className="profile-hr" />
       <div>
         {!isLoading && (
           <ListGrid

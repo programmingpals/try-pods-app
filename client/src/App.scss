@@ -88,7 +88,8 @@ h5 {
 }
 
 .section-title h3 {
-  font-size: 30px;
+  font-size: 23px;
+  font-weight: bold;
 }
 
 .hash-tag {
@@ -100,6 +101,13 @@ h5 {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
+}
+
+.podcasts {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 }
 
 .listitem-main {
@@ -169,7 +177,7 @@ p.add-list {
 }
 
 .profile-hr {
-  border-color: #370545;
+  border-color: #64167a;
 }
 
 .podlist-hr {
@@ -456,16 +464,24 @@ button {
   width: 200px;
 }
 
+.profile-top8 {
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
 .profile-top8 h3 {
-  margin-top: 40px;
+  margin-top: 0px;
   margin-bottom: 5px;
+  text-align: left;
+  margin-left: 6px;
 }
 
 .top8-grid {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-top: 10px;
 }
 
 .top8-item {
@@ -476,13 +492,21 @@ button {
 }
 
 .top8-item img {
-  width: 75px;
+  width: 100px;
 }
 
 .friends-block,
 .add-friend {
   display: flex;
   flex-direction: row;
+}
+
+.friend-block {
+  margin: 0px -50px 0px -50px;
+}
+
+.friends-block .friends-title {
+  margin: 5px;
 }
 
 .add-friend {
@@ -503,15 +527,20 @@ button {
   margin: 0px 10px 0px 10px;
 }
 
+.friend-item img {
+  border: solid 5px white;
+  border-radius: 100%;
+}
+
 .friend-item img:hover {
-  border: solid 2px #d2e93c;
+  border: solid 5px #d2e93c;
   border-radius: 100%;
 }
 
 .recommend-item img,
 .friend-item img,
 .add-friend img {
-  width: 40px;
+  width: 50px;
   margin-right: 10px;
 }
 
