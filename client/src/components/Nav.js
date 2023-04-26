@@ -5,6 +5,7 @@ import { searchContext } from "../providers/SearchToggleProvider";
 import AnimateHeight from "react-animate-height";
 import Rowan from "../assets/1Rowan.png";
 import Logo from "../assets/icons/logo.png";
+import TryPods from "../assets/trypods2.png"
 import SearchWhite from "../assets/icons/search-white.png";
 import "./Nav.scss";
 
@@ -16,7 +17,7 @@ export default function Nav() {
       <div className="nav">
         <div className="nav-left">
           <Link to={"/"} className="nav-link">
-            <img src={Logo} alt="Try-Pods logo"/>
+            <img src={TryPods} alt="Try-Pods logo"/>
             </Link>
             <h4 className="logo-name">Try-Pods</h4>
           

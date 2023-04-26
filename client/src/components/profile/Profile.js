@@ -148,7 +148,8 @@ export default function Profile(props) {
       <hr className="profile-hr" />
       {user !== userIdInt && (
         <div className="add-friend">
-          <p>Add {userDetails.first_name}</p>
+          <p>Friends</p>
+          {/* <p>Add {userDetails.first_name}</p> */}
           <img src={HeartFilled} alt="heart-icon" />
         </div>
       )}
