@@ -1,9 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import folder from "../../assets/icons/folder.png";
 
 export default function ListChoice(props) {
-
+  const navigate = useNavigate();
   const addToList = function (podInfo) {
     axios
       .post(`/api/podcasts`, {
@@ -22,6 +23,7 @@ export default function ListChoice(props) {
       })
 
       .then((response) => {
+        navigate(`/podcastlist/${props.id}`);
       })
       .catch((err) => {
         console.log("axios addToList error:", err);
@@ -30,11 +32,14 @@ export default function ListChoice(props) {
 
   return (
     <div className="listitem-add">
-      <Link to={`/podcastlist/${props.id}`}>
-        <button className="unstyled-button" onClick={() => addToList(props.podcast)}>
-          <h4>{props.name}</h4>
-        </button>
-      </Link>
+      <button
+        className="unstyled-button"
+        onClick={() => addToList(props.podcast)}
+      >
+        <img src={folder} alt="folder icon" />
+        <h4>{props.name}</h4>
+      </button>
+      <hr className="podcast-hr" />
     </div>
   );
 }

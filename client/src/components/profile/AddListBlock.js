@@ -8,10 +8,9 @@ export default function AddListBlock(props) {
   return (
     <div className="listitem-main">
       <Link to={"/addlist"} state={{ state: setUserLists }}>
-        <img src={Add} className="add-list-icon" alt="add icon" />
         <p className="add-list">Add New List</p>
+        <img src={Add} className="add-list-icon" alt="add icon" />
       </Link>
-      <p>Quick! Before you forget!</p>
     </div>
   );
 }

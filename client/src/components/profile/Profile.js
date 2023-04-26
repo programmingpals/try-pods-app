@@ -6,7 +6,7 @@ import Top8Grid from "./Top8Grid";
 import Friend from "./Friend";
 import axios from "axios";
 import { useParams } from "react-router-dom";
-import Heart from "../../assets/icons/heart.png";
+import HeartFilled from "../../assets/icons/heart-filled.png";
 import blank from "../../assets/icons/blank.png";
 
 export default function Profile(props) {
@@ -131,8 +131,6 @@ export default function Profile(props) {
 
   const top8Link = listOrg.top8?.id;
 
-  console.log("user", user, "params.userId", params.userId);
-
   return (
     <div className="profile">
       <div className="profile-header">
@@ -151,7 +149,7 @@ export default function Profile(props) {
       {user !== userIdInt && (
         <div className="add-friend">
           <p>Add {userDetails.first_name}</p>
-          <img src={Heart} alt="heart-icon" />
+          <img src={HeartFilled} alt="heart-icon" />
         </div>
       )}
       {user === userIdInt && (
