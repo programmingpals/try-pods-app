@@ -6,9 +6,21 @@
   padding: 20px;
 }
 
+.logo-gif {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.logo-gif img {
+  width: 200px;
+  border: 5px #2fc2ae;
+  margin: 35px;
+}
+
 .wrap-container h2 {
   font-weight: lighter;
-  padding-bottom: 20px;
+  padding-bottom: 15px;
 }
 
 .buds-container {
@@ -35,7 +47,7 @@
 .seafood-tower img {
   width: 500px;
   border: dotted 9px #2fc2ae;
-  margin-bottom: 100px;
+  margin-bottom: 75px;
 }
 
 .seafood-tower img:hover {
@@ -55,7 +67,7 @@
   justify-content: space-evenly;
   font-size: larger;
   font-weight: 400;
-  padding: 20px;
+  padding-bottom: 20px;
 }
 
 .tech-stack-container img {

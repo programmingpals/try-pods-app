@@ -5,6 +5,7 @@ import Kate from "../../assets/3Kate.png";
 import Rowan from "../../assets/1Rowan.png";
 import Seafood from "../../assets/Seafood-Tower.png";
 import TechStack from "../../assets/tech_stack.png";
+import Trypodgif from "../../assets/Try-Pods.gif"
 
 export default function WrapUp() {
   return (
@@ -44,6 +45,11 @@ export default function WrapUp() {
           <p>Episode Lists</p>
           <p>Spotify Integration</p>
         </div>
+      </div>
+      <div className="logo-gif">
+        <img src={Trypodgif} alt="trypod logo gif"/>
+        <img src={Trypodgif} alt="trypod logo gif"/>
+        <img src={Trypodgif} alt="trypod logo gif"/>
       </div>
       <div className="seafood-tower">
         <h2>
