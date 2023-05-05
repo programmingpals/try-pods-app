@@ -1,6 +1,6 @@
 ## Try-Pods
 
-A Podcast application that allows you to discover, listen to, and share lists of your favortie podcasts. 
+A Podcast application that allows you to discover, listen to, and share lists of your favorite podcasts. 
 
 ## Preview
 
