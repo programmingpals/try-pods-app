@@ -1,6 +1,16 @@
-##Try-Pods
+## Try-Pods
 
 A Podcast application that allows you to discover, listen to, and share lists of your favortie podcasts. 
+
+## Preview
+
+!["Home navigation gif"](https://github.com/programmingpals/try-pods-app/blob/master/client/src/assets/screenshots/try-pods-home.gif?raw=true)
+
+!["Profile Top 8 gif"](https://github.com/programmingpals/try-pods-app/blob/master/client/src/assets/screenshots/try-pods-top-8.gif?raw=true)
+
+!["Friends gif"](https://github.com/programmingpals/try-pods-app/blob/master/client/src/assets/screenshots/try-pods-friends-list.gif?raw=true)
+
+!["Try-Pods Logo gif"](https://github.com/programmingpals/try-pods-app/blob/master/client/src/assets/screenshots/Try%20Pods.gif?raw=true)
 
 
 The main important bit is that the React project has `proxy` set to `localhost:3001` in the `package.json` file. Take a look!
