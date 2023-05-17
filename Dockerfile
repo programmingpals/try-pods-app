@@ -11,13 +11,11 @@ FROM node:$NODE_VERSION-slim as client
 ENV NODE_ENV=production
 
 # Install node modules
-# COPY --link client/package.json client/package-lock.json client/
-COPY client .
+COPY --link client/package.json client/package-lock.json client/
 RUN npm install
 
 # build client application
-# COPY --link client client/
-COPY client .
+COPY --link client client/
 RUN npm run build
 
 
