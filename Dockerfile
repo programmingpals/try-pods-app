@@ -84,7 +84,7 @@ COPY --from=build /usr/local/bundle /usr/local/bundle
 COPY --from=build --chown=rails:rails /rails /rails
 
 # Copy built client
-COPY --from=client --chown=rails:rails /rails/client/build /rails/public
+COPY --from=client --chown=rails:rails /client/build /rails/public
 
 # Deployment options
 ENV RAILS_LOG_TO_STDOUT="1" \
