@@ -7,11 +7,11 @@ app = "try-pods-fly"
 primary_region = "sea"
 
 [http_service]
-  internal_port = 3000
+  internal_port = 3001
   force_https = true
   auto_stop_machines = true
   auto_start_machines = true
 
 [[statics]]
-  guest_path = "/rails/client/public"
+  guest_path = "/rails/client/build"
   url_prefix = "/"
